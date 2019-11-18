@@ -1,0 +1,169 @@
+[
+  {
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+      "name": "Margherita",
+      "description": "Molho de tomate, mussarela, folhas de manjeric\u00e3o e molho de tomate sobre a pizza.",
+      "price": "66.00"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+      "name": "Frango com Catupiry",
+      "description": "Molho de tomate, frango inteiro korin temperado em peda\u00e7os e requeij\u00e3o catupiry.",
+      "price": "75.00"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+      "name": "Heineken 600ml",
+      "description": "",
+      "price": "15.00"
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 1,
+    "fields": {
+      "name": "Pizzas",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.category",
+    "pk": 2,
+    "fields": {
+      "name": "Bebidas",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.ingredient",
+    "pk": 1,
+    "fields": {
+      "name": "Molho de tomate",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.ingredient",
+    "pk": 2,
+    "fields": {
+      "name": "Mussarela",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.ingredient",
+    "pk": 3,
+    "fields": {
+      "name": "Manjeric\u00e3o",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.variation",
+    "pk": 1,
+    "fields": {
+      "name": "Broto",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.variation",
+    "pk": 2,
+    "fields": {
+      "name": "Grande",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.productvariation",
+    "pk": 1,
+    "fields": {
+      "product": 1,
+      "variation": 1,
+      "price": "42.00"
+    }
+  },
+  {
+    "model": "products.productvariation",
+    "pk": 2,
+    "fields": {
+      "product": 1,
+      "variation": 2,
+      "price": "66.00"
+    }
+  },
+  {
+    "model": "products.productvariation",
+    "pk": 3,
+    "fields": {
+      "product": 2,
+      "variation": 1,
+      "price": "47.00"
+    }
+  },
+  {
+    "model": "products.productvariation",
+    "pk": 4,
+    "fields": {
+      "product": 2,
+      "variation": 2,
+      "price": "75.00"
+    }
+  },
+  {
+    "model": "products.productingredient",
+    "pk": 1,
+    "fields": {
+      "product": 1,
+      "ingredient": 3
+    }
+  },
+  {
+    "model": "products.productingredient",
+    "pk": 2,
+    "fields": {
+      "product": 1,
+      "ingredient": 1
+    }
+  },
+  {
+    "model": "products.productingredient",
+    "pk": 3,
+    "fields": {
+      "product": 1,
+      "ingredient": 2
+    }
+  },
+  {
+    "model": "products.productcategory",
+    "pk": 1,
+    "fields": {
+      "product": 1,
+      "category": 1
+    }
+  },
+  {
+    "model": "products.productcategory",
+    "pk": 2,
+    "fields": {
+      "product": 2,
+      "category": 1
+    }
+  },
+  {
+    "model": "products.productcategory",
+    "pk": 3,
+    "fields": {
+      "product": 3,
+      "category": 2
+    }
+  }
+]

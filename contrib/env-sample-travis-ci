@@ -1,0 +1,13 @@
+# Basic config
+SECRET_KEY=ChangeFor_aSecretHere
+DEBUG=True
+ALLOWED_HOSTS=localhost, 127.0.0.1
+DATABASE_URL=postgres://postgres@localhost/travis_ci_db
+
+# Email Configuration
+EMAIL_BACKEND=django.core.mail.backends.console.EmailBackend
+EMAIL_HOST=localhost
+EMAIL_PORT=25
+EMAIL_USE_TLS=False
+EMAIL_HOST_USER=
+EMAIL_HOST_PASSWORD=
