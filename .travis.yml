@@ -1,0 +1,24 @@
+language: python
+python: 3.7-dev
+
+services:
+  postgresql
+env:
+  global:
+    - DJANGO_SETTINGS_MODULE="djmenu.settings"
+addons:
+  postgresql: '9.5'
+# command to install dependencies
+install:
+  - cp contrib/env-sample-travis-ci .env
+  - pip install -r requirements-dev.txt codecov
+before_script:
+  - psql -c "CREATE DATABASE travis_ci_db;" -U postgres
+  - python manage.py migrate --noinput
+# command to run tests
+script:
+  - pycodestyle .
+  - flake8 .
+  - coverage run manage.py test -v 2
+after_success:
+  - codecov
