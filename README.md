@@ -1,5 +1,8 @@
 # djmenu - Django food menu
 
+[![Updates](https://pyup.io/repos/github/tiagocordeiro/djmenu/shield.svg)](https://pyup.io/repos/github/tiagocordeiro/djmenu/)
+[![Python 3](https://pyup.io/repos/github/tiagocordeiro/djmenu/python-3-shield.svg)](https://pyup.io/repos/github/tiagocordeiro/djmenu/)
+[![codecov](https://codecov.io/gh/tiagocordeiro/djmenu/branch/master/graph/badge.svg)](https://codecov.io/gh/tiagocordeiro/djmenu)
 [![Python 3.7.4](https://img.shields.io/badge/python-3.7.4-blue.svg)](https://www.python.org/downloads/release/python-374/)
 [![Django 2.2.7](https://img.shields.io/badge/django-2.2.7-blue.svg)](https://www.djangoproject.com/download/)
 
