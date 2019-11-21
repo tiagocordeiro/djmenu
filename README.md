@@ -61,7 +61,7 @@ python manage.py test -v 2
 Para rodar os testes com relatório de cobertura.
 ```
 coverage run manage.py test -v 2
-coverage hmtl
+coverage html
 ```
 
 Verificando o `Code style`
