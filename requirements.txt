@@ -8,3 +8,6 @@ python-decouple==3.3
 
 # DJ Database URL
 dj-database-url==0.5.0
+
+# PsycoPG
+psycopg2-binary==2.8.4

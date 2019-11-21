@@ -1,7 +1,9 @@
-# djmenu
-Django food menu
+# djmenu - Django food menu
 
-### Como rodar o projeto?
+[![Python 3.7.4](https://img.shields.io/badge/python-3.7.4-blue.svg)](https://www.python.org/downloads/release/python-374/)
+[![Django 2.2.7](https://img.shields.io/badge/django-2.2.7-blue.svg)](https://www.djangoproject.com/download/)
+
+### Como rodar o projeto
 
 * Clone esse repositório.
 * Crie um virtualenv com Python 3.
@@ -39,4 +41,28 @@ python manage.py createsuperuser --username dev --email dev@foo.bar
 Para rodar o projeto localmente
 ```
 python manage.py runserver
+```
+
+
+### Testes, contribuição e dependências de desenvolvimento
+Para instalar as dependências de desenvolvimento
+```
+pip install -r requirements-dev.txt
+```
+
+Para rodar os testes
+```
+python manage.py test -v 2
+```
+
+Para rodar os testes com relatório de cobertura.
+```
+coverage run manage.py test -v 2
+coverage hmtl
+```
+
+Verificando o `Code style`
+```
+pycodestyle .
+flake8 .
 ```
