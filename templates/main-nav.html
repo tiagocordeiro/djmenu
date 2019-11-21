@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mb-3">
     <div class="container">
         <a class="navbar-brand" href="#">Django Menu</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -13,6 +13,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'products-list' %}">Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'two-flavors' %}">Pizza dois sabores</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
