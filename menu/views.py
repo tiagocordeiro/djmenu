@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from .models import Menu
+from .facade import menu_builder
 
 
 # Create your views here.
 def menu_display(request, pk):
-    menu = Menu.objects.get(pk=pk)
+    menu = menu_builder(pk=pk)
 
     context = {
         'menu': menu,
