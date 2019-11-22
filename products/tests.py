@@ -1,25 +1,23 @@
 from django.test import TestCase, Client, RequestFactory
-from .views import products_list
-from .models import Product, Category, Variation, ProductVariation, ProductCategory
+from .views import products_list, two_flavors
+from .models import Product, Category, Variation, ProductVariation
 
 
 # Create your tests here.
-class DashboardViewTest(TestCase):
+class ProductsViewTest(TestCase):
     def setUp(self):
         # Every test needs access to the request factory.
         self.factory = RequestFactory()
         self.client = Client()
 
-        # Product
-        self.margherita = Product.objects.create(name='Margherita',
-                                                 description='Molho de tomate, mussarela, folhas de manjericão...',
-                                                 price=66)
-
         # Category
         self.category_pizza = Category.objects.create(name='Pizzas')
 
-        # Margherita Category
-        self.margherita_category = ProductCategory.objects.create(product=self.margherita, category=self.category_pizza)
+        # Product
+        self.margherita = Product.objects.create(name='Margherita',
+                                                 category=self.category_pizza,
+                                                 description='Molho de tomate, mussarela, folhas de manjericão...',
+                                                 price=66)
 
         # Product Variations
         self.broto_variation = Variation.objects.create(name='Broto')
@@ -39,3 +37,20 @@ class DashboardViewTest(TestCase):
         response = products_list(request)
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'Margherita')
+
+    def test_product_with_two_flavors(self):
+        request = self.factory.get('/products/list/two-flavors')
+
+        response = two_flavors(request)
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, '42,00')
+
+    def test_product_name_str_return(self):
+        product = Product.objects.get(pk=self.margherita.pk)
+
+        self.assertEqual(product.name, 'Margherita')
+
+    def test_category_name_return(self):
+        category = Category.objects.get(pk=self.category_pizza.pk)
+
+        self.assertEqual(category.__str__(), 'Pizzas')

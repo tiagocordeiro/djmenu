@@ -1,18 +1,14 @@
 from django.shortcuts import render
 from django.db.models import Min
 
-from .models import ProductCategory, ProductVariation, ProductIngredient
+from .models import ProductVariation
 
 
 # Create your views here.
 def products_list(request):
-    bebidas = ProductCategory.objects.filter(category__name='Bebidas')
     variacoes = ProductVariation.objects.all()
-    ingredientes = ProductIngredient.objects.all()
     context = {
-        'bebidas': bebidas,
         'variacoes': variacoes,
-        'ingredientes': ingredientes,
     }
     return render(request, 'products/list.html', context=context)
 
