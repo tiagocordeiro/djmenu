@@ -3,7 +3,7 @@ from .views import index
 
 
 # Create your tests here.
-class DashboardViewTest(TestCase):
+class IndexViewTest(TestCase):
     def setUp(self):
         # Every test needs access to the request factory.
         self.factory = RequestFactory()

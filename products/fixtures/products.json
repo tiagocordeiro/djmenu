@@ -1,32 +1,5 @@
 [
   {
-    "model": "products.product",
-    "pk": 1,
-    "fields": {
-      "name": "Margherita",
-      "description": "Molho de tomate, mussarela, folhas de manjeric\u00e3o e molho de tomate sobre a pizza.",
-      "price": "66.00"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 2,
-    "fields": {
-      "name": "Frango com Catupiry",
-      "description": "Molho de tomate, frango inteiro korin temperado em peda\u00e7os e requeij\u00e3o catupiry.",
-      "price": "75.00"
-    }
-  },
-  {
-    "model": "products.product",
-    "pk": 3,
-    "fields": {
-      "name": "Heineken 600ml",
-      "description": "",
-      "price": "15.00"
-    }
-  },
-  {
     "model": "products.category",
     "pk": 1,
     "fields": {
@@ -43,27 +16,33 @@
     }
   },
   {
-    "model": "products.ingredient",
+    "model": "products.product",
     "pk": 1,
     "fields": {
-      "name": "Molho de tomate",
-      "description": ""
+      "name": "Margherita",
+      "description": "Molho de tomate, mussarela, folhas de manjeric\u00e3o e molho de tomate sobre a pizza.",
+      "price": "66.00",
+      "category": 1
     }
   },
   {
-    "model": "products.ingredient",
+    "model": "products.product",
     "pk": 2,
     "fields": {
-      "name": "Mussarela",
-      "description": ""
+      "name": "Frango com Catupiry",
+      "description": "Molho de tomate, frango inteiro korin temperado em peda\u00e7os e requeij\u00e3o catupiry.",
+      "price": "75.00",
+      "category": 1
     }
   },
   {
-    "model": "products.ingredient",
+    "model": "products.product",
     "pk": 3,
     "fields": {
-      "name": "Manjeric\u00e3o",
-      "description": ""
+      "name": "Heineken 600ml",
+      "description": "",
+      "price": "15.00",
+      "category": 2
     }
   },
   {
@@ -116,54 +95,6 @@
       "product": 2,
       "variation": 2,
       "price": "75.00"
-    }
-  },
-  {
-    "model": "products.productingredient",
-    "pk": 1,
-    "fields": {
-      "product": 1,
-      "ingredient": 3
-    }
-  },
-  {
-    "model": "products.productingredient",
-    "pk": 2,
-    "fields": {
-      "product": 1,
-      "ingredient": 1
-    }
-  },
-  {
-    "model": "products.productingredient",
-    "pk": 3,
-    "fields": {
-      "product": 1,
-      "ingredient": 2
-    }
-  },
-  {
-    "model": "products.productcategory",
-    "pk": 1,
-    "fields": {
-      "product": 1,
-      "category": 1
-    }
-  },
-  {
-    "model": "products.productcategory",
-    "pk": 2,
-    "fields": {
-      "product": 2,
-      "category": 1
-    }
-  },
-  {
-    "model": "products.productcategory",
-    "pk": 3,
-    "fields": {
-      "product": 3,
-      "category": 2
     }
   }
 ]
