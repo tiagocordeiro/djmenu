@@ -10,4 +10,10 @@ python-decouple==3.3
 dj-database-url==0.5.0
 
 # PsycoPG
+psycopg2==2.8.4
 psycopg2-binary==2.8.4
+
+# Heroku
+django-heroku==0.3.1
+gunicorn==20.0.2
+whitenoise==4.1.4
