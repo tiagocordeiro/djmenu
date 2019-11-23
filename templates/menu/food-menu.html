@@ -6,7 +6,21 @@
 </head>
 <body>
 
-{{menu.name}}
+<h2>{{ menu_title }}</h2>
 
+{% for category in menu %}
+    <p>{{ category.category }}</p>
+    {% for item in category.itens %}
+        <p>{{ item.product.name }}</p>
+        <p>{{ item.product.description }}</p>
+        {% if item.product.price|length > 1 %}
+            {% for variacao in item.product.price %}
+                <p>{{ variacao.variation_name }}: {{ variacao.variation_price }}</p>
+            {% endfor %}
+        {% else %}
+            <p>{{ item.product.price }}</p>
+        {% endif %}
+    {% endfor %}
+{% endfor %}
 </body>
 </html>
