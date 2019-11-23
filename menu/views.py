@@ -7,7 +7,8 @@ def menu_display(request, pk):
     menu = menu_builder(pk=pk)
 
     context = {
-        'menu': menu,
+        'menu_title': menu['title'],
+        'menu': menu['itens'],
     }
 
     return render(request, 'menu/food-menu.html', context=context)

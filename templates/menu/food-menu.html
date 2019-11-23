@@ -6,6 +6,8 @@
 </head>
 <body>
 
+<h2>{{ menu_title }}</h2>
+
 {% for category in menu %}
     <p>{{ category.category }}</p>
     {% for item in category.itens %}

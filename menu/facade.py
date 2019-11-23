@@ -1,4 +1,3 @@
-import json
 from .models import Menu
 from products.models import Product, ProductVariation
 
@@ -41,4 +40,4 @@ def menu_builder(pk):
             product_count += 1
         category_count += 1
 
-    return menu_itens
+    return {'title': menu.name, 'itens': menu_itens}
