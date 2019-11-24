@@ -1,4 +1,6 @@
 from django.shortcuts import render
+
+from menu.models import Menu
 from .facade import menu_builder
 
 
@@ -12,3 +14,9 @@ def menu_display(request, pk):
     }
 
     return render(request, 'menu/food-menu.html', context=context)
+
+
+def menu_list(request):
+    menus = Menu.objects.all()
+
+    return render(request, 'menu/list.html', context={'menus': menus})

@@ -1,6 +1,6 @@
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mb-3">
     <div class="container">
-        <a class="navbar-brand" href="#">Django Menu</a>
+        <a class="navbar-brand" href="{% url 'index' %}">Django Menu</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -12,11 +12,14 @@
                     <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'products-list' %}">Produtos</a>
+                    <a class="nav-link" href="{% url 'menu-list' %}">Cardápios</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'two-flavors' %}">Pizza dois sabores</a>
-                </li>
+{#                <li class="nav-item">#}
+{#                    <a class="nav-link" href="{% url 'products-list' %}">Produtos</a>#}
+{#                </li>#}
+{#                <li class="nav-item">#}
+{#                    <a class="nav-link" href="{% url 'two-flavors' %}">Pizza dois sabores</a>#}
+{#                </li>#}
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

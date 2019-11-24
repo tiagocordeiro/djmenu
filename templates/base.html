@@ -5,17 +5,48 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+            integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+      <!-- Custom styles -->
+      <style>
+          html {
+              position: relative;
+              min-height: 100%;
+          }
+
+          body {
+              margin-bottom: 60px; /* Margin bottom by footer height */
+          }
+
+          .footer {
+              position: absolute;
+              bottom: 0;
+              width: 100%;
+              height: 60px; /* Set the fixed height of the footer here */
+              line-height: 60px; /* Vertically center the text there */
+              background-color: #f5f5f5;
+          }
+      </style>
     {% block extra_css %}{% endblock extra_css %}
 
     <title>Django Menu</title>
   </head>
   <body>
 
-    {% include 'main-nav.html' %}
+      {% include 'main-nav.html' %}
 
-    {% block content %}{% endblock content %}
+  <main role="main" class="container">
+      {% block content %}{% endblock content %}
+  </main>
+
+  <footer class="footer">
+      <div class="container">
+          <span class="text-muted">MIT License</span>
+      </div>
+  </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

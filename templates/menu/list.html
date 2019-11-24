@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+    <style>
+        .food-menu-item {
+            border-bottom-style: dotted;
+            border-color: gray;
+        }
+
+        .food-category-title {
+            border-bottom-style: dotted;
+            border-color: gray;
+        }
+    </style>
+{% endblock extra_css %}
+
+{% block content %}
+    <div class="container">
+        <div class="d-flex justify-content-center mt-5">
+            <h2 class="text-center food-category-title">Nossos Cardápios</h2>
+        </div>
+
+        {% for menu in menus %}
+
+            <div class="row justify-content-between align-items-center food-menu-item">
+                <div class='col'>
+                    <h2 class='mt-2'>{{ menu.name }}</h2>
+                    <p>{{ menu.description }}</p>
+                </div>
+                <div class="d-flex">
+                    <div class='col'>
+                        <a class="btn btn-primary my-4" href="{% url 'menu-display' pk=menu.pk %}" role="button">Ver cardápio</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+
+    </div>
+{% endblock content %}
