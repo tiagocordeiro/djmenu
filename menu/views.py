@@ -1,5 +1,5 @@
 from django.contrib.sites.shortcuts import get_current_site
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from django.urls import reverse
 from qr_code.qrcode.utils import QRCodeOptions
@@ -97,6 +97,7 @@ def menu_pdf_gen(request, pk):
         return response
     return HttpResponse("Not found")
 
+
 def menu_print(request, pk):
     menu = menu_builder(pk=pk)
 
@@ -106,3 +107,14 @@ def menu_print(request, pk):
     }
 
     return render(request, 'menu/food-menu-print.html', context=context)
+
+
+def menu_json(request, pk):
+    menu = menu_builder(pk=pk)
+
+    context = {
+        'menu_title': menu['title'],
+        'menu': menu['itens'],
+    }
+
+    return JsonResponse(context)
