@@ -1,7 +1,7 @@
 from django.contrib.sites.shortcuts import get_current_site
 from django.shortcuts import render
 from django.urls import reverse
-from qr_code.qrcode.utils import ContactDetail as QRCodeDetails, QRCodeOptions
+from qr_code.qrcode.utils import QRCodeOptions
 
 from menu.models import Menu
 from .facade import menu_builder
@@ -58,24 +58,22 @@ def menu_qrcode_sheet_gen(request, pk, size):
     size = size
     menu = Menu.objects.get(pk=pk)
     menu_url = reverse('menu-display', kwargs={'pk': pk})
-    qrcode_details = QRCodeDetails(
-        url=''.join(['https://', get_current_site(request).domain, menu_url])
-    )
+    complete_url = ''.join(['https://', get_current_site(request).domain, menu_url])
     qrcode_options = QRCodeOptions(size=size)
     if size.lower() == 's':
-        loop_time = range(0, 30)
+        loop_time = range(0, 20)
     elif size.lower() == 'm':
-        loop_time = range(0, 15)
+        loop_time = range(0, 8)
     elif size.lower() == 'l':
-        loop_time = range(0, 6)
+        loop_time = range(0, 2)
     else:
         loop_time = range(0, 1)
 
     context = {
         'menu': menu,
         'menu_url': menu_url,
+        'complete_url': complete_url,
         'qrcode_options': qrcode_options,
-        'qrcode_details': qrcode_details,
         'loop_time': loop_time,
     }
     return render(request, 'menu/qr-sheet-gen.html', context=context)

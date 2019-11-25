@@ -8,13 +8,15 @@
     <style>
         .flex {
             display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .flex-wrap {
             flex-wrap: wrap;
         }
+
         .item {
-            margin: 5px;
             text-align: center;
             font-size: 1.5em;
         }
@@ -28,14 +30,14 @@
 <!-- "padding-**mm" is optional: you can set 10, 15, 20 or 25 -->
 <section class="sheet padding-10mm container flex flex-wrap">
 
-{% for _ in loop_time %}
-    <div class="item">{% qr_from_text menu_url options=qrcode_options %}</div>
-{% endfor %}
+    {% for _ in loop_time %}
+        <div class="item">{% qr_from_text complete_url options=qrcode_options %}</div>
+    {% endfor %}
 
 </section>
 <script>
-    (function(){
-        window.addEventListener('load',()=>{
+    (function () {
+        window.addEventListener('load', () => {
             window.print()
         })
     }());
