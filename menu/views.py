@@ -28,16 +28,13 @@ def menu_list(request):
 def menu_qrcode_gen(request, pk):
     menu = Menu.objects.get(pk=pk)
     menu_url = reverse('menu-display', kwargs={'pk': pk})
-    qrcode_details = QRCodeDetails(
-        url=''.join(['https://', get_current_site(request).domain, menu_url])
-    )
+    complete_url = ''.join(['https://', get_current_site(request).domain, menu_url])
     qrcode_options = QRCodeOptions(size='M')
 
     context = {
         'menu': menu,
-        'menu_url': menu_url,
+        'complete_url': complete_url,
         'qrcode_options': qrcode_options,
-        'qrcode_details': qrcode_details,
     }
     return render(request, 'menu/qr-gen.html', context=context)
 
