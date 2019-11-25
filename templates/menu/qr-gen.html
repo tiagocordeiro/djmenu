@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load qr_code %}
+
+{% block extra_css %}
+    <style>
+        .food-menu-item {
+            border-bottom-style: dotted;
+            border-color: gray;
+        }
+
+        .food-category-title {
+            border-bottom-style: dotted;
+            border-color: gray;
+        }
+    </style>
+{% endblock extra_css %}
+
+{% block content %}
+    <div class="container">
+
+        <div class="card text-center">
+            <div class="card-header">
+                {{menu}}
+            </div>
+            <div class="card-body">
+                <div class="card-title">{% qr_from_text menu_url options=qrcode_options %}</div>
+
+                {% if menu.description %}
+                    <p class="card-text">{{ menu.description }}</p>
+                {% endif %}
+                <a href="{% url 'menu-display' pk=menu.pk %}" class="btn btn-primary mb-4">Ver cardápio</a>
+            </div>
+        </div>
+
+    </div>
+{% endblock content %}

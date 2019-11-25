@@ -1,0 +1,45 @@
+{% load qr_code %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ menu_title }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.3.0/paper.css">
+    <style>
+        .flex {
+            display: flex;
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+        .item {
+            margin: 5px;
+            text-align: center;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<!-- Set "A5", "A4" or "A3" for class name -->
+<!-- Set also "landscape" if you need -->
+<body class="A4">
+
+<!-- Each sheet element should have the class "sheet" -->
+<!-- "padding-**mm" is optional: you can set 10, 15, 20 or 25 -->
+<section class="sheet padding-10mm container flex flex-wrap">
+
+{% for _ in loop_time %}
+    <div class="item">{% qr_from_text menu_url options=qrcode_options %}</div>
+{% endfor %}
+
+</section>
+<script>
+    (function(){
+        window.addEventListener('load',()=>{
+            window.print()
+        })
+    }());
+</script>
+
+</body>
+</html>
