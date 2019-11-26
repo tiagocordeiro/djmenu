@@ -1,5 +1,5 @@
-from .models import Menu
 from products.models import Product, ProductVariation
+from .models import Menu
 
 
 def get_menu(pk):

@@ -77,6 +77,17 @@ def menu_qrcode_sheet_gen(request, pk, size):
     return render(request, 'menu/qr-sheet-gen.html', context=context)
 
 
+def menu_print(request, pk):
+    menu = menu_builder(pk=pk)
+
+    context = {
+        'menu_title': menu['title'],
+        'menu': menu['itens'],
+    }
+
+    return render(request, 'menu/food-menu-print.html', context=context)
+
+
 def menu_json(request, pk):
     menu = menu_builder(pk=pk)
 

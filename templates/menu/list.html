@@ -29,7 +29,7 @@
                 </div>
                 <div class="d-flex">
                     <div class='col'>
-                        <a class="btn btn-primary my-4" href="{% url 'menu-display' pk=menu.pk %}" role="button"><i class="far fa-eye"></i> Abrir</a>
+                        <a class="btn btn-primary my-4" href="{% url 'menu-display' pk=menu.pk %}" role="button"><i class="far fa-eye"></i></a>
                     </div>
                     <div class="col">
                         <h4>
@@ -42,6 +42,9 @@
                                 </a>
                                 <a href="{% url 'qr-sheet-gen' pk=menu.pk size='s' %}" class="badge badge-secondary">
                                     <i class="fas fa-th"></i> 20
+                                </a>
+                                <a href="{% url 'menu-print' pk=menu.pk %}" class="badge badge-secondary">
+                                    <i class="far fa-file-alt"></i> Folhas
                                 </a>
                             </span>
                         </h4>

@@ -3,7 +3,7 @@ from django.test import TestCase, RequestFactory, Client
 from products.models import Product, Category, ProductVariation, Variation
 from .facade import menu_builder
 from .models import Menu, MenuCategory
-from .views import menu_display, menu_list, menu_qrcode_gen, menu_qrcode_sheet_gen, menu_json
+from .views import menu_display, menu_list, menu_qrcode_gen, menu_qrcode_sheet_gen, menu_json, menu_print
 
 
 # Create your tests here.
@@ -51,9 +51,18 @@ class MenuViewTest(TestCase):
         self.menu_almoco = Menu.objects.create(name='Almoço')
 
         # Select categories to menu
-        self.menu_category = MenuCategory.objects.create(menu=self.menu_almoco, category=self.rotolinas, order=1)
-        self.menu_category = MenuCategory.objects.create(menu=self.menu_almoco, category=self.petiscos, order=2)
-        self.menu_category = MenuCategory.objects.create(menu=self.menu_almoco, category=self.doces, order=3)
+        self.menu_cat_rotolinas = MenuCategory.objects.create(menu=self.menu_almoco, category=self.rotolinas, order=1)
+        self.menu_cat_petiscos = MenuCategory.objects.create(menu=self.menu_almoco, category=self.petiscos, order=2)
+        self.menu_cat_doces = MenuCategory.objects.create(menu=self.menu_almoco, category=self.doces, order=3)
+
+    def test_menu_name_return_str(self):
+        menu = Menu.objects.get(name=self.menu_almoco.name)
+        self.assertEqual(menu.name, self.menu_almoco.name)
+
+    def test_menu_category_name_return_str(self):
+        menu_category = MenuCategory.objects.get(pk=self.menu_cat_doces.category.pk)
+        self.assertEqual(menu_category.category.name, self.menu_cat_doces.category.name)
+        self.assertEqual(menu_category.__str__(), self.menu_cat_doces.category.name + ' - ' + self.menu_almoco.name)
 
     def test_menu_page_status_code_is_ok(self):
         request = self.factory.get(f'/menu/view/{self.menu_almoco.pk}/')
@@ -93,6 +102,12 @@ class MenuViewTest(TestCase):
         self.assertEqual(response_medio.status_code, 200)
         self.assertEqual(response_small.status_code, 200)
         self.assertEqual(response_with_number.status_code, 200)
+
+    def test_menu_print_status_code_is_ok(self):
+        request = self.factory.get(f'/menu/print/{self.menu_almoco.pk}')
+
+        response = menu_print(request, pk=self.menu_almoco.pk)
+        self.assertEqual(response.status_code, 200)
 
     def test_json_return(self):
         request = self.factory.get(f'/menu/json/{self.menu_almoco.pk}')
