@@ -8,6 +8,5 @@ urlpatterns = [
     path('list/', views.menu_list, name='menu-list'),
     path('qrcode/<pk>', views.menu_qrcode_gen, name='qr-gen'),
     path('qrcode/sheet/<pk>/<size>', views.menu_qrcode_sheet_gen, name='qr-sheet-gen'),
-    path('pdf/<pk>', views.menu_pdf_gen, name='pdf-gen'),
     path('print/<pk>', views.menu_print, name='menu-print'),
 ]

@@ -7,13 +7,21 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.3.0/paper.css">
     <link href="https://fonts.googleapis.com/css?family=Yesteryear&display=swap" rel="stylesheet">
     <style>
-        @page { size: A4 }
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        body {
+            margin: 0;
+        }
+
         .badge-warning {
             background-color: #ffc1075c;
         }
+
         .food-menu-item {
             border-bottom-style: dotted;
             border-color: gray;
@@ -24,69 +32,66 @@
             border-color: gray;
             font-family: 'Yesteryear', cursive;
         }
+
         body {
-            background-image: url('https://cdn1.vectorstock.com/i/1000x1000/83/85/blank-aged-paper-background-vertical-a4-format-vector-14518385.jpg');
-            background-size: cover;
+            background-image: url('https://pagecdn.io/lib/subtlepatterns/restaurant.png');
             -webkit-print-color-adjust: exact;
         }
-        .sheet {
-            background-color: transparent;
+
+        .menu-category {
+            page-break-before: auto;
+            page-break-inside: avoid;
             margin: auto;
+            padding: 3vh 10vh;
         }
     </style>
 
     <title>{{ menu_title }}</title>
 </head>
-<!-- Set "A5", "A4" or "A3" for class name -->
-<!-- Set also "landscape" if you need -->
-<body class="A4">
 
-<!-- Each sheet element should have the class "sheet" -->
-<!-- "padding-**mm" is optional: you can set 10, 15, 20 or 25 -->
-<section class="sheet padding-20mm container flex flex-wrap">
+<body>
 
+<section class="container flex flex-wrap">
     {% for category in menu %}
-        <div class="d-flex justify-content-center mt-5">
-            <h2 class="text-center food-category-title">{{ category.category }}</h2>
-        </div>
-
-        {% for item in category.itens %}
-
-            <div class="row justify-content-between align-items-center food-menu-item">
-                <div class='col'>
-                    <h4 class="mt-4">{{ item.product.name }}</h4>
-                    {% if item.product.description %}
-                        <p>{{ item.product.description }}</p>
-                    {% endif %}
-                </div>
-                <div class="d-flex">
-                    {% if item.product.price|length > 1 %}
-                        {% for variacao in item.product.price %}
-                            <div class='col'>
-                                <h5><span class="badge badge-warning my-4 p-3">{{ variacao.variation_name }}:<hr>R$ {{ variacao.variation_price }}</span></h5>
-                            </div>
-                        {% endfor %}
-                    {% else %}
-                        <div class='col'>
-                            <h5><span class="badge badge-warning my-4 p-3">R$ {{ item.product.price }}</span></h5>
-                        </div>
-                    {% endif %}
-
-                </div>
+        <div class="menu-category">
+            <div class="d-flex justify-content-center mt-5">
+                <h2 class="text-center food-category-title">{{ category.category }}</h2>
             </div>
 
+            {% for item in category.itens %}
+                <div class="row justify-content-between align-items-center food-menu-item">
+                    <div class='col'>
+                        <h4 class="mt-4">{{ item.product.name }}</h4>
+                        {% if item.product.description %}
+                            <p>{{ item.product.description }}</p>
+                        {% endif %}
+                    </div>
+                    <div class="d-flex">
+                        {% if item.product.price|length > 1 %}
+                            {% for variacao in item.product.price %}
+                                <div class='col'>
+                                    <h5><span class="badge badge-warning my-4 p-3">{{ variacao.variation_name }}:<hr>R$ {{ variacao.variation_price }}</span></h5>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            <div class='col'>
+                                <h5><span class="badge badge-warning my-4 p-3">R$ {{ item.product.price }}</span></h5>
+                            </div>
+                        {% endif %}
 
-        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
     {% endfor %}
-
-    <script>
-        (function () {
-            window.addEventListener('load', () => {
-                window.print()
-            })
-        }());
-    </script>
-
 </section>
+<script>
+    (function () {
+        window.addEventListener('load', () => {
+            window.print()
+        })
+    }());
+</script>
 </body>
 </html>

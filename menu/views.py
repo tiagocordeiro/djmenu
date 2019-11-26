@@ -1,11 +1,11 @@
 from django.contrib.sites.shortcuts import get_current_site
-from django.http import HttpResponse, JsonResponse
+from django.http import JsonResponse
 from django.shortcuts import render
 from django.urls import reverse
 from qr_code.qrcode.utils import QRCodeOptions
 
 from menu.models import Menu
-from .facade import menu_builder, render_to_pdf
+from .facade import menu_builder
 
 
 # Create your views here.
@@ -75,27 +75,6 @@ def menu_qrcode_sheet_gen(request, pk, size):
         'loop_time': loop_time,
     }
     return render(request, 'menu/qr-sheet-gen.html', context=context)
-
-
-def menu_pdf_gen(request, pk):
-    menu = menu_builder(pk=pk)
-
-    context = {
-        'menu_title': menu['title'],
-        'menu': menu['itens'],
-    }
-
-    pdf = render_to_pdf('menu/food-menu-pdf.html', context)
-    if pdf:
-        response = HttpResponse(pdf, content_type='application/pdf')
-        filename = f"Menu-{menu['title']}.pdf"
-        content = f"inline; filename={filename}"
-        download = request.GET.get("download")
-        if download:
-            content = f"attachment; filename='{filename}'"
-        response['Content-Disposition'] = content
-        return response
-    return HttpResponse("Not found")
 
 
 def menu_print(request, pk):
