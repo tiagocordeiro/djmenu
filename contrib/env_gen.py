@@ -21,6 +21,12 @@ EMAIL_PORT=25
 EMAIL_USE_TLS=False
 EMAIL_HOST_USER=
 EMAIL_HOST_PASSWORD=
+
+# Codecov
+CODECOV_TOKEN=
+
+# Sentry
+SENTRY_DSN=
 """
 
 # Writing our configuration file to '.env'

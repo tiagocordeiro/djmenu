@@ -11,10 +11,12 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-from decouple import config, Csv
-from dj_database_url import parse as dburl
 
 import django_heroku
+import sentry_sdk
+from decouple import config, Csv
+from dj_database_url import parse as dburl
+from sentry_sdk.integrations.django import DjangoIntegration
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -59,6 +61,12 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# Django DebugToolbar
+if DEBUG:
+    INSTALLED_APPS.append('debug_toolbar')
+    MIDDLEWARE.insert(0, 'debug_toolbar.middleware.DebugToolbarMiddleware')
+    INTERNAL_IPS = ['127.0.0.1']
 
 ROOT_URLCONF = 'djmenu.urls'
 
@@ -136,3 +144,6 @@ django_heroku.settings(locals())
 if 'DYNO' in os.environ:
     SECURE_SSL_REDIRECT = True
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Sentry
+sentry_sdk.init(dsn=config('SENTRY_DSN'), integrations=[DjangoIntegration()])
