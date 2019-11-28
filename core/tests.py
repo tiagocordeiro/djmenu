@@ -1,6 +1,8 @@
 from django.test import TestCase, Client, RequestFactory
+from django.urls import reverse
 
-from core.models import Company
+from .admin import CompanyAdmin
+from .models import Company
 from .views import index
 
 
@@ -27,3 +29,15 @@ class IndexViewTest(TestCase):
     def test_company_name_return_str(self):
         company = Company.objects.get(name=self.company.name)
         self.assertEqual(company.__str__(), self.company.name)
+
+    def test_company_admin_add_company_return_false(self):
+        request = reverse('admin:core_company_changelist')
+        has_add_permission = CompanyAdmin.has_add_permission(self.company, request)
+        self.assertEqual(has_add_permission, False)
+
+    def test_returns_true_when_no_business_data_exists(self):
+        self.company.delete()
+
+        request = reverse('admin:core_company_changelist')
+        has_add_permission = CompanyAdmin.has_add_permission(self.company, request)
+        self.assertEqual(has_add_permission, True)
