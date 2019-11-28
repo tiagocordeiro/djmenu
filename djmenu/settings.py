@@ -167,5 +167,7 @@ if CLOUDINARY_URL:
         'cloudinary',
     ] + INSTALLED_APPS
 
+    COLLECTFAST_ENABLED = True
+
     DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.RawMediaCloudinaryStorage'
     STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
