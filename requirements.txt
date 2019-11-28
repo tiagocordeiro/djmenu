@@ -27,3 +27,11 @@ six==1.13.0
 certifi==2019.9.11
 sentry-sdk==0.13.4
 urllib3==1.25.7
+
+# Cloudinary
+chardet==3.0.4
+cloudinary==1.18.2
+django-cloudinary-storage==0.2.3
+idna==2.8
+mock==3.0.5
+requests==2.22.0

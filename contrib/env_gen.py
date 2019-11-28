@@ -27,6 +27,11 @@ CODECOV_TOKEN=
 
 # Sentry
 SENTRY_DSN=
+
+# Cloudinary
+CLOUDINARY_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
 """
 
 # Writing our configuration file to '.env'
