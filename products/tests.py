@@ -54,3 +54,6 @@ class ProductsViewTest(TestCase):
         category = Category.objects.get(pk=self.category_pizza.pk)
 
         self.assertEqual(category.__str__(), 'Pizzas')
+
+    def test_product_variation_name_return(self):
+        self.assertEqual(self.margherita_broto.__str__(), 'Margherita - Broto - 42')
