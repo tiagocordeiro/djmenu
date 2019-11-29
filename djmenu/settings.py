@@ -149,7 +149,7 @@ COLLECTFAST_ENABLED = False
 django_heroku.settings(locals())
 
 # Force ssl if run in Heroku
-if 'DYNO' in os.environ:
+if 'DYNO' in os.environ:  # pragma: no cover
     SECURE_SSL_REDIRECT = True
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
@@ -159,7 +159,7 @@ sentry_sdk.init(dsn=config('SENTRY_DSN'), integrations=[DjangoIntegration()])
 # Cloudinary
 CLOUDINARY_URL = config('CLOUDINARY_URL', default=False)
 
-if CLOUDINARY_URL:
+if CLOUDINARY_URL:  # pragma: no cover
     INSTALLED_APPS.remove('django.contrib.staticfiles')
     INSTALLED_APPS = [
         'cloudinary_storage',
