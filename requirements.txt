@@ -15,7 +15,7 @@ psycopg2-binary==2.8.4
 # Heroku
 django-heroku==0.3.1
 gunicorn==20.0.4
-whitenoise==4.1.4
+whitenoise==5.0.1
 
 # QRcode
 django-qr-code==1.1.0
@@ -24,12 +24,12 @@ six==1.13.0
 
 # Sentry
 certifi==2019.11.28
-sentry-sdk==0.13.5
+sentry-sdk==0.14.0
 urllib3==1.25.7
 
 # Cloudinary
 chardet==3.0.4
-cloudinary==1.18.2
+cloudinary==1.19.1
 django-cloudinary-storage==0.2.3
 idna==2.8
 mock==3.0.5
