@@ -153,9 +153,6 @@ if 'DYNO' in os.environ:  # pragma: no cover
     SECURE_SSL_REDIRECT = True
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-# Sentry
-sentry_sdk.init(dsn=config('SENTRY_DSN'), integrations=[DjangoIntegration()])
-
 # Cloudinary
 CLOUDINARY_URL = config('CLOUDINARY_URL', default=False)
 
@@ -171,3 +168,6 @@ if CLOUDINARY_URL:  # pragma: no cover
 
     DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.RawMediaCloudinaryStorage'
     STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+
+# Sentry
+sentry_sdk.init(dsn=config('SENTRY_DSN'), integrations=[DjangoIntegration()])
