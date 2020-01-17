@@ -1,5 +1,5 @@
 # Django
-Django==2.2.8
+Django==2.2.9
 pytz==2019.3
 
 # Python Decouple
@@ -20,7 +20,7 @@ whitenoise==5.0.1
 # QRcode
 django-qr-code==1.1.0
 qrcode==6.1
-six==1.13.0
+six==1.14.0
 
 # Sentry
 certifi==2019.11.28
