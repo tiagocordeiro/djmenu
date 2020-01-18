@@ -7,8 +7,8 @@ https://djmenu.herokuapp.com/
 [![Updates](https://pyup.io/repos/github/tiagocordeiro/djmenu/shield.svg)](https://pyup.io/repos/github/tiagocordeiro/djmenu/)
 [![Python 3](https://pyup.io/repos/github/tiagocordeiro/djmenu/python-3-shield.svg)](https://pyup.io/repos/github/tiagocordeiro/djmenu/)
 [![codecov](https://codecov.io/gh/tiagocordeiro/djmenu/branch/master/graph/badge.svg)](https://codecov.io/gh/tiagocordeiro/djmenu)
-[![Python 3.7.6](https://img.shields.io/badge/python-3.7.6-blue.svg)](https://www.python.org/downloads/release/python-376/)
-[![Django 2.2.9](https://img.shields.io/badge/django-2.2.9-blue.svg)](https://www.djangoproject.com/download/)
+[![Python 3.8.1](https://img.shields.io/badge/python-3.8.1-blue.svg)](https://www.python.org/downloads/release/python-381/)
+[![Django 3.0.2](https://img.shields.io/badge/django-3.0.2-blue.svg)](https://www.djangoproject.com/download/)
 [![Build Status](https://travis-ci.org/tiagocordeiro/djmenu.svg?branch=master)](https://travis-ci.org/tiagocordeiro/djmenu)
 [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/tiagocordeiro/djmenu/blob/master/LICENSE)
 
