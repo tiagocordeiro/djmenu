@@ -1,5 +1,5 @@
 # Django
-Django==2.2.9
+Django==3.0.2
 pytz==2019.3
 
 # Python Decouple
@@ -30,7 +30,7 @@ urllib3==1.25.7
 # Cloudinary
 chardet==3.0.4
 cloudinary==1.19.1
-django-cloudinary-storage==0.2.3
+git+git://github.com/tiagocordeiro/django-cloudinary-storage@Django3Support
 idna==2.8
 mock==3.0.5
 requests==2.22.0
