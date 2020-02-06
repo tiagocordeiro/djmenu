@@ -32,5 +32,5 @@ chardet==3.0.4
 cloudinary==1.19.1
 git+git://github.com/tiagocordeiro/django-cloudinary-storage@Django3Support
 idna==2.8
-mock==3.0.5
+mock==4.0.1
 requests==2.22.0
