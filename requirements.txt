@@ -24,7 +24,7 @@ six==1.14.0
 
 # Sentry
 certifi==2019.11.28
-sentry-sdk==0.14.0
+sentry-sdk==0.14.2
 urllib3==1.25.7
 
 # Cloudinary
