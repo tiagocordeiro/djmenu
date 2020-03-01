@@ -1,5 +1,5 @@
 # Django
-Django==3.0.2
+Django==3.0.3
 pytz==2019.3
 
 # Python Decouple
@@ -24,13 +24,13 @@ six==1.14.0
 
 # Sentry
 certifi==2019.11.28
-sentry-sdk==0.14.0
-urllib3==1.25.7
+sentry-sdk==0.14.2
+urllib3==1.25.8
 
 # Cloudinary
 chardet==3.0.4
-cloudinary==1.19.1
-git+git://github.com/tiagocordeiro/django-cloudinary-storage@Django3Support
-idna==2.8
-mock==3.0.5
-requests==2.22.0
+cloudinary==1.20.0
+-e git://github.com/tiagocordeiro/django-cloudinary-storage.git@master#egg=django-cloudinary-storage
+idna==2.9
+mock==4.0.1
+requests==2.23.0
