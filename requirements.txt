@@ -1,6 +1,6 @@
 # Django
-Django==3.0.4
-pytz==2019.3
+Django==3.0.6
+pytz==2020.1
 
 # Python Decouple
 python-decouple==3.3
@@ -9,28 +9,28 @@ python-decouple==3.3
 dj-database-url==0.5.0
 
 # PsycoPG
-psycopg2==2.8.4
-psycopg2-binary==2.8.4
+psycopg2==2.8.5
+psycopg2-binary==2.8.5
 
 # Heroku
 django-heroku==0.3.1
 gunicorn==20.0.4
-whitenoise==5.0.1
+whitenoise==5.1.0
 
 # QRcode
-django-qr-code==1.1.0
+django-qr-code==1.2.0
 qrcode==6.1
-six==1.14.0
+six==1.15.0
 
 # Sentry
-certifi==2019.11.28
-sentry-sdk==0.14.2
-urllib3==1.25.8
+certifi==2020.4.5.1
+sentry-sdk==0.14.4
+urllib3==1.25.9
 
 # Cloudinary
 chardet==3.0.4
 cloudinary==1.20.0
 dj3-cloudinary-storage==0.0.1
 idna==2.9
-mock==4.0.1
+mock==4.0.2
 requests==2.23.0
