@@ -1,14 +1,14 @@
 # Code Style
-pycodestyle==2.5.0
+pycodestyle==2.6.0
 
 # Flake8
 entrypoints==0.3
-flake8==3.7.9
+flake8==3.8.2
 mccabe==0.6.1
-pyflakes==2.1.1
+pyflakes==2.2.0
 
 # Coverage
-coverage==5.0.3
+coverage==5.1
 
 # DebugToolbar
 django-debug-toolbar==2.2
