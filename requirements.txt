@@ -29,7 +29,7 @@ urllib3==1.25.9
 
 # Cloudinary
 chardet==3.0.4
-cloudinary==1.20.0
+cloudinary==1.21.0
 dj3-cloudinary-storage==0.0.1
 idna==2.9
 mock==4.0.2
