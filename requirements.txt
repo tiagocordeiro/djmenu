@@ -1,5 +1,5 @@
 # Django
-Django==3.0.6
+Django==3.0.7
 pytz==2020.1
 
 # Python Decouple
@@ -23,14 +23,14 @@ qrcode==6.1
 six==1.15.0
 
 # Sentry
-certifi==2020.4.5.1
+certifi==2020.4.5.2
 sentry-sdk==0.14.4
 urllib3==1.25.9
 
 # Cloudinary
 chardet==3.0.4
-cloudinary==1.20.0
-dj3-cloudinary-storage==0.0.1
+cloudinary==1.21.0
+dj3-cloudinary-storage==0.0.3
 idna==2.9
 mock==4.0.2
 requests==2.23.0
