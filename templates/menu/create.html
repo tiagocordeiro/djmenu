@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+
+{% endblock %}
+
+{% block content %}
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#add-item").click(function (ev) {
+                ev.preventDefault();
+                let count = $('#categorias').children().length;
+                let tmplMarkup = $("#categoria-cardapio").html();
+                let compiledTmpl = tmplMarkup.replace(/__prefix__/g, count);
+                $("div#categorias").append(compiledTmpl);
+
+                // update form count
+                $('#id_product-TOTAL_FORMS').attr('value', count + 1);
+
+            });
+        });
+    </script>
+
+    <div class="container">
+        <div class="py-5 text-center">
+            <h2 class="text-center food-category-title">Novo Cardápio</h2>
+        </div>
+
+        <div class="row">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="col-12">
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            {{ message|safe }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+            {% if form.errors %}
+                <div class="col-12">
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        {{ form.errors }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+            {% endif %}
+
+            {% if formset.errors %}
+                <div class="col-12">
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        {{ formset.errors }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+
+
+            <form action="." method="post">
+                {% csrf_token %}
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="id_name">Título</label>
+                        {{ form.name }}
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="id_description">Descrição</label>
+                        {{ form.description }}
+                    </div>
+                </div>
+
+                {{ formset.management_form }}
+                <div class="content" id="categorias">
+                    {% for category in formset %}
+                        <div id="item-{{ forloop.counter0 }}" class="row form-row spacer">
+                            <div class="input-group">
+                                <div class="col-md-9"><label>Categoria</label><br> {{ category.category }}</div>
+                                <div class="col-md-2"><label>Ordem</label><br> {{ category.order }}</div>
+                                <div class="col-md-1" style="margin-top: 38px;">{{ category.DELETE }}
+                                    <label><i class="fas fa-trash"></i></label></div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="row my-5">
+                    <div class="col-md-12" style="display: flex; justify-content: space-between;">
+                        <a class="btn btn-info" id="add-item"><i class="fa fa-plus"></i> Add Categoria</a>
+                        <input type="submit" value="Salvar" class="btn btn-success">
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/html" id="categoria-cardapio">
+        <div id="item-__prefix__" style="margin-top: 10px" class="row form-row spacer">
+            <div class="input-group">
+                <div class="col-md-9"><label>Categoria</label><br> {{ formset.empty_form.category }}</div>
+                <div class="col-md-2"><label>Ordem</label><br> {{ formset.empty_form.order }}</div>
+                <div class="col-md-1" style="margin-top: 38px;">{{ formset.empty_form.DELETE }}
+                    <i class="fas fa-trash"></i></div>
+            </div>
+        </div>
+    </script>
+
+{% endblock content %}
