@@ -10,10 +10,10 @@
         $(document).ready(function () {
             $("#add-item").click(function (ev) {
                 ev.preventDefault();
-                let count = $('#categorias').children().length;
-                let tmplMarkup = $("#categoria-cardapio").html();
+                let count = $('#variacoes').children().length;
+                let tmplMarkup = $("#variacao-produto").html();
                 let compiledTmpl = tmplMarkup.replace(/__prefix__/g, count);
-                $("div#categorias").append(compiledTmpl);
+                $("div#variacoes").append(compiledTmpl);
 
                 // update form count
                 $('#id_product-TOTAL_FORMS').attr('value', count + 1);
@@ -21,10 +21,9 @@
             });
         });
     </script>
-
     <div class="container">
         <div class="py-5 text-center">
-            <h2 class="text-center food-category-title">Novo Cardápio</h2>
+            <h2 class="text-center food-category-title">Novo Produto</h2>
         </div>
 
         <div class="row">
@@ -66,19 +65,27 @@
                     </div>
                 </div>
             {% endif %}
+
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
 
-
             <form action="." method="post">
                 {% csrf_token %}
 
                 <div class="form-row">
-                    <div class="form-group col-md-12">
-                        <label for="id_name">Título</label>
+                    <div class="form-group col-md-7">
+                        <label for="id_name">Nome</label>
                         {{ form.name }}
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="id_category">Categoria</label>
+                        {{ form.category }}
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="id_price">Preço</label>
+                        {{ form.price }}
                     </div>
                 </div>
 
@@ -90,21 +97,22 @@
                 </div>
 
                 {{ formset.management_form }}
-                <div class="content" id="categorias">
-                    {% for category in formset %}
+                <div class="content" id="variacoes">
+                    {% for variation in formset %}
                         <div id="item-{{ forloop.counter0 }}" class="row form-row spacer">
                             <div class="input-group">
-                                <div class="col-md-9"><label>Categoria</label><br> {{ category.category }}</div>
-                                <div class="col-md-2"><label>Ordem</label><br> {{ category.order }}</div>
-                                <div class="col-md-1" style="margin-top: 38px;">{{ category.DELETE }}
+                                <div class="col-md-9"><label>Variação</label><br> {{ variation.variation }}</div>
+                                <div class="col-md-2"><label>Preço</label><br> {{ variation.price }}</div>
+                                <div class="col-md-1" style="margin-top: 38px;">{{ variation.DELETE }}
                                     <label><i class="fas fa-trash"></i></label></div>
                             </div>
                         </div>
                     {% endfor %}
                 </div>
+
                 <div class="row my-5">
                     <div class="col-md-12" style="display: flex; justify-content: space-between;">
-                        <a class="btn btn-info" id="add-item"><i class="fa fa-plus"></i> Add Categoria</a>
+                        <a class="btn btn-info" id="add-item"><i class="fa fa-plus"></i> Add Variação</a>
                         <input type="submit" value="Salvar" class="btn btn-success">
                     </div>
 
@@ -113,11 +121,11 @@
         </div>
     </div>
 
-    <script type="text/html" id="categoria-cardapio">
+    <script type="text/html" id="variacao-produto">
         <div id="item-__prefix__" style="margin-top: 10px" class="row form-row spacer">
             <div class="input-group">
-                <div class="col-md-9"><label>Categoria</label><br> {{ formset.empty_form.category }}</div>
-                <div class="col-md-2"><label>Ordem</label><br> {{ formset.empty_form.order }}</div>
+                <div class="col-md-9"><label>Variação</label><br> {{ formset.empty_form.variation }}</div>
+                <div class="col-md-2"><label>Preço</label><br> {{ formset.empty_form.price }}</div>
                 <div class="col-md-1" style="margin-top: 38px;">{{ formset.empty_form.DELETE }}
                     <i class="fas fa-trash"></i></div>
             </div>

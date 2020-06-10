@@ -32,7 +32,8 @@ def menu_list(request):
 def menu_qrcode_gen(request, pk):
     menu = Menu.objects.get(pk=pk)
     menu_url = reverse('menu-display', kwargs={'pk': pk})
-    complete_url = ''.join(['https://', get_current_site(request).domain, menu_url])
+    complete_url = ''.join(
+        ['https://', get_current_site(request).domain, menu_url])
     qrcode_options = QRCodeOptions(size='M')
 
     context = {
@@ -114,15 +115,14 @@ def new_menu(request):
         formset = categories_menu_formset(request.POST,
                                           instance=menu_form,
                                           prefix='product')
-        try:
-            if form.is_valid() and formset.is_valid():
-                novo_cardapio = form.save(commit=False)
-                novo_cardapio.save()
-                formset.save()
-                messages.success(request, "Novo cardápio cadastrado.")
-                return redirect('menu-list')
-        except Exception as e:
-            messages.warning(request, f'Ocorreu um erro ao cadastrar: {e}')
+
+        if form.is_valid() and formset.is_valid():
+            novo_cardapio = form.save(commit=False)
+            novo_cardapio.save()
+            formset.save()
+            messages.success(request, "Novo cardápio cadastrado.")
+            return redirect('menu-list')
+
     else:
         form = MenuForm(instance=menu_form, prefix='main')
         formset = categories_menu_formset(instance=menu_form, prefix='product')

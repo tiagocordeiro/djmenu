@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+    <style>
+        .food-menu-item {
+            border-bottom-style: dotted;
+            border-color: gray;
+        }
+
+        .food-category-title {
+            border-bottom-style: dotted;
+            border-color: gray;
+        }
+    </style>
+{% endblock extra_css %}
+
+{% block content %}
+    <div class="container">
+        <div class="d-flex justify-content-center mt-5">
+            <h2 class="text-center food-category-title">Variações</h2>
+        </div>
+
+        <div class="row">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="col-12">
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            {{ message|safe }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+
+        {% for variacao in variacoes %}
+            <div class="row justify-content-between align-items-center food-menu-item">
+                <div class='col-lg-9'>
+                    <h2 class='mt-2'>{{ variacao.name }}</h2>
+                    <p>{{ variacao.description }}</p>
+                </div>
+                <div class="col-lg-3 flex-row d-flex">
+                    <div class="col"></div>
+                    <div class='col'>
+                        {% if variacao.productvariation_set.count <= 1 %}
+                            <a class="btn btn-primary my-4" href="#" role="button">
+                                {{ variacao.productvariation_set.count }} item
+                            </a>
+                        {% else %}
+                            <a class="btn btn-primary my-4" href="#" role="button">
+                                {{ variacao.productvariation_set.count }} itens
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+{% endblock content %}
