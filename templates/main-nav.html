@@ -11,8 +11,29 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'menu-list' %}">Cardápios</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Produtos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'products-list' %}">Todos os produtos</a>
+                        <a class="dropdown-item" href="{% url 'product_new' %}">Adicionar produto</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'categories_list' %}">Categorias</a>
+                        <a class="dropdown-item" href="{% url 'category_new' %}">Nova categoria</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'variations_list' %}">Variações</a>
+                        <a class="dropdown-item" href="{% url 'variation_new' %}">Nova variação</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Cardápios
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'menu-list' %}">Todos os cardápios</a>
+                        <a class="dropdown-item" href="{% url 'menu-create' %}">Adicionar cardápio</a>
+                    </div>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">

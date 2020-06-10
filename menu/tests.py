@@ -154,7 +154,7 @@ class MenuViewTest(TestCase):
             'main-description': 'Apenas doces',
             'product-TOTAL_FORMS': 1,
             'product-INITIAL_FORMS': 0,
-            'product-MIN_NUM_FORMS': 1,
+            'product-MIN_NUM_FORMS': 0,
             'product-MAX_NUM_FORMS': 1000,
             'product-0-category': self.menu_cat_doces.pk,
             'product-0-order': 1
@@ -182,3 +182,60 @@ class MenuViewTest(TestCase):
         response = new_menu(request)
         self.assertEqual(response.status_code, 302)
         self.assertEqual(response.url, '/menu/list/')
+
+    def test_menu_create_new_invalid_form(self):
+        form_data = {
+            'main-name': 'Novo cardápio',
+            'main-description': 'Teste com categorias repetidas',
+            'product-TOTAL_FORMS': 2,
+            'product-INITIAL_FORMS': 0,
+            'product-MIN_NUM_FORMS': 0,
+            'product-MAX_NUM_FORMS': 1000,
+            'product-0-category': self.menu_cat_doces.pk,
+            'product-0-order': 1,
+            'product-1-category': self.menu_cat_doces.pk,
+            'product-1-order': 2,
+        }
+
+        form = MenuForm(data=form_data)
+        self.assertEqual(form.is_valid(), False)
+
+    def test_menu_create_new_invalid_data(self):
+        menus = Menu.objects.all()
+        self.assertEqual(len(menus), 1)
+        self.assertEqual(Menu.objects.count(), 1)
+
+        form_data = {
+            'main-name': '',
+            'main-description': 'Teste com categorias repetidas',
+            'product-TOTAL_FORMS': 2,
+            'product-INITIAL_FORMS': 0,
+            'product-MIN_NUM_FORMS': 0,
+            'product-MAX_NUM_FORMS': 1000,
+            'product-0-category': self.menu_cat_doces.pk,
+            'product-0-order': 1,
+            'product-1-category': self.menu_cat_doces.pk,
+            'product-1-order': 2,
+        }
+
+        menu_form = Menu()
+        categories_menu_formset = inlineformset_factory(
+            Menu, MenuCategory,
+            form=MenuCategoriesForm, extra=1
+        )
+
+        form = MenuForm(form_data, instance=menu_form, prefix='main')
+        formset = categories_menu_formset(form_data,
+                                          instance=menu_form,
+                                          prefix='product')
+
+        request = self.factory.post(reverse('menu-create'), data=form_data)
+        setattr(request, 'session', 'session')
+        messages = FallbackStorage(request)
+        setattr(request, '_messages', messages)
+
+        self.assertEqual(form.is_valid(), False)
+        self.assertEqual(formset.is_valid(), False)
+
+        response = new_menu(request)
+        self.assertEqual(response.status_code, 200)
