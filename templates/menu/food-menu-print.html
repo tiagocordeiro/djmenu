@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Yesteryear&display=swap" rel="stylesheet">
     <style>
         @page {
@@ -67,7 +67,7 @@
                         {% endif %}
                     </div>
                     <div class="d-flex">
-                        {% if item.product.price|length > 1 %}
+                        {% if item.product.price|length >= 1 %}
                             {% for variacao in item.product.price %}
                                 <div class='col'>
                                     <h5><span class="badge badge-warning my-4 p-3">{{ variacao.variation_name }}:<hr>R$ {{ variacao.variation_price }}</span></h5>
