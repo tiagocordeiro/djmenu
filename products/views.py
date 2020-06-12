@@ -1,4 +1,5 @@
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.forms import inlineformset_factory
 from django.shortcuts import render, redirect
 from django.db.models import Min
@@ -8,6 +9,7 @@ from .forms import CategoryForm, ProductForm, VariationForm, \
 from .models import ProductVariation, Category, Product, Variation
 
 
+@login_required
 def products_list(request):
     produtos = Product.objects.all().order_by('category__name', 'name')
 
@@ -22,6 +24,7 @@ def products_list(request):
     return render(request, 'products/list_products.html', context=context)
 
 
+@login_required
 def product_new(request):
     product_form = Product()
     variations_formset = inlineformset_factory(Product, ProductVariation,
@@ -60,6 +63,7 @@ def two_flavors(request):
     return render(request, 'products/sliced.html', context=context)
 
 
+@login_required
 def categories_list(request):
     categories = Category.objects.all()
     context = {'categories': categories}
@@ -67,6 +71,7 @@ def categories_list(request):
     return render(request, 'products/list_categories.html', context)
 
 
+@login_required
 def category_new(request):
     if request.method == "POST":
         form = CategoryForm(request.POST)
@@ -80,6 +85,7 @@ def category_new(request):
     return render(request, 'products/category_new.html', {'form': form})
 
 
+@login_required
 def variations_list(request):
     variacoes = Variation.objects.all()
     context = {'variacoes': variacoes}
@@ -87,6 +93,7 @@ def variations_list(request):
     return render(request, 'products/list_variations.html', context)
 
 
+@login_required
 def variation_new(request):
     if request.method == "POST":
         form = VariationForm(request.POST)
