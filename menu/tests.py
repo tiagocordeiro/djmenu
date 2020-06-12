@@ -127,7 +127,7 @@ class MenuViewTest(TestCase):
 
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response,
-                             '/accounts/login/?next=/menu/qrcode/1/',
+                             f'/accounts/login/?next=/menu/qrcode/{self.menu_almoco.pk}/',
                              status_code=302,
                              target_status_code=200)
 
@@ -156,7 +156,7 @@ class MenuViewTest(TestCase):
 
         self.assertEqual(request.status_code, 302)
         self.assertRedirects(request,
-                             '/accounts/login/?next=/menu/qrcode/sheet/1/l/',
+                             f'/accounts/login/?next=/menu/qrcode/sheet/{self.menu_almoco.pk}/l/',
                              status_code=302,
                              target_status_code=200)
 
@@ -175,7 +175,7 @@ class MenuViewTest(TestCase):
 
         self.assertEqual(request.status_code, 302)
         self.assertRedirects(request,
-                             '/accounts/login/?next=/menu/print/1/',
+                             f'/accounts/login/?next=/menu/print/{self.menu_almoco.pk}/',
                              status_code=302,
                              target_status_code=200)
 
