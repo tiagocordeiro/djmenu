@@ -56,6 +56,10 @@ Para rodar o projeto localmente
 python manage.py runserver
 ```
 
+### Banco de dados para ambiente de desenvolvimento com Docker
+```
+docker-compose up -d
+```
 
 ### Testes, contribuição e dependências de desenvolvimento
 Para instalar as dependências de desenvolvimento
