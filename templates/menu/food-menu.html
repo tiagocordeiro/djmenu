@@ -43,13 +43,13 @@
         {% for item in category.itens %}
 
             <div class="row justify-content-between align-items-center food-menu-item">
-                <div class='col'>
+                <div class='col-md-8 col-sm-12'>
                     <h4 class="mt-4">{{ item.product.name }}</h4>
                     {% if item.product.description %}
                         <p>{{ item.product.description }}</p>
                     {% endif %}
                 </div>
-                <div class="d-flex">
+                <div class="d-flex col-md-4 col-sm-12">
                     {% if item.product.price|length >= 1 %}
                         {% for variacao in item.product.price %}
                             <div class='col'>
