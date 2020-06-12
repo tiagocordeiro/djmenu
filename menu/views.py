@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.sites.shortcuts import get_current_site
 from django.forms import inlineformset_factory
 from django.http import JsonResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from qr_code.qrcode.utils import QRCodeOptions
 
@@ -13,8 +13,9 @@ from .forms import MenuForm, MenuCategoriesForm
 
 
 # Create your views here.
-def menu_display(request, pk):
-    menu = menu_builder(pk=pk)
+def menu_display(request, slug):
+    menu_object = get_object_or_404(Menu, slug=slug)
+    menu = menu_builder(pk=menu_object.pk)
 
     context = {
         'menu_title': menu['title'],
@@ -34,7 +35,7 @@ def menu_list(request):
 @login_required
 def menu_qrcode_gen(request, pk):
     menu = Menu.objects.get(pk=pk)
-    menu_url = reverse('menu-display', kwargs={'pk': pk})
+    menu_url = reverse('menu-display', kwargs={'slug': menu.slug})
     complete_url = ''.join(
         ['https://', get_current_site(request).domain, menu_url])
     qrcode_options = QRCodeOptions(size='M')
@@ -63,7 +64,7 @@ def menu_qrcode_sheet_gen(request, pk, size):
     """
     size = size
     menu = Menu.objects.get(pk=pk)
-    menu_url = reverse('menu-display', kwargs={'pk': pk})
+    menu_url = reverse('menu-display', kwargs={'slug': menu.slug})
     complete_url = ''.join(
         ['https://', get_current_site(request).domain, menu_url])
     qrcode_options = QRCodeOptions(size=size)
@@ -122,12 +123,15 @@ def new_menu(request):
                                           instance=menu_form,
                                           prefix='product')
 
-        if form.is_valid() and formset.is_valid():
-            novo_cardapio = form.save(commit=False)
-            novo_cardapio.save()
-            formset.save()
-            messages.success(request, "Novo cardápio cadastrado.")
-            return redirect('menu-list')
+        try:
+            if form.is_valid() and formset.is_valid():
+                novo_cardapio = form.save(commit=False)
+                novo_cardapio.save()
+                formset.save()
+                messages.success(request, "Novo cardápio cadastrado.")
+                return redirect('menu-list')
+        except Exception as e:
+            messages.warning(request, f'Ocorreu um erro ao atualizar: {e}')
 
     else:
         form = MenuForm(instance=menu_form, prefix='main')

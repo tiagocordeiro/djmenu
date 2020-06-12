@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User, Group
 from django.contrib.messages.storage.fallback import FallbackStorage
+from django.db.transaction import TransactionManagementError
 from django.forms import inlineformset_factory
 from django.test import TestCase, RequestFactory, Client
 from django.urls import reverse
@@ -87,7 +88,7 @@ class MenuViewTest(TestCase):
     def test_menu_page_status_code_is_ok(self):
         request = self.factory.get(f'/menu/view/{self.menu_almoco.pk}/')
 
-        response = menu_display(request, pk=self.menu_almoco.pk)
+        response = menu_display(request, slug=self.menu_almoco.slug)
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'Almoço')
 
@@ -239,6 +240,33 @@ class MenuViewTest(TestCase):
         response = new_menu(request)
         self.assertEqual(response.status_code, 302)
         self.assertEqual(response.url, '/menu/list/')
+
+    def test_menu_create_new_with_same_name(self):
+        with self.assertRaises(TransactionManagementError):
+            menus = Menu.objects.all()
+            self.assertEqual(len(menus), 1)
+            self.assertEqual(Menu.objects.count(), 1)
+
+            novo_cardapio = {
+                'main-name': 'Almoço',
+                'main-description': 'Apenas doces',
+                'product-TOTAL_FORMS': 0,
+                'product-INITIAL_FORMS': 0,
+                'product-MIN_NUM_FORMS': 0,
+                'product-MAX_NUM_FORMS': 1000,
+            }
+
+            form = MenuForm(novo_cardapio)
+
+            request = self.factory.post(reverse('menu-create'), data=novo_cardapio)
+            request.user = self.staff_user
+            setattr(request, 'session', 'session')
+            messages = FallbackStorage(request)
+            setattr(request, '_messages', messages)
+
+            self.assertEqual(form.is_valid(), False)
+
+            new_menu(request)
 
     def test_menu_create_new_invalid_form(self):
         form_data = {

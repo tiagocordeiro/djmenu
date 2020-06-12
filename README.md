@@ -7,8 +7,8 @@ https://djmenu.herokuapp.com/
 [![Updates](https://pyup.io/repos/github/tiagocordeiro/djmenu/shield.svg)](https://pyup.io/repos/github/tiagocordeiro/djmenu/)
 [![Python 3](https://pyup.io/repos/github/tiagocordeiro/djmenu/python-3-shield.svg)](https://pyup.io/repos/github/tiagocordeiro/djmenu/)
 [![codecov](https://codecov.io/gh/tiagocordeiro/djmenu/branch/master/graph/badge.svg)](https://codecov.io/gh/tiagocordeiro/djmenu)
-[![Python 3.8.1](https://img.shields.io/badge/python-3.8.1-blue.svg)](https://www.python.org/downloads/release/python-381/)
-[![Django 3.0.2](https://img.shields.io/badge/django-3.0.2-blue.svg)](https://www.djangoproject.com/download/)
+[![Python 3.8.3](https://img.shields.io/badge/python-3.8.3-blue.svg)](https://www.python.org/downloads/release/python-383/)
+[![Django 3.0.7](https://img.shields.io/badge/django-3.0.7-blue.svg)](https://www.djangoproject.com/download/)
 [![Build Status](https://travis-ci.org/tiagocordeiro/djmenu.svg?branch=master)](https://travis-ci.org/tiagocordeiro/djmenu)
 [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/tiagocordeiro/djmenu/blob/master/LICENSE)
 
@@ -36,6 +36,10 @@ python manage.py migrate
 Para criar produtos, categorias e variações de exemplo, execute o comando abaixo
 ```
 python manage.py loaddata products/fixtures/products.json
+```
+Para criar um cardápio de exemplo usando os dados criados acima
+```
+python manage.py loaddata menu/fixtures/menus.json
 ```
 
 
@@ -75,3 +79,7 @@ Verificando o `Code style`
 pycodestyle .
 flake8 .
 ```
+
+#### Thanx
+
+[ ~ Dependencies scanned by PyUp.io ~ ]
