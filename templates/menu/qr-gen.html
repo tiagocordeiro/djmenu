@@ -28,7 +28,7 @@
                 {% if menu.description %}
                     <p class="card-text">{{ menu.description }}</p>
                 {% endif %}
-                <a href="{% url 'menu-display' pk=menu.pk %}" class="btn btn-primary mb-4">Ver cardápio</a>
+                <a href="{% url 'menu-display' slug=menu.slug %}" class="btn btn-primary mb-4">Ver cardápio</a>
             </div>
         </div>
 

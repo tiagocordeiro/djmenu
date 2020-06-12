@@ -1,0 +1,38 @@
+[
+  {
+    "model": "menu.menu",
+    "pk": 1,
+    "fields": {
+      "created": "2020-06-12T19:21:32.600Z",
+      "modified": "2020-06-12T19:21:32.600Z",
+      "active": true,
+      "name": "Principal",
+      "description": "",
+      "slug": "principal"
+    }
+  },
+  {
+    "model": "menu.menucategory",
+    "pk": 1,
+    "fields": {
+      "created": "2020-06-12T19:21:32.626Z",
+      "modified": "2020-06-12T19:21:32.627Z",
+      "active": true,
+      "menu": 1,
+      "category": 1,
+      "order": 1
+    }
+  },
+  {
+    "model": "menu.menucategory",
+    "pk": 2,
+    "fields": {
+      "created": "2020-06-12T19:21:32.655Z",
+      "modified": "2020-06-12T19:21:32.655Z",
+      "active": true,
+      "menu": 1,
+      "category": 2,
+      "order": 2
+    }
+  }
+]
