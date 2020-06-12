@@ -25,6 +25,7 @@ admin.site.site_header = 'Django Menu'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('', include('core.urls')),
     path('products/', include('products.urls')),
     path('menu/', include('menu.urls')),

@@ -1,3 +1,4 @@
+{% load static %}
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mb-3">
     <div class="container">
         <a class="navbar-brand" href="{% url 'index' %}">Django Menu</a>
@@ -36,10 +37,34 @@
                     </div>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+
+            {% if user.is_authenticated %}
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span>Olá {{ user }} </span>
+                            <img src="{% static 'images/avatar.png' %}" class="rounded-circle" alt="Perfil" width="30" height="30">
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Meu perfil</a>
+                            <a class="dropdown-item" href="{% url 'logout' %}">Sair</a>
+                        </div>
+                    </li>
+                </ul>
+            {% else %}
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span>Olá visitante </span>
+                            <img src="{% static 'images/avatar.png' %}" class="rounded-circle" alt="Perfil" width="30" height="30">
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="{% url 'login' %}">Acessar</a>
+                        </div>
+                    </li>
+                </ul>
+            {% endif %}
+
         </div>
     </div>
 </nav>

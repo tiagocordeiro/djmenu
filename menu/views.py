@@ -1,4 +1,5 @@
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.contrib.sites.shortcuts import get_current_site
 from django.forms import inlineformset_factory
 from django.http import JsonResponse
@@ -23,12 +24,14 @@ def menu_display(request, pk):
     return render(request, 'menu/food-menu.html', context=context)
 
 
+@login_required
 def menu_list(request):
     menus = Menu.objects.all()
 
     return render(request, 'menu/list.html', context={'menus': menus})
 
 
+@login_required
 def menu_qrcode_gen(request, pk):
     menu = Menu.objects.get(pk=pk)
     menu_url = reverse('menu-display', kwargs={'pk': pk})
@@ -44,6 +47,7 @@ def menu_qrcode_gen(request, pk):
     return render(request, 'menu/qr-gen.html', context=context)
 
 
+@login_required
 def menu_qrcode_sheet_gen(request, pk, size):
     """
     Gera uma folha de QR codes.
@@ -82,6 +86,7 @@ def menu_qrcode_sheet_gen(request, pk, size):
     return render(request, 'menu/qr-sheet-gen.html', context=context)
 
 
+@login_required
 def menu_print(request, pk):
     menu = menu_builder(pk=pk)
 
@@ -104,6 +109,7 @@ def menu_json(request, pk):
     return JsonResponse(context)
 
 
+@login_required
 def new_menu(request):
     menu_form = Menu()
     categories_menu_formset = inlineformset_factory(

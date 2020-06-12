@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User, Group
 from django.contrib.messages.storage.fallback import FallbackStorage
 from django.forms import inlineformset_factory
 from django.test import TestCase, Client, RequestFactory
@@ -5,9 +6,9 @@ from django.urls import reverse
 
 from .forms import CategoryForm, ProductForm, VariationForm, \
     ProductVariationForm
-from .views import products_list, two_flavors, categories_list, category_new, \
-    product_new, variations_list, variation_new
 from .models import Product, Category, Variation, ProductVariation
+from .views import two_flavors, category_new, \
+    product_new, variation_new
 
 
 # Create your tests here.
@@ -42,12 +43,29 @@ class ProductsViewTest(TestCase):
             variation=self.grande_variation,
             price=66)
 
-    def test_products_list_page_status_code_is_ok(self):
-        request = self.factory.get('/products/list/')
+        # Staff user
+        self.staff_user = User.objects.create_user(username='jacob',
+                                                   email='jacob@…',
+                                                   password='top_secret')
+        self.group = Group.objects.create(name='Staff Test')
+        self.group.user_set.add(self.staff_user)
 
-        response = products_list(request)
-        self.assertEqual(response.status_code, 200)
-        self.assertContains(response, 'Margherita')
+    def test_products_list_page_status_code_with_logged_user(self):
+        self.client.force_login(self.staff_user)
+        request = self.client.get(reverse('products-list'))
+
+        self.assertEqual(request.status_code, 200)
+        self.assertContains(request, 'Margherita')
+
+    def test_products_list_page_status_code_with_no_logged_user(self):
+        self.client.logout()
+        request = self.client.get(reverse('products-list'))
+
+        self.assertEqual(request.status_code, 302)
+        self.assertRedirects(request,
+                             '/accounts/login/?next=/products/list/',
+                             status_code=302,
+                             target_status_code=200)
 
     def test_product_with_two_flavors(self):
         request = self.factory.get('/products/list/two-flavors')
@@ -70,17 +88,39 @@ class ProductsViewTest(TestCase):
         expected = 'Margherita - Broto - 42'
         self.assertEqual(self.margherita_broto.__str__(), expected)
 
-    def test_categories_list_status_code_is_ok(self):
+    def test_categories_list_status_code_with_logged_user(self):
+        self.client.force_login(self.staff_user)
         request = self.client.get(reverse('categories_list'))
 
-        response = categories_list(request)
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(request.status_code, 200)
+        self.assertContains(request, "Pizzas")
 
-    def test_category_new_view_status_code_is_ok(self):
+    def test_categories_list_status_code_with_non_logged_user(self):
+        self.client.logout()
+        request = self.client.get(reverse('categories_list'))
+
+        self.assertEqual(request.status_code, 302)
+        self.assertRedirects(request,
+                             '/accounts/login/?next=/products/categories/',
+                             status_code=302,
+                             target_status_code=200)
+
+    def test_category_new_view_status_code_with_logged_user(self):
+        self.client.force_login(self.staff_user)
         request = self.client.get(reverse('category_new'))
         self.assertEqual(request.status_code, 200)
 
-    def test_category_crete_new(self):
+    def test_category_new_view_status_code_with_non_logged_user(self):
+        self.client.logout()
+        request = self.client.get(reverse('category_new'))
+
+        self.assertEqual(request.status_code, 302)
+        self.assertRedirects(request,
+                             '/accounts/login/?next=/products/category/new/',
+                             status_code=302,
+                             target_status_code=200)
+
+    def test_category_crete_new_with_logged_user(self):
         categories = Category.objects.all()
         self.assertEqual(len(categories), 2)
         self.assertEqual(Category.objects.count(), 2)
@@ -94,6 +134,7 @@ class ProductsViewTest(TestCase):
         self.assertEqual(form.is_valid(), True)
 
         request = self.factory.post(reverse('category_new'), data=new_category)
+        request.user = self.staff_user
         setattr(request, 'session', 'session')
         messages = FallbackStorage(request)
         setattr(request, '_messages', messages)
@@ -106,9 +147,20 @@ class ProductsViewTest(TestCase):
         self.assertEqual(len(categories), 3)
         self.assertEqual(Category.objects.count(), 3)
 
-    def test_product_new_view_status_code_is_ok(self):
+    def test_product_new_view_status_code_with_logged_user(self):
+        self.client.force_login(self.staff_user)
         request = self.client.get(reverse('product_new'))
         self.assertEqual(request.status_code, 200)
+
+    def test_product_new_view_status_code_with_non_logged_user(self):
+        self.client.logout()
+        request = self.client.get(reverse('product_new'))
+
+        self.assertEqual(request.status_code, 302)
+        self.assertRedirects(request,
+                             '/accounts/login/?next=/products/new/',
+                             status_code=302,
+                             target_status_code=200)
 
     def test_product_crete_new(self):
         products = Product.objects.all()
@@ -140,6 +192,7 @@ class ProductsViewTest(TestCase):
                                      prefix='product')
 
         request = self.factory.post(reverse('product_new'), data=new_product)
+        request.user = self.staff_user
         setattr(request, 'session', 'session')
         messages = FallbackStorage(request)
         setattr(request, '_messages', messages)
@@ -155,15 +208,35 @@ class ProductsViewTest(TestCase):
         self.assertEqual(len(products), 2)
         self.assertEqual(Product.objects.count(), 2)
 
-    def test_variations_list_status_code_is_ok(self):
+    def test_variations_list_status_code_with_logged_user(self):
+        self.client.force_login(self.staff_user)
+        request = self.client.get(reverse('variations_list'))
+        self.assertEqual(request.status_code, 200)
+
+    def test_variation_list_status_code_with_non_logged_user(self):
+        self.client.logout()
         request = self.client.get(reverse('variations_list'))
 
-        response = variations_list(request)
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(request.status_code, 302)
+        self.assertRedirects(request,
+                             '/accounts/login/?next=/products/variations/',
+                             status_code=302,
+                             target_status_code=200)
 
-    def test_variation_new_view_status_code_is_ok(self):
+    def test_variation_new_view_status_code_with_logged_user(self):
+        self.client.force_login(self.staff_user)
         request = self.client.get(reverse('variation_new'))
         self.assertEqual(request.status_code, 200)
+
+    def test_variation_new_view_status_code_with_non_logged_user(self):
+        self.client.logout()
+        request = self.client.get(reverse('variation_new'))
+
+        self.assertEqual(request.status_code, 302)
+        self.assertRedirects(request,
+                             '/accounts/login/?next=/products/variation/new/',
+                             status_code=302,
+                             target_status_code=200)
 
     def test_variation_crete_new(self):
         variations = Variation.objects.all()
@@ -179,6 +252,7 @@ class ProductsViewTest(TestCase):
         self.assertEqual(form.is_valid(), True)
 
         request = self.factory.post(reverse('variation_new'), data=form_data)
+        request.user = self.staff_user
         setattr(request, 'session', 'session')
         messages = FallbackStorage(request)
         setattr(request, '_messages', messages)

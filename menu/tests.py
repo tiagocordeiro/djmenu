@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User, Group
 from django.contrib.messages.storage.fallback import FallbackStorage
 from django.forms import inlineformset_factory
 from django.test import TestCase, RequestFactory, Client
@@ -7,8 +8,7 @@ from products.models import Product, Category, ProductVariation, Variation
 from .facade import menu_builder
 from .forms import MenuCategoriesForm, MenuForm
 from .models import Menu, MenuCategory
-from .views import menu_display, menu_list, menu_qrcode_gen, \
-    menu_qrcode_sheet_gen, menu_json, menu_print, new_menu
+from .views import menu_display, menu_json, new_menu
 
 
 # Create your tests here.
@@ -65,6 +65,13 @@ class MenuViewTest(TestCase):
         self.menu_cat_doces = MenuCategory.objects.create(
             menu=self.menu_almoco, category=self.doces, order=3)
 
+        # Staff user
+        self.staff_user = User.objects.create_user(username='jacob',
+                                                   email='jacob@…',
+                                                   password='top_secret')
+        self.group = Group.objects.create(name='Staff Test')
+        self.group.user_set.add(self.staff_user)
+
     def test_menu_name_return_str(self):
         menu = Menu.objects.get(name=self.menu_almoco.name)
         self.assertEqual(menu.name, self.menu_almoco.name)
@@ -89,50 +96,88 @@ class MenuViewTest(TestCase):
 
         self.assertEqual(self.menu['title'], self.menu_almoco.name)
 
-    def test_menu_list_status_code_is_ok(self):
-        request = self.factory.get('/menu/list/')
+    def test_menu_list_status_code_with_logged_user(self):
+        self.client.force_login(self.staff_user)
+        response = self.client.get(reverse('menu-list'))
 
-        response = menu_list(request)
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "Almoço")
+
+    def test_menu_list_status_code_with_non_logged_user(self):
+        self.client.logout()
+        request = self.client.get(reverse('menu-list'))
+
+        self.assertEqual(request.status_code, 302)
+        self.assertRedirects(request,
+                             '/accounts/login/?next=/menu/list/',
+                             status_code=302,
+                             target_status_code=200)
+
+    def test_qrcode_gen_status_code_with_logged_user(self):
+        self.client.force_login(self.staff_user)
+        response = self.client.get(
+            reverse('qr-gen', kwargs={'pk': self.menu_almoco.pk}))
+
         self.assertEqual(response.status_code, 200)
 
-    def test_qrcode_gen_status_code(self):
-        request = self.factory.get(f'/menu/qrcode/{self.menu_almoco.pk}')
+    def test_qrcode_gen_status_code_with_non_logged_user(self):
+        self.client.logout()
+        response = self.client.get(
+            reverse('qr-gen', kwargs={'pk': self.menu_almoco.pk}))
 
-        response = menu_qrcode_gen(request, pk=self.menu_almoco.pk)
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 302)
+        self.assertRedirects(response,
+                             '/accounts/login/?next=/menu/qrcode/1/',
+                             status_code=302,
+                             target_status_code=200)
 
-    def test_qrcode_gen_sheet_status_code(self):
-        request_large = self.factory.get(
-            f'/menu/sheet/{self.menu_almoco.pk}/l')
-        request_medio = self.factory.get(
-            f'/menu/sheet/{self.menu_almoco.pk}/m')
-        request_small = self.factory.get(
-            f'/menu/sheet/{self.menu_almoco.pk}/s')
-        request_with_number = self.factory.get(
-            f'/menu/sheet/{self.menu_almoco.pk}/45')
+    def test_qrcode_gen_sheet_status_code_with_logged_user(self):
+        self.client.force_login(self.staff_user)
 
-        response_large = menu_qrcode_sheet_gen(request_large,
-                                               pk=self.menu_almoco.pk,
-                                               size='l')
-        response_medio = menu_qrcode_sheet_gen(request_medio,
-                                               pk=self.menu_almoco.pk,
-                                               size='m')
-        response_small = menu_qrcode_sheet_gen(request_small,
-                                               pk=self.menu_almoco.pk,
-                                               size='s')
-        response_with_number = menu_qrcode_sheet_gen(request_with_number,
-                                                     pk=self.menu_almoco.pk,
-                                                     size='45')
+        response_large = self.client.get(reverse('qr-sheet-gen', kwargs={
+            'pk': self.menu_almoco.pk, 'size': 'l'}))
+        response_medio = self.client.get(reverse('qr-sheet-gen', kwargs={
+            'pk': self.menu_almoco.pk, 'size': 'm'}))
+        response_small = self.client.get(reverse('qr-sheet-gen', kwargs={
+            'pk': self.menu_almoco.pk, 'size': 's'}))
+        response_with_number = self.client.get(reverse('qr-sheet-gen', kwargs={
+            'pk': self.menu_almoco.pk, 'size': 45}))
+
         self.assertEqual(response_large.status_code, 200)
         self.assertEqual(response_medio.status_code, 200)
         self.assertEqual(response_small.status_code, 200)
         self.assertEqual(response_with_number.status_code, 200)
 
-    def test_menu_print_status_code_is_ok(self):
-        request = self.factory.get(f'/menu/print/{self.menu_almoco.pk}')
+    def test_qrcode_gen_sheet_status_code_with_non_logged_user(self):
+        self.client.logout()
+        request = self.client.get(reverse('qr-sheet-gen',
+                                          kwargs={'pk': self.menu_almoco.pk,
+                                                  'size': 'l'}))
 
-        response = menu_print(request, pk=self.menu_almoco.pk)
+        self.assertEqual(request.status_code, 302)
+        self.assertRedirects(request,
+                             '/accounts/login/?next=/menu/qrcode/sheet/1/l/',
+                             status_code=302,
+                             target_status_code=200)
+
+    def test_menu_print_status_code_with_logged_user(self):
+        self.client.force_login(self.staff_user)
+        response = self.client.get(
+            reverse('menu-print', kwargs={'pk': self.menu_almoco.pk}))
+
         self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "Almoço")
+
+    def test_menu_print_status_code_with_non_logged_user(self):
+        self.client.logout()
+        request = self.client.get(
+            reverse('menu-print', kwargs={'pk': self.menu_almoco.pk}))
+
+        self.assertEqual(request.status_code, 302)
+        self.assertRedirects(request,
+                             '/accounts/login/?next=/menu/print/1/',
+                             status_code=302,
+                             target_status_code=200)
 
     def test_json_return(self):
         request = self.factory.get(f'/menu/json/{self.menu_almoco.pk}')
@@ -140,9 +185,20 @@ class MenuViewTest(TestCase):
         response = menu_json(request, pk=self.menu_almoco.pk)
         self.assertEqual(response.status_code, 200)
 
-    def test_menu_create_view(self):
+    def test_menu_create_view_status_code_with_logged_user(self):
+        self.client.force_login(self.staff_user)
         request = self.client.get(reverse('menu-create'))
         self.assertEqual(request.status_code, 200)
+
+    def test_menu_create_view_status_code_with_non_logged_user(self):
+        self.client.logout()
+        request = self.client.get(reverse('menu-create'))
+
+        self.assertEqual(request.status_code, 302)
+        self.assertRedirects(request,
+                             '/accounts/login/?next=/menu/novo/',
+                             status_code=302,
+                             target_status_code=200)
 
     def test_menu_create_new(self):
         menus = Menu.objects.all()
@@ -172,6 +228,7 @@ class MenuViewTest(TestCase):
                                           prefix='product')
 
         request = self.factory.post(reverse('menu-create'), data=novo_cardapio)
+        request.user = self.staff_user
         setattr(request, 'session', 'session')
         messages = FallbackStorage(request)
         setattr(request, '_messages', messages)
@@ -230,6 +287,7 @@ class MenuViewTest(TestCase):
                                           prefix='product')
 
         request = self.factory.post(reverse('menu-create'), data=form_data)
+        request.user = self.staff_user
         setattr(request, 'session', 'session')
         messages = FallbackStorage(request)
         setattr(request, '_messages', messages)
