@@ -12,6 +12,8 @@ https://djmenu.herokuapp.com/
 [![Build Status](https://travis-ci.org/tiagocordeiro/djmenu.svg?branch=master)](https://travis-ci.org/tiagocordeiro/djmenu)
 [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/tiagocordeiro/djmenu/blob/master/LICENSE)
 
+[![Veja no youtube](https://img.youtube.com/vi/6Hlx33WapPo/0.jpg)](https://youtu.be/6Hlx33WapPo)
+
 ### Como rodar o projeto
 
 * Clone esse repositório.

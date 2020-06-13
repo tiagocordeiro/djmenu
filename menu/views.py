@@ -69,9 +69,9 @@ def menu_qrcode_sheet_gen(request, pk, size):
         ['https://', get_current_site(request).domain, menu_url])
     qrcode_options = QRCodeOptions(size=size)
     if size.lower() == 's':
-        loop_time = range(0, 20)
+        loop_time = range(0, 15)
     elif size.lower() == 'm':
-        loop_time = range(0, 8)
+        loop_time = range(0, 6)
     elif size.lower() == 'l':
         loop_time = range(0, 2)
     else:
