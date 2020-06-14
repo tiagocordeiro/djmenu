@@ -1,8 +1,9 @@
-{% extends "base.html" %}
+{% extends "layouts/base.html" %}
 
-{% block extra_css %}
+{% block title %} Novo Produto {% endblock %}
 
-{% endblock %}
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
 
 {% block content %}
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
@@ -21,106 +22,145 @@
             });
         });
     </script>
-    <div class="container">
-        <div class="py-5 text-center">
-            <h2 class="text-center food-category-title">Novo Produto</h2>
-        </div>
 
-        <div class="row">
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="col-12">
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            {{ message|safe }}
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+    <div class="pcoded-content">
+        <div class="pcoded-inner-content">
+            <!-- [ breadcrumb ] start -->
+            <div class="page-header">
+                <div class="page-block">
+                    <div class="row align-items-center">
+                        <div class="col-md-12">
+                            <div class="page-header-title">
+                                <h5 class="m-b-10">Cadastro de Produto</h5>
+                            </div>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="{% url 'dashboard' %}"><i class="feather icon-home"></i></a></li>
+                                <li class="breadcrumb-item"><a href="{% url 'products-list' %}">Produtos</a></li>
+                                <li class="breadcrumb-item"><a href="javascript:">Novo</a></li>
+                            </ul>
                         </div>
                     </div>
-                {% endfor %}
-            {% endif %}
-
-            {% if form.errors %}
-                <div class="col-12">
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        {% for erro in form.errors %}
-                            {{ erro }}
-                        {% endfor %}
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
                 </div>
-            {% endif %}
+            </div>
+            <!-- [ breadcrumb ] end -->
+            <div class="main-body">
+                <div class="page-wrapper">
 
-            {% if formset.errors %}
-                <div class="col-12">
-                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                        {% for erro in formset.errors %}
-                            {{ erro }}
-                        {% endfor %}
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+                    <div class="row">
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="col-12">
+                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        {{ message|safe }}
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+
+                        {% if form.errors %}
+                            <div class="col-12">
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    {% for erro in form.errors %}
+                                        {{ erro }}
+                                    {% endfor %}
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            </div>
+                        {% endif %}
+
+                        {% if formset.errors %}
+                            <div class="col-12">
+                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    {% for erro in formset.errors %}
+                                        {{ erro }}
+                                    {% endfor %}
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            </div>
+                        {% endif %}
+
                     </div>
-                </div>
-            {% endif %}
+                    <!-- [ Main Content ] start -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Novo Produto</h5>
+                                </div>
+                                <div class="card-block">
+                                    <div class="row">
+                                        <div class="col-md-12">
 
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
+                                            <form action="." method="post">
+                                                {% csrf_token %}
 
-            <form action="." method="post">
-                {% csrf_token %}
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-7">
+                                                        <label for="id_name">Nome</label>
+                                                        {{ form.name }}
+                                                    </div>
+                                                    <div class="form-group col-md-3">
+                                                        <label for="id_category">Categoria</label>
+                                                        {{ form.category }}
+                                                    </div>
+                                                    <div class="form-group col-md-2">
+                                                        <label for="id_price">Preço</label>
+                                                        {{ form.price }}
+                                                    </div>
+                                                </div>
 
-                <div class="form-row">
-                    <div class="form-group col-md-7">
-                        <label for="id_name">Nome</label>
-                        {{ form.name }}
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="id_category">Categoria</label>
-                        {{ form.category }}
-                    </div>
-                    <div class="form-group col-md-2">
-                        <label for="id_price">Preço</label>
-                        {{ form.price }}
-                    </div>
-                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-12">
+                                                        <label for="id_description">Descrição</label>
+                                                        {{ form.description }}
+                                                    </div>
+                                                </div>
 
-                <div class="form-row">
-                    <div class="form-group col-md-12">
-                        <label for="id_description">Descrição</label>
-                        {{ form.description }}
-                    </div>
-                </div>
+                                                {{ formset.management_form }}
+                                                <div class="content" id="variacoes">
+                                                    {% for variation in formset %}
+                                                        <div id="item-{{ forloop.counter0 }}" class="row form-row spacer">
+                                                            <div class="input-group">
+                                                                <div class="col-md-9">
+                                                                    <label>Variação</label><br> {{ variation.variation }}
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <label>Preço</label><br> {{ variation.price }}</div>
+                                                                <div class="col-md-1" style="margin-top: 38px;">{{ variation.DELETE }}
+                                                                    <label><i class="fas fa-trash"></i></label></div>
+                                                            </div>
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
 
-                {{ formset.management_form }}
-                <div class="content" id="variacoes">
-                    {% for variation in formset %}
-                        <div id="item-{{ forloop.counter0 }}" class="row form-row spacer">
-                            <div class="input-group">
-                                <div class="col-md-9"><label>Variação</label><br> {{ variation.variation }}</div>
-                                <div class="col-md-2"><label>Preço</label><br> {{ variation.price }}</div>
-                                <div class="col-md-1" style="margin-top: 38px;">{{ variation.DELETE }}
-                                    <label><i class="fas fa-trash"></i></label></div>
+                                                <div class="row my-5">
+                                                    <div class="col-md-12" style="display: flex; justify-content: space-between;">
+                                                        <button type="button" id="add-item" class="btn btn-primary">
+                                                            <i class="fa fa-plus"></i> Add variação
+                                                        </button>
+                                                        <input type="submit" value="Salvar" class="btn btn-success">
+                                                    </div>
+
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    {% endfor %}
-                </div>
-
-                <div class="row my-5">
-                    <div class="col-md-12" style="display: flex; justify-content: space-between;">
-                        <a class="btn btn-info" id="add-item"><i class="fa fa-plus"></i> Add Variação</a>
-                        <input type="submit" value="Salvar" class="btn btn-success">
                     </div>
-
+                    <!-- [ Main Content ] end -->
                 </div>
-            </form>
+            </div>
         </div>
     </div>
-
     <script type="text/html" id="variacao-produto">
         <div id="item-__prefix__" style="margin-top: 10px" class="row form-row spacer">
             <div class="input-group">
@@ -133,3 +173,6 @@
     </script>
 
 {% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

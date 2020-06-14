@@ -1,0 +1,54 @@
+<nav class="pcoded-navbar">
+    <div class="navbar-wrapper">
+        <div class="navbar-brand header-logo">
+            <a href="{% url 'dashboard' %}" class="b-brand">
+                <div class="b-bg">
+                    <i class="feather icon-heart"></i>
+                </div>
+                <span class="b-title">Django Menu</span>
+            </a>
+            <a class="mobile-menu" id="mobile-collapse" href="javascript:"><span></span></a>
+        </div>
+        <div class="navbar-content scroll-div">
+            <ul class="nav pcoded-inner-navbar">
+
+                <li data-username="dashboard" class="nav-item active">
+                    <a href="{% url 'dashboard' %}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
+                </li>
+
+                <li data-username="produtos categorias variações" class="nav-item pcoded-hasmenu">
+                    <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Produtos</span></a>
+                    <ul class="pcoded-submenu">
+                        <li class=""><a href="{% url 'products-list' %}" class="">Todos os produtos</a></li>
+                        <li class=""><a href="{% url 'product_new' %}" class="">Adicionar produto</a></li>
+                        <hr>
+                        <li class=""><a href="{% url 'categories_list' %}" class="">Categorias</a></li>
+                        <li class=""><a href="{% url 'category_new' %}" class="">Nova categoria</a></li>
+                        <hr>
+                        <li class=""><a href="{% url 'variations_list' %}" class="">Variações</a></li>
+                        <li class=""><a href="{% url 'variation_new' %}" class="">Nova variação</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item pcoded-menu-caption">
+                    <label>Cardápios</label>
+                </li>
+                <li data-username="form elements advance componant validation masking wizard picker select" class="nav-item">
+                    <a href="{% url 'menu-list' %}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Todos os cardápios</span></a>
+                </li>
+                <li data-username="Table bootstrap datatable footable" class="nav-item">
+                    <a href="{% url 'menu-create' %}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-plus"></i></span><span class="pcoded-mtext">Adicionar cardápio</span></a>
+                </li>
+
+                <li data-username="Disabled Menu" class="nav-item">
+                    <a href={% url 'logout' %} class="nav-link">
+                            <span class="pcoded-micon">
+                                <i class="feather icon-power"></i>
+                            </span>
+                        <span class="pcoded-mtext">Logout - [ {{ request.user.username }} ]</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
