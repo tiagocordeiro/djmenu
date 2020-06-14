@@ -1,78 +1,116 @@
-{% extends "base.html" %}
+{% extends "layouts/base.html" %}
 
-{% block extra_css %}
-    <style>
-        .food-menu-item {
-            border-bottom-style: dotted;
-            border-color: gray;
-        }
+{% block title %} Page Blank {% endblock %}
 
-        .food-category-title {
-            border-bottom-style: dotted;
-            border-color: gray;
-        }
-    </style>
-{% endblock extra_css %}
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
 
 {% block content %}
-    <div class="container">
-        <div class="d-flex justify-content-center mt-5">
-            <h2 class="text-center food-category-title">Nossos Cardápios</h2>
-        </div>
 
-        <div class="row">
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="col-12">
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            {{ message|safe }}
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+    <div class="pcoded-content">
+        <div class="pcoded-inner-content">
+            <!-- [ breadcrumb ] start -->
+            <div class="page-header">
+                <div class="page-block">
+                    <div class="row align-items-center">
+                        <div class="col-md-12">
+                            <div class="page-header-title">
+                                <h5 class="m-b-10">Listagem de Cardápios</h5>
+                            </div>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
+                                <li class="breadcrumb-item"><a href="javascript:">Cardápios</a></li>
+                            </ul>
                         </div>
                     </div>
-                {% endfor %}
-            {% endif %}
-        </div>
-
-
-        {% for menu in menus %}
-
-            <div class="row justify-content-between align-items-center food-menu-item">
-                <div class='col'>
-                    <h2 class='mt-2'>{{ menu.name }}</h2>
-                    <p>{{ menu.description }}</p>
-                </div>
-                <div class="d-flex">
-                    <div class='col'>
-                        <a class="btn btn-primary my-4" href="{% url 'menu-display' slug=menu.slug %}" target="_blank" role="button"><i class="far fa-eye"></i></a>
-                    </div>
-                    <div class="col">
-                        <h4>
-                        <span class="badge badge-primary  my-4 py-2"><i class="fas fa-print"></i>
-                            <a href="{% url 'qr-sheet-gen' pk=menu.pk size='l' %}" target="_blank" class="badge badge-secondary">
-                                <i class="fas fa-th-large"></i> 2
-                            </a>
-                            <a href="{% url 'qr-sheet-gen' pk=menu.pk size='m' %}" target="_blank" class="badge badge-secondary">
-                                <i class="fas fa-grip-vertical"></i> 6
-                            </a>
-                            <a href="{% url 'qr-sheet-gen' pk=menu.pk size='s' %}" target="_blank" class="badge badge-secondary">
-                                <i class="fas fa-th"></i> 15
-                            </a>
-                            <a href="{% url 'menu-print' pk=menu.pk %}" target="_blank" class="badge badge-secondary">
-                                <i class="far fa-file-alt"></i> Folhas
-                            </a>
-                        </span>
-                        </h4>
-                    </div>
-
                 </div>
             </div>
-        {% endfor %}
+            <!-- [ breadcrumb ] end -->
+            <div class="main-body">
+                <div class="page-wrapper">
+                    <div class="row">
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="col-12">
+                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        {{ message|safe }}
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    <!-- [ Main Content ] start -->
+                    <div class="row">
 
-        <div class="py-4 text-center">
-            <p>{{ menus.count }} Cardápios</p>
+                        <!--[ Recent Users ] start-->
+                        <div class="col-xl-12">
+                            <div class="card Recent-Users">
+                                <div class="card-header">
+                                    <h5>Recent Users</h5>
+                                </div>
+                                <div class="card-block px-0 py-3">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <tbody>
+                                            {% for menu in menus %}
+                                                <tr class="unread">
+                                                    <td>
+                                                        <h6 class="mb-1">
+                                                            <i class="fas fa-circle text-c-green f-10 m-r-15"></i> {{ menu.name }}
+                                                        </h6>
+                                                        <p class="m-0">{{ menu.description }}</p>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <a target="_blank" href="{% url 'menu-display' slug=menu.slug %}" class="label theme-bg2 text-white f-12"><i class="fas fa-external-link-alt"></i>
+                                                            Abrir</a>
+                                                        <a href="{% url 'qr-gen' pk=menu.pk %}" class="label theme-bg text-white f-12"><i class="fas fa-qrcode"></i>
+                                                            QR Code</a>
+                                                        <a class="label label-info text-white f-12 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i class="fas fa-print"></i> Impressão
+                                                        </a>
+                                                        <div class="dropdown-menu">
+                                                            <a href="{% url 'qr-sheet-gen' pk=menu.pk size='l' %}" target="_blank" class="dropdown-item">
+                                                                <i class="fas fa-qrcode"></i> 2 por folha
+                                                            </a>
+                                                            <a href="{% url 'qr-sheet-gen' pk=menu.pk size='m' %}" target="_blank" class="dropdown-item">
+                                                                <i class="fas fa-qrcode"></i> 6 por folha
+                                                            </a>
+                                                            <a href="{% url 'qr-sheet-gen' pk=menu.pk size='s' %}" target="_blank" class="dropdown-item">
+                                                                <i class="fas fa-qrcode"></i> 15 por folha
+                                                            </a>
+                                                            <a href="{% url 'menu-print' pk=menu.pk %}" target="_blank" class="dropdown-item">
+                                                                <i class="far fa-file-alt"></i> Folhas
+                                                            </a>
+                                                        </div>
+                                                        <a href="#" class="label label-primary text-white"><i class="fas fa-edit"></i></a>
+                                                        <a href="#" class="label label-danger text-white"><i class="fas fa-trash"></i></a>
+
+                                                    </td>
+                                                </tr>
+                                            {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="text-center">
+                                    <p>{{ menus.count }} Cardápios</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--[ Recent Users ] end-->
+
+                    </div>
+                    <!-- [ Main Content ] end -->
+                </div>
+            </div>
         </div>
-
     </div>
+
 {% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
