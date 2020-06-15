@@ -1,65 +1,65 @@
-<!doctype html>
-<html lang="pt-br">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    Django Menu - {% block title %}{% endblock %}
+  </title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{% static 'assets/vendors/mdi/css/materialdesignicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/vendors/css/vendor.bundle.base.css' %}">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <!-- endinject -->
+  <!-- Layout styles -->
+  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+  <!-- End layout styles -->
+  <link rel="shortcut icon" href="{% static 'assets/images/favicon.png' %}"/>
 
-      <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-            integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-      <!-- Custom styles -->
-      <style>
-          html {
-              position: relative;
-              min-height: 100%;
-          }
+  <!-- Specific CSS goes HERE -->
+  {% block stylesheets %}{% endblock stylesheets %}
+</head>
+<body>
+<div class="container-scroller">
+  <!-- partial: navbar -->
+  {% include 'includes/navbar.html' %}
 
-          body {
-              margin-bottom: 60px; /* Margin bottom by footer height */
-          }
+  <div class="container-fluid page-body-wrapper">
+    <!-- partial: sidebar -->
+    {% include 'includes/sidebar.html' %}
 
-          .footer {
-              position: absolute;
-              bottom: 0;
-              width: 100%;
-              height: 60px; /* Set the fixed height of the footer here */
-              line-height: 60px; /* Vertically center the text there */
-              background-color: #f5f5f5;
-          }
-      </style>
-    {% block extra_css %}{% endblock extra_css %}
-
-    <title>Django Menu</title>
-  </head>
-  <body>
-
-      {% include 'main-nav.html' %}
-
-  <main role="main" class="container">
-      {% block content %}{% endblock content %}
-  </main>
-
-  <footer class="footer">
-      <div class="container">
-          <span class="text-muted">MIT License</span>
+    <div class="main-panel">
+      <!-- content-wrapper -->
+      <div class="content-wrapper">
+        {% block content %}{% endblock content %}
       </div>
-  </footer>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    {% block extra_js %}{% endblock extra_js %}
-  </body>
-    <script>
-      // Altera item ativo no menu de navegação
-      $(document).ready(function() {
-        $('li.active').removeClass('active');
-        $('a[href="' + location.pathname + '"]').closest('li').addClass('active');
-      });
-    </script>
+      <!-- content-wrapper ends -->
+      <!-- partial: footer.html -->
+      {% include 'includes/footer.html' %}
+    </div>
+    <!-- main-panel ends -->
+  </div>
+  <!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
+<!-- plugins:js -->
+<script src="{% static 'assets/vendors/js/vendor.bundle.base.js' %}"></script>
+<!-- endinject -->
+<!-- Plugin js for this page -->
+<!-- End plugin js for this page -->
+<!-- inject:js -->
+<script src="{% static 'assets/js/off-canvas.js' %}"></script>
+<script src="{% static 'assets/js/hoverable-collapse.js' %}"></script>
+<script src="{% static 'assets/js/misc.js' %}"></script>
+<!-- endinject -->
+<!-- Custom js for this page -->
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
+<!-- End custom js for this page -->
+</body>
 </html>

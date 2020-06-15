@@ -1,115 +1,90 @@
-{% extends "layouts/base.html" %}
+{% extends "base.html" %}
 
-{% block title %} Page Blank {% endblock %}
+{% block title %} Listagem de Cardápios {% endblock %}
 
 <!-- Specific CSS goes HERE -->
 {% block stylesheets %}{% endblock stylesheets %}
 
 {% block content %}
-
-    <div class="pcoded-content">
-        <div class="pcoded-inner-content">
-            <!-- [ breadcrumb ] start -->
-            <div class="page-header">
-                <div class="page-block">
-                    <div class="row align-items-center">
-                        <div class="col-md-12">
-                            <div class="page-header-title">
-                                <h5 class="m-b-10">Listagem de Cardápios</h5>
-                            </div>
-                            <ul class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
-                                <li class="breadcrumb-item"><a href="javascript:">Cardápios</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- [ breadcrumb ] end -->
-            <div class="main-body">
-                <div class="page-wrapper">
-                    <div class="row">
-                        {% if messages %}
-                            {% for message in messages %}
-                                <div class="col-12">
-                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                        {{ message|safe }}
-                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            {% endfor %}
-                        {% endif %}
-                    </div>
-                    <!-- [ Main Content ] start -->
-                    <div class="row">
-
-                        <!--[ Recent Users ] start-->
-                        <div class="col-xl-12">
-                            <div class="card Recent-Users">
-                                <div class="card-header">
-                                    <h5>Recent Users</h5>
-                                </div>
-                                <div class="card-block px-0 py-3">
-                                    <div class="table-responsive">
-                                        <table class="table table-hover">
-                                            <tbody>
-                                            {% for menu in menus %}
-                                                <tr class="unread">
-                                                    <td>
-                                                        <h6 class="mb-1">
-                                                            <i class="fas fa-circle text-c-green f-10 m-r-15"></i> {{ menu.name }}
-                                                        </h6>
-                                                        <p class="m-0">{{ menu.description }}</p>
-                                                    </td>
-                                                    <td class="text-right">
-                                                        <a target="_blank" href="{% url 'menu-display' slug=menu.slug %}" class="label theme-bg2 text-white f-12"><i class="fas fa-external-link-alt"></i>
-                                                            Abrir</a>
-                                                        <a href="{% url 'qr-gen' pk=menu.pk %}" class="label theme-bg text-white f-12"><i class="fas fa-qrcode"></i>
-                                                            QR Code</a>
-                                                        <a class="label label-info text-white f-12 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            <i class="fas fa-print"></i> Impressão
-                                                        </a>
-                                                        <div class="dropdown-menu">
-                                                            <a href="{% url 'qr-sheet-gen' pk=menu.pk size='l' %}" target="_blank" class="dropdown-item">
-                                                                <i class="fas fa-qrcode"></i> 2 por folha
-                                                            </a>
-                                                            <a href="{% url 'qr-sheet-gen' pk=menu.pk size='m' %}" target="_blank" class="dropdown-item">
-                                                                <i class="fas fa-qrcode"></i> 6 por folha
-                                                            </a>
-                                                            <a href="{% url 'qr-sheet-gen' pk=menu.pk size='s' %}" target="_blank" class="dropdown-item">
-                                                                <i class="fas fa-qrcode"></i> 15 por folha
-                                                            </a>
-                                                            <a href="{% url 'menu-print' pk=menu.pk %}" target="_blank" class="dropdown-item">
-                                                                <i class="far fa-file-alt"></i> Folhas
-                                                            </a>
-                                                        </div>
-                                                        <a href="#" class="label label-primary text-white"><i class="fas fa-edit"></i></a>
-                                                        <a href="#" class="label label-danger text-white"><i class="fas fa-trash"></i></a>
-
-                                                    </td>
-                                                </tr>
-                                            {% endfor %}
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-
-                                <div class="text-center">
-                                    <p>{{ menus.count }} Cardápios</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--[ Recent Users ] end-->
-
-                    </div>
-                    <!-- [ Main Content ] end -->
-                </div>
-            </div>
+  <div class="page-header">
+    <h3 class="page-title">Cardápios</h3>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'dashboard' %}"><i class="mdi mdi-home menu-icon"></i></a></li>
+        <li class="breadcrumb-item active" aria-current="page">cardápios</li>
+      </ol>
+    </nav>
+  </div>
+  <div class="row">
+    {% if messages %}
+      {% for message in messages %}
+        <div class="col-12">
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message|safe }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
         </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+  <div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Cardápios</h4>
+          <p class="card-description"> Listando todos os <code>cardápios</code>
+          </p>
+          <table class="table table-responsive-sm">
+            <thead>
+            <tr>
+              <th>Cardápio</th>
+              <th class="text-center">Ações</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for menu in menus %}
+              <tr class="unread">
+                <td>
+                  <h6>{{ menu.name }}</h6>
+                  <p class="m-0">{{ menu.description }}</p>
+                </td>
+                <td class="text-right">
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-primary">
+                      <a class="text-light" target="_blank" href="{% url 'menu-display' slug=menu.slug %}"><i class="mdi mdi-link-variant"></i></a>
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                      <a class="text-light" href="{% url 'qr-gen' pk=menu.pk %}" class="label"><i class="mdi mdi-qrcode"></i></a>
+                    </button>
+                  </div>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-info btn-icon-text dropdown-toggle" data-toggle="dropdown">
+                      Impressão <i class="mdi mdi-printer btn-icon-append"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                      <a href="{% url 'qr-sheet-gen' pk=menu.pk size='l' %}" target="_blank" class="dropdown-item">2
+                        por folha</a>
+                      <a href="{% url 'qr-sheet-gen' pk=menu.pk size='m' %}" target="_blank" class="dropdown-item">6
+                        por folha</a>
+                      <a href="{% url 'qr-sheet-gen' pk=menu.pk size='s' %}" target="_blank" class="dropdown-item">15
+                        por folha</a>
+                      <a href="{% url 'menu-print' pk=menu.pk %}" target="_blank" class="dropdown-item">Folhas</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+          <div class="text-center">
+            <p>{{ menus.count }} Cardápios</p>
+          </div>
+        </div>
+      </div>
     </div>
-
+  </div>
 {% endblock content %}
 
 <!-- Specific Page JS goes HERE  -->

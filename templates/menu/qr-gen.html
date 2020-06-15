@@ -1,4 +1,4 @@
-{% extends "layouts/base.html" %}
+{% extends "base.html" %}
 {% load qr_code %}
 
 {% block title %} QR Code {% endblock %}
@@ -7,53 +7,34 @@
 {% block stylesheets %}{% endblock stylesheets %}
 
 {% block content %}
+  <div class="page-header">
+    <h3 class="page-title">QRCode Cardápio: {{ menu }}</h3>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'menu-list' %}">Cardápios</a></li>
+        <li class="breadcrumb-item active" aria-current="page">qr-code</li>
+      </ol>
+    </nav>
+  </div>
 
-    <div class="pcoded-content">
-        <div class="pcoded-inner-content">
-            <!-- [ breadcrumb ] start -->
-            <div class="page-header">
-                <div class="page-block">
-                    <div class="row align-items-center">
-                        <div class="col-md-12">
-                            <div class="page-header-title">
-                                <h5 class="m-b-10">QR Code</h5>
-                            </div>
-                            <ul class="breadcrumb">
-                                <li class="breadcrumb-item">
-                                    <a href="{% url 'dashboard' %}"><i class="feather icon-home"></i></a></li>
-                                <li class="breadcrumb-item"><a href="{% url 'menu-list' %}">Cardápios</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- [ breadcrumb ] end -->
-            <div class="main-body">
-                <div class="page-wrapper">
-                    <!-- [ Main Content ] start -->
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5>{{ menu }}</h5>
-                                </div>
-                                <div class="card-block text-center">
-                                    <p>{% qr_from_text complete_url options=qrcode_options %}</p>
-                                    {% if menu.description %}
-                                        <p class="card-text">{{ menu.description }}</p>
-                                    {% endif %}
-                                    <a target="_blank" href="{% url 'menu-display' slug=menu.slug %}" class="btn btn-primary mb-4"><i class="fas fa-external-link-alt"></i>
-                                        Ver cardápio</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- [ Main Content ] end -->
-                </div>
-            </div>
+  <div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+
+          </p>
+          <div class="text-center">
+            <p>{% qr_from_text complete_url options=qrcode_options %}</p>
+            {% if menu.description %}
+              <p class="card-text">{{ menu.description }}</p>
+            {% endif %}
+            <a target="_blank" href="{% url 'menu-display' slug=menu.slug %}" class="btn btn-primary mb-4"><i class="fas fa-external-link-alt"></i>
+              Ver cardápio</a>
+          </div>
         </div>
+      </div>
     </div>
-
+  </div>
 {% endblock content %}
 
 <!-- Specific Page JS goes HERE  -->
