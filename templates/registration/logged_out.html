@@ -1,41 +1,65 @@
-{% extends "layouts/base-fullscreen.html" %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Django Menu - Logged out</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{% static 'assets/vendors/mdi/css/materialdesignicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/vendors/css/vendor.bundle.base.css' %}">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <!-- endinject -->
+  <!-- Layout styles -->
+  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+  <!-- End layout styles -->
+  <link rel="shortcut icon" href="{% static 'assets/images/favicon.png' %}"/>
+</head>
+<body>
+<div class="container-scroller">
+  <div class="container-fluid page-body-wrapper full-page-wrapper">
+    <div class="content-wrapper d-flex align-items-center auth">
 
-{% block title %} Login {% endblock %}
-
-{% block content %}
-
-    <div class="auth-wrapper">
-        <div class="auth-content">
-            <div class="auth-bg">
-                <span class="r"></span>
-                <span class="r s"></span>
-                <span class="r s"></span>
-                <span class="r"></span>
+      <div class="row flex-grow">
+        <div class="col-lg-4 mx-auto">
+          <div class="auth-form-light text-center p-5">
+            <div class="brand-logo">
+              <img src="{% static 'assets/images/logo-djmenu.svg' %}">
             </div>
-            <div class="card">
-                <div class="card-body text-center">
-                    <div class="mb-4">
-                        <i class="feather icon-unlock auth-icon"></i>
-                    </div>
-                    <h3 class="mb-4">Login</h3>
+            <h4>Olá!</h4>
+            <h6 class="font-weight-light">Você desconectou da sua conta.</h6>
+            <br/>
+            <br/>
 
-                    <span class="mb-0 text-muted">
-                        Você desconectou da sua conta.
-                    </span>
-
-                    <br/>
-                    <br/>
-
-                    <a href="{% url 'login' %}" class="btn btn-primary shadow-2 mb-4">
-                       Acessar
-                    </a>
-                    <br/>
-                    <p class="mb-2 text-muted">
-                        &copy; <a href="{% url 'index' %}">DjangoMenu</a>.
-                    </p>
-                </div>
-            </div>
+            <a href="{% url 'login' %}" class="btn btn-primary shadow-2 mb-4">
+              Acessar
+            </a>
+            <br/>
+            <p class="mb-2 text-muted">
+              &copy; <a href="{% url 'index' %}">DjangoMenu</a>.
+            </p>
+          </div>
         </div>
+      </div>
     </div>
-
-{% endblock content %}
+    <!-- content-wrapper ends -->
+  </div>
+  <!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
+<!-- plugins:js -->
+<script src="{% static 'assets/vendors/js/vendor.bundle.base.js' %}"></script>
+<!-- endinject -->
+<!-- Plugin js for this page -->
+<!-- End plugin js for this page -->
+<!-- inject:js -->
+<script src="{% static 'assets/js/off-canvas.js' %}"></script>
+<script src="{% static 'assets/js/hoverable-collapse.js' %}"></script>
+<script src="{% static 'assets/js/misc.js' %}"></script>
+<!-- endinject -->
+</body>
+</html>

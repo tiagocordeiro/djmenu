@@ -5,7 +5,8 @@ from core.facade import get_dashboard_data_summary
 
 
 def index(request):
-    return render(request, 'core/index.html')
+    resumo = get_dashboard_data_summary()
+    return render(request, 'core/index.html', {'resumo': resumo})
 
 
 @login_required

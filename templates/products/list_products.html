@@ -1,128 +1,96 @@
-{% extends "layouts/base.html" %}
+{% extends "base.html" %}
 
 {% block title %} Produtos {% endblock %}
 
 <!-- Specific CSS goes HERE -->
 {% block stylesheets %}
-    <style>
-        .food-menu-item {
-            border-bottom-style: dotted;
-            border-color: gray;
-        }
+  <style>
+    .food-menu-item {
+      border-bottom-style: dotted;
+      border-color: gray;
+    }
 
-        .food-category-title {
-            border-bottom-style: dotted;
-            border-color: gray;
-        }
-    </style>
+    .food-category-title {
+      border-bottom-style: dotted;
+      border-color: gray;
+    }
+  </style>
 {% endblock stylesheets %}
 
 {% block content %}
-
-    <div class="pcoded-content">
-        <div class="pcoded-inner-content">
-            <!-- [ breadcrumb ] start -->
-            <div class="page-header">
-                <div class="page-block">
-                    <div class="row align-items-center">
-                        <div class="col-md-12">
-                            <div class="page-header-title">
-                                <h5 class="m-b-10">Listagem de Produtos</h5>
-                            </div>
-                            <ul class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="{% url 'dashboard' %}"><i class="feather icon-home"></i></a></li>
-                                <li class="breadcrumb-item"><a href="javascript:">Produtos</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- [ breadcrumb ] end -->
-            <div class="main-body">
-                <div class="page-wrapper">
-
-                    {% if messages %}
-                        <div class="row">
-                            {% for message in messages %}
-                                <div class="col-12">
-                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                        {{ message|safe }}
-                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            {% endfor %}
-                        </div>
-                    {% endif %}
-
-                    <!-- [ Main Content ] start -->
-                    <div class="row">
-                        <!-- [ Produtos Simples - table ] start -->
-                        <div class="col-xl-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5>Produtos Simples</h5>
-                                    <span class="d-block m-t-5">produtos sem variações</span>
-                                </div>
-                                <div class="card-block table-border-style">
-                                    {% for product in produtos_simples %}
-                                        <div class="row justify-content-between align-items-center food-menu-item">
-                                            <div class='col-lg-9'>
-                                                <h2 class='mt-2'>{{ product.name }}</h2>
-                                            </div>
-                                            <div class="col-lg-3 flex-row d-flex">
-                                                <div class="col"></div>
-                                                <div class='col'>
-                                                    <a class="btn btn-primary my-4" href="#" role="button">R$ {{ product.price }}</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    {% endfor %}
-                                </div>
-                            </div>
-                        </div>
-                        <!-- [ Produtos Simples - table ] end -->
-
-
-                        <!-- [ Produtos Variáveis - table ] start -->
-                        <div class="col-xl-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5>Produtos Variáveis</h5>
-                                    <span class="d-block m-t-5">produtos com <code>variações</code> ou preço especial</span>
-                                </div>
-                                <div class="card-block table-border-style">
-                                    {% regroup variacoes by product as variacoes_list %}
-                                    {% for variacao in variacoes_list %}
-
-                                        <div class="row justify-content-between align-items-center food-menu-item">
-                                            <div class='col-lg-9'>
-                                                <h2 class='mt-2'>{{ variacao.grouper }}</h2>
-                                                <p>{{ variacao.grouper.description }}</p>
-                                            </div>
-                                            <div class="col-lg-3 flex-row d-flex">
-                                                {% for variacao in variacao.list %}
-                                                    <div class='col'>
-                                                        <a class="btn btn-primary my-4" href="#" role="button">{{ variacao.variation }}:<br>
-                                                            R$ {{ variacao.price }}</a>
-                                                    </div>
-                                                {% endfor %}
-                                            </div>
-                                        </div>
-                                    {% endfor %}
-                                </div>
-                            </div>
-                        </div>
-                        <!-- [ Produtos Variáveis - table ] end -->
-
-
-                    </div>
-                    <!-- [ Main Content ] end -->
-                </div>
-            </div>
+  <div class="page-header">
+    <h3 class="page-title">Produtos</h3>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'dashboard' %}"><i class="mdi mdi-home menu-icon"></i></a></li>
+        <li class="breadcrumb-item active" aria-current="page">produtos</li>
+      </ol>
+    </nav>
+  </div>
+  <div class="row">
+    {% if messages %}
+      {% for message in messages %}
+        <div class="col-12">
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message|safe }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
         </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+  <div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <p class="card-description"> Listando todos os produtos <code>simples</code>
+          </p>
+          {% for product in produtos_simples %}
+            <div class="row justify-content-between align-items-center food-menu-item">
+              <div class='col-lg-7'>
+                <h2 class='mt-2'>{{ product.name }}</h2>
+              </div>
+              <div class="col-lg-5 flex-row d-flex">
+                <div class="col"></div>
+                <div class='col'>
+                  <a class="btn btn-primary my-4" href="#" role="button">R$ {{ product.price }}</a>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <p class="card-description"> Listando todos os produtos <code>variáveis</code></p>
+          {% regroup variacoes by product as variacoes_list %}
+          {% for variacao in variacoes_list %}
+            <div class="row justify-content-between align-items-center food-menu-item">
+              <div class='col-lg-7'>
+                <h2 class='mt-2'>{{ variacao.grouper }}</h2>
+                <p>{{ variacao.grouper.description }}</p>
+              </div>
+              <div class="col-lg-5 flex-row d-flex">
+                {% for variacao in variacao.list %}
+                  <div class='col'>
+                    <a class="btn btn-primary my-4" href="#" role="button">{{ variacao.variation }}:<br>
+                      R$ {{ variacao.price }}</a>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
 
 {% endblock content %}
 
