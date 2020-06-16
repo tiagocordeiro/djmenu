@@ -9,17 +9,17 @@
     Django Menu - {% block title %}{% endblock %}
   </title>
   <!-- plugins:css -->
-  <link rel="stylesheet" href="https://res.cloudinary.com/hzwcmjkgh/raw/upload/v1592241275/static/assets/vendors/mdi/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="https://res.cloudinary.com/hzwcmjkgh/raw/upload/v1592241278/static/assets/vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="{% static 'assets/vendors/mdi/css/materialdesignicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/vendors/css/vendor.bundle.base.css' %}">
   <!-- endinject -->
   <!-- Plugin css for this page -->
   <!-- End plugin css for this page -->
   <!-- inject:css -->
   <!-- endinject -->
   <!-- Layout styles -->
-  <link rel="stylesheet" href="https://res.cloudinary.com/hzwcmjkgh/raw/upload/v1592241301/static/assets/css/style.css">
+  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
   <!-- End layout styles -->
-  <link rel="shortcut icon" href="https://res.cloudinary.com/hzwcmjkgh/image/upload/v1592241279/static/assets/images/favicon.png"/>
+  <link rel="shortcut icon" href="{% static 'assets/images/favicon.png' %}"/>
 
   <!-- Specific CSS goes HERE -->
   {% block stylesheets %}{% endblock stylesheets %}
@@ -48,14 +48,14 @@
 </div>
 <!-- container-scroller -->
 <!-- plugins:js -->
-<script src="https://res.cloudinary.com/hzwcmjkgh/raw/upload/v1592241278/static/assets/vendors/js/vendor.bundle.base.js"></script>
+<script src="{% static 'assets/vendors/js/vendor.bundle.base.js' %}"></script>
 <!-- endinject -->
 <!-- Plugin js for this page -->
 <!-- End plugin js for this page -->
 <!-- inject:js -->
-<script src="https://res.cloudinary.com/hzwcmjkgh/raw/upload/v1592241300/static/assets/js/off-canvas.js"></script>
-<script src="https://res.cloudinary.com/hzwcmjkgh/raw/upload/v1592241301/static/assets/js/hoverable-collapse.js"></script>
-<script src="https://res.cloudinary.com/hzwcmjkgh/raw/upload/v1592241300/static/assets/js/misc.js"></script>
+<script src="{% static 'assets/js/off-canvas.js' %}"></script>
+<script src="{% static 'assets/js/hoverable-collapse.js' %}"></script>
+<script src="{% static 'assets/js/misc.js' %}"></script>
 <!-- endinject -->
 <!-- Custom js for this page -->
 <!-- Specific Page JS goes HERE  -->
