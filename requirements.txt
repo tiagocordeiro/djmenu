@@ -27,10 +27,5 @@ certifi==2020.4.5.2
 sentry-sdk==0.14.4
 urllib3==1.25.9
 
-# Cloudinary
-chardet==3.0.4
-cloudinary==1.21.1
-dj3-cloudinary-storage==0.0.3
-idna==2.9
-mock==4.0.2
-requests==2.23.0
+# AWS Storage
+django-s3-folder-storage==0.5
