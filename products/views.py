@@ -1,9 +1,11 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.forms import inlineformset_factory
-from django.shortcuts import render, redirect
 from django.db.models import Min
+from django.forms import inlineformset_factory
+from django.http import JsonResponse
+from django.shortcuts import render, redirect
 
+from .facade import get_product, get_from_category
 from .forms import CategoryForm, ProductForm, VariationForm, \
     ProductVariationForm
 from .models import ProductVariation, Category, Product, Variation
@@ -105,3 +107,15 @@ def variation_new(request):
         form = VariationForm()
 
     return render(request, 'products/variation_new.html', {'form': form})
+
+
+@login_required
+def import_from_woocommerce(request, product_id):
+    product = get_product(product_id=product_id)
+    return JsonResponse(product.json())
+
+
+@login_required
+def import_all_from_woocommerce_category(request, category_id):
+    products = get_from_category(category_id)
+    return JsonResponse(products)

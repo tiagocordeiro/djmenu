@@ -168,13 +168,13 @@ if CLOUDINARY_URL:  # pragma: no cover
 
 # DropBox
 DROPBOX_OAUTH2_TOKEN = config('DROPBOX_TOKEN', default=False)
-if DROPBOX_OAUTH2_TOKEN:
+if DROPBOX_OAUTH2_TOKEN:  # pragma: no cover
     DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
     STATICFILES_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
 
 # FTP Storage
 FTP_STORAGE = config('FTP_STORAGE_LOCATION', default=False)
-if FTP_STORAGE:
+if FTP_STORAGE:  # pragma: no cover
     FTP_STORAGE_LOCATION = config('FTP_STORAGE_LOCATION', default=False)
     LOCATION = FTP_STORAGE
     DEFAULT_FILE_STORAGE = 'storages.backends.ftp.FTPStorage'
