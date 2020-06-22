@@ -1,0 +1,1908 @@
+{
+  "products": [
+    {
+      "id": 623,
+      "name": "Margherita",
+      "slug": "margherita",
+      "permalink": "https://vituccio.com/cardapio/produtos/margherita/",
+      "date_created": "2018-11-23T00:56:18",
+      "date_created_gmt": "2018-11-23T02:56:18",
+      "date_modified": "2019-07-05T17:03:01",
+      "date_modified_gmt": "2019-07-05T20:03:01",
+      "type": "variable",
+      "status": "publish",
+      "featured": false,
+      "catalog_visibility": "visible",
+      "description": "<p>Molho de tomate, mussarela, folhas de manjeric\u00e3o e molho de tomate sobre a pizza</p>\n",
+      "short_description": "<p>Molho de tomate, mussarela, folhas de manjeric\u00e3o e molho de tomate sobre a pizza</p>\n",
+      "sku": "",
+      "price": "42",
+      "regular_price": "",
+      "sale_price": "",
+      "date_on_sale_from": null,
+      "date_on_sale_from_gmt": null,
+      "date_on_sale_to": null,
+      "date_on_sale_to_gmt": null,
+      "price_html": "<span class=\"woocommerce-Price-amount amount\">\n                <span class=\"woocommerce-Price-currencySymbol\">R$ </span>42.00<span style=\"font-size: 12px !important;\"> Pequena</span>\n                <br>\n                <span class=\"woocommerce-Price-currencySymbol\">R$ </span>66.00<span style=\"font-size: 12px !important;\"> Grande</span>\n                </span>",
+      "on_sale": false,
+      "purchasable": true,
+      "total_sales": 3,
+      "virtual": false,
+      "downloadable": false,
+      "downloads": [],
+      "download_limit": 0,
+      "download_expiry": 0,
+      "external_url": "",
+      "button_text": "",
+      "tax_status": "taxable",
+      "tax_class": "",
+      "manage_stock": false,
+      "stock_quantity": null,
+      "stock_status": "instock",
+      "backorders": "no",
+      "backorders_allowed": false,
+      "backordered": false,
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "shipping_required": true,
+      "shipping_taxable": true,
+      "shipping_class": "",
+      "shipping_class_id": 0,
+      "reviews_allowed": true,
+      "average_rating": "0.00",
+      "rating_count": 0,
+      "related_ids": [
+        265,
+        257,
+        271,
+        256,
+        249
+      ],
+      "upsell_ids": [],
+      "cross_sell_ids": [],
+      "parent_id": 0,
+      "purchase_note": "",
+      "categories": [
+        {
+          "id": 33,
+          "name": "Pizzas Tradicionais",
+          "slug": "pizzas-tradicionais"
+        },
+        {
+          "id": 25,
+          "name": "Todos os Produtos",
+          "slug": "produtos"
+        }
+      ],
+      "tags": [],
+      "images": [],
+      "attributes": [
+        {
+          "id": 1,
+          "name": "Tamanho",
+          "position": 0,
+          "visible": true,
+          "variation": true,
+          "options": [
+            "Broto",
+            "Grande"
+          ]
+        }
+      ],
+      "default_attributes": [],
+      "variations": [
+        624,
+        625
+      ],
+      "grouped_products": [],
+      "menu_order": 0,
+      "meta_data": [
+        {
+          "id": 5098,
+          "key": "_vc_post_settings",
+          "value": {
+            "vc_grid_id": []
+          }
+        },
+        {
+          "id": 5099,
+          "key": "slide_template",
+          "value": "default"
+        },
+        {
+          "id": 5100,
+          "key": "_et_pb_post_hide_nav",
+          "value": "default"
+        },
+        {
+          "id": 5101,
+          "key": "_et_pb_page_layout",
+          "value": "et_right_sidebar"
+        },
+        {
+          "id": 5102,
+          "key": "_et_pb_side_nav",
+          "value": "off"
+        },
+        {
+          "id": 5103,
+          "key": "_et_pb_use_builder",
+          "value": ""
+        },
+        {
+          "id": 5104,
+          "key": "_et_builder_version",
+          "value": "BB|Divi|3.17.6"
+        },
+        {
+          "id": 5105,
+          "key": "_et_pb_ab_stats_refresh_interval",
+          "value": "hourly"
+        },
+        {
+          "id": 5106,
+          "key": "_et_pb_old_content",
+          "value": ""
+        },
+        {
+          "id": 5107,
+          "key": "_et_pb_enable_shortcode_tracking",
+          "value": ""
+        },
+        {
+          "id": 5108,
+          "key": "_et_pb_custom_css",
+          "value": ""
+        },
+        {
+          "id": 7122,
+          "key": "_yoast_wpseo_primary_product_cat",
+          "value": ""
+        },
+        {
+          "id": 7123,
+          "key": "_et_pb_first_image",
+          "value": ""
+        },
+        {
+          "id": 7124,
+          "key": "_et_pb_truncate_post",
+          "value": ""
+        },
+        {
+          "id": 7125,
+          "key": "_yoast_wpseo_content_score",
+          "value": "60"
+        }
+      ],
+      "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v14.3 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Margherita - Vituccio Pizzaria</title>\n<!-- Aviso apenas para o administrador: esta p\u00e1gina n\u00e3o mostra uma meta descri\u00e7\u00e3o porque n\u00e3o possui nenhuma, escreva depois uma meta-descri\u00e7\u00e3o especificamente para esta p\u00e1gina ou v\u00e1 ao menu [SEO - Apar\u00eancia na Pesquisa] e configure um padr\u00e3o. -->\n<meta name=\"robots\" content=\"index, follow\" />\n<meta name=\"googlebot\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta name=\"bingbot\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://vituccio.com/cardapio/produtos/margherita/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Margherita - Vituccio Pizzaria\" />\n<meta property=\"og:description\" content=\"Molho de tomate, mussarela, folhas de manjeric\u00e3o e molho de tomate sobre a pizza\" />\n<meta property=\"og:url\" content=\"https://vituccio.com/cardapio/produtos/margherita/\" />\n<meta property=\"og:site_name\" content=\"Vituccio Pizzaria\" />\n<meta property=\"article:modified_time\" content=\"2019-07-05T20:03:01+00:00\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebSite\",\"@id\":\"https://vituccio.com/#website\",\"url\":\"https://vituccio.com/\",\"name\":\"Vituccio Pizzaria\",\"description\":\"Fundada em 1982, pelo italiano Vito Colonna, a Vituccio \\u00e9 uma das mais antigas e a mais tradicional pizzaria da zona Oeste de S\\u00e3o Paulo\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":\"https://vituccio.com/?s={search_term_string}\",\"query-input\":\"required name=search_term_string\"}],\"inLanguage\":\"pt-BR\"},{\"@type\":\"WebPage\",\"@id\":\"https://vituccio.com/cardapio/produtos/margherita/#webpage\",\"url\":\"https://vituccio.com/cardapio/produtos/margherita/\",\"name\":\"Margherita - Vituccio Pizzaria\",\"isPartOf\":{\"@id\":\"https://vituccio.com/#website\"},\"datePublished\":\"2018-11-23T02:56:18+00:00\",\"dateModified\":\"2019-07-05T20:03:01+00:00\",\"inLanguage\":\"pt-BR\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://vituccio.com/cardapio/produtos/margherita/\"]}]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+      "_links": {
+        "self": [
+          {
+            "href": "https://vituccio.com/wp-json/wc/v3/products/623"
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://vituccio.com/wp-json/wc/v3/products"
+          }
+        ]
+      }
+    },
+    {
+      "id": 620,
+      "name": "Calabresa",
+      "slug": "calabresa",
+      "permalink": "https://vituccio.com/cardapio/produtos/calabresa/",
+      "date_created": "2018-11-23T00:50:14",
+      "date_created_gmt": "2018-11-23T02:50:14",
+      "date_modified": "2019-07-05T16:38:08",
+      "date_modified_gmt": "2019-07-05T19:38:08",
+      "type": "variable",
+      "status": "publish",
+      "featured": false,
+      "catalog_visibility": "visible",
+      "description": "<p>Molho de tomate, calabresa especial e pr\u00e9-assada, cebola e or\u00e9gano</p>\n",
+      "short_description": "<p>Molho de tomate, calabresa especial e pr\u00e9-assada, cebola e or\u00e9gano</p>\n",
+      "sku": "",
+      "price": "43",
+      "regular_price": "",
+      "sale_price": "",
+      "date_on_sale_from": null,
+      "date_on_sale_from_gmt": null,
+      "date_on_sale_to": null,
+      "date_on_sale_to_gmt": null,
+      "price_html": "<span class=\"woocommerce-Price-amount amount\">\n                <span class=\"woocommerce-Price-currencySymbol\">R$ </span>43.00<span style=\"font-size: 12px !important;\"> Pequena</span>\n                <br>\n                <span class=\"woocommerce-Price-currencySymbol\">R$ </span>68.00<span style=\"font-size: 12px !important;\"> Grande</span>\n                </span>",
+      "on_sale": false,
+      "purchasable": true,
+      "total_sales": 0,
+      "virtual": false,
+      "downloadable": false,
+      "downloads": [],
+      "download_limit": 0,
+      "download_expiry": 0,
+      "external_url": "",
+      "button_text": "",
+      "tax_status": "taxable",
+      "tax_class": "",
+      "manage_stock": false,
+      "stock_quantity": null,
+      "stock_status": "instock",
+      "backorders": "no",
+      "backorders_allowed": false,
+      "backordered": false,
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "shipping_required": true,
+      "shipping_taxable": true,
+      "shipping_class": "",
+      "shipping_class_id": 0,
+      "reviews_allowed": true,
+      "average_rating": "0.00",
+      "rating_count": 0,
+      "related_ids": [
+        270,
+        263,
+        271,
+        262,
+        256
+      ],
+      "upsell_ids": [],
+      "cross_sell_ids": [],
+      "parent_id": 0,
+      "purchase_note": "",
+      "categories": [
+        {
+          "id": 33,
+          "name": "Pizzas Tradicionais",
+          "slug": "pizzas-tradicionais"
+        },
+        {
+          "id": 25,
+          "name": "Todos os Produtos",
+          "slug": "produtos"
+        }
+      ],
+      "tags": [],
+      "images": [],
+      "attributes": [
+        {
+          "id": 1,
+          "name": "Tamanho",
+          "position": 0,
+          "visible": true,
+          "variation": true,
+          "options": [
+            "Broto",
+            "Grande"
+          ]
+        }
+      ],
+      "default_attributes": [],
+      "variations": [
+        621,
+        622
+      ],
+      "grouped_products": [],
+      "menu_order": 0,
+      "meta_data": [
+        {
+          "id": 4973,
+          "key": "_vc_post_settings",
+          "value": {
+            "vc_grid_id": []
+          }
+        },
+        {
+          "id": 4974,
+          "key": "slide_template",
+          "value": "default"
+        },
+        {
+          "id": 4975,
+          "key": "_et_pb_post_hide_nav",
+          "value": "default"
+        },
+        {
+          "id": 4976,
+          "key": "_et_pb_page_layout",
+          "value": "et_right_sidebar"
+        },
+        {
+          "id": 4977,
+          "key": "_et_pb_side_nav",
+          "value": "off"
+        },
+        {
+          "id": 4978,
+          "key": "_et_pb_use_builder",
+          "value": ""
+        },
+        {
+          "id": 4979,
+          "key": "_et_builder_version",
+          "value": "BB|Divi|3.17.6"
+        },
+        {
+          "id": 4980,
+          "key": "_et_pb_ab_stats_refresh_interval",
+          "value": "hourly"
+        },
+        {
+          "id": 4981,
+          "key": "_et_pb_old_content",
+          "value": ""
+        },
+        {
+          "id": 4982,
+          "key": "_et_pb_enable_shortcode_tracking",
+          "value": ""
+        },
+        {
+          "id": 4983,
+          "key": "_et_pb_custom_css",
+          "value": ""
+        }
+      ],
+      "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v14.3 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Calabresa - Vituccio Pizzaria</title>\n<!-- Aviso apenas para o administrador: esta p\u00e1gina n\u00e3o mostra uma meta descri\u00e7\u00e3o porque n\u00e3o possui nenhuma, escreva depois uma meta-descri\u00e7\u00e3o especificamente para esta p\u00e1gina ou v\u00e1 ao menu [SEO - Apar\u00eancia na Pesquisa] e configure um padr\u00e3o. -->\n<meta name=\"robots\" content=\"index, follow\" />\n<meta name=\"googlebot\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta name=\"bingbot\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://vituccio.com/cardapio/produtos/calabresa/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Calabresa - Vituccio Pizzaria\" />\n<meta property=\"og:description\" content=\"Molho de tomate, calabresa especial e pr\u00e9-assada, cebola e or\u00e9gano\" />\n<meta property=\"og:url\" content=\"https://vituccio.com/cardapio/produtos/calabresa/\" />\n<meta property=\"og:site_name\" content=\"Vituccio Pizzaria\" />\n<meta property=\"article:modified_time\" content=\"2019-07-05T19:38:08+00:00\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebSite\",\"@id\":\"https://vituccio.com/#website\",\"url\":\"https://vituccio.com/\",\"name\":\"Vituccio Pizzaria\",\"description\":\"Fundada em 1982, pelo italiano Vito Colonna, a Vituccio \\u00e9 uma das mais antigas e a mais tradicional pizzaria da zona Oeste de S\\u00e3o Paulo\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":\"https://vituccio.com/?s={search_term_string}\",\"query-input\":\"required name=search_term_string\"}],\"inLanguage\":\"pt-BR\"},{\"@type\":\"WebPage\",\"@id\":\"https://vituccio.com/cardapio/produtos/calabresa/#webpage\",\"url\":\"https://vituccio.com/cardapio/produtos/calabresa/\",\"name\":\"Calabresa - Vituccio Pizzaria\",\"isPartOf\":{\"@id\":\"https://vituccio.com/#website\"},\"datePublished\":\"2018-11-23T02:50:14+00:00\",\"dateModified\":\"2019-07-05T19:38:08+00:00\",\"inLanguage\":\"pt-BR\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://vituccio.com/cardapio/produtos/calabresa/\"]}]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+      "_links": {
+        "self": [
+          {
+            "href": "https://vituccio.com/wp-json/wc/v3/products/620"
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://vituccio.com/wp-json/wc/v3/products"
+          }
+        ]
+      }
+    },
+    {
+      "id": 617,
+      "name": "Portuguesa",
+      "slug": "portuguesa-com-tomates-secos",
+      "permalink": "https://vituccio.com/cardapio/produtos/portuguesa-com-tomates-secos/",
+      "date_created": "2018-11-23T00:46:53",
+      "date_created_gmt": "2018-11-23T02:46:53",
+      "date_modified": "2019-07-05T18:14:36",
+      "date_modified_gmt": "2019-07-05T21:14:36",
+      "type": "variable",
+      "status": "publish",
+      "featured": false,
+      "catalog_visibility": "visible",
+      "description": "<p>Molho de tomate, mussarela, presunto, ovos, ervilhas frescas, cebola</p>\n",
+      "short_description": "<p>Molho de tomate, mussarela, presunto, ovos, ervilhas frescas, cebola</p>\n",
+      "sku": "",
+      "price": "47",
+      "regular_price": "",
+      "sale_price": "",
+      "date_on_sale_from": null,
+      "date_on_sale_from_gmt": null,
+      "date_on_sale_to": null,
+      "date_on_sale_to_gmt": null,
+      "price_html": "<span class=\"woocommerce-Price-amount amount\">\n                <span class=\"woocommerce-Price-currencySymbol\">R$ </span>47.00<span style=\"font-size: 12px !important;\"> Pequena</span>\n                <br>\n                <span class=\"woocommerce-Price-currencySymbol\">R$ </span>74.00<span style=\"font-size: 12px !important;\"> Grande</span>\n                </span>",
+      "on_sale": false,
+      "purchasable": true,
+      "total_sales": 0,
+      "virtual": false,
+      "downloadable": false,
+      "downloads": [],
+      "download_limit": 0,
+      "download_expiry": 0,
+      "external_url": "",
+      "button_text": "",
+      "tax_status": "taxable",
+      "tax_class": "",
+      "manage_stock": false,
+      "stock_quantity": null,
+      "stock_status": "instock",
+      "backorders": "no",
+      "backorders_allowed": false,
+      "backordered": false,
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "shipping_required": true,
+      "shipping_taxable": true,
+      "shipping_class": "",
+      "shipping_class_id": 0,
+      "reviews_allowed": true,
+      "average_rating": "0.00",
+      "rating_count": 0,
+      "related_ids": [
+        264,
+        250,
+        257,
+        271,
+        261
+      ],
+      "upsell_ids": [],
+      "cross_sell_ids": [],
+      "parent_id": 0,
+      "purchase_note": "",
+      "categories": [
+        {
+          "id": 33,
+          "name": "Pizzas Tradicionais",
+          "slug": "pizzas-tradicionais"
+        },
+        {
+          "id": 25,
+          "name": "Todos os Produtos",
+          "slug": "produtos"
+        }
+      ],
+      "tags": [],
+      "images": [],
+      "attributes": [
+        {
+          "id": 1,
+          "name": "Tamanho",
+          "position": 0,
+          "visible": true,
+          "variation": true,
+          "options": [
+            "Broto",
+            "Grande"
+          ]
+        }
+      ],
+      "default_attributes": [],
+      "variations": [
+        618,
+        619
+      ],
+      "grouped_products": [],
+      "menu_order": 0,
+      "meta_data": [
+        {
+          "id": 4849,
+          "key": "_vc_post_settings",
+          "value": {
+            "vc_grid_id": []
+          }
+        },
+        {
+          "id": 4850,
+          "key": "slide_template",
+          "value": "default"
+        },
+        {
+          "id": 4931,
+          "key": "_et_pb_post_hide_nav",
+          "value": "default"
+        },
+        {
+          "id": 4932,
+          "key": "_et_pb_page_layout",
+          "value": "et_right_sidebar"
+        },
+        {
+          "id": 4933,
+          "key": "_et_pb_side_nav",
+          "value": "off"
+        },
+        {
+          "id": 4934,
+          "key": "_et_pb_use_builder",
+          "value": ""
+        },
+        {
+          "id": 4935,
+          "key": "_et_builder_version",
+          "value": "BB|Divi|3.17.6"
+        },
+        {
+          "id": 4936,
+          "key": "_et_pb_ab_stats_refresh_interval",
+          "value": "hourly"
+        },
+        {
+          "id": 4937,
+          "key": "_et_pb_old_content",
+          "value": ""
+        },
+        {
+          "id": 4938,
+          "key": "_et_pb_enable_shortcode_tracking",
+          "value": ""
+        },
+        {
+          "id": 4939,
+          "key": "_et_pb_custom_css",
+          "value": ""
+        },
+        {
+          "id": 7163,
+          "key": "_yoast_wpseo_primary_product_cat",
+          "value": ""
+        },
+        {
+          "id": 7164,
+          "key": "_et_pb_first_image",
+          "value": ""
+        },
+        {
+          "id": 7165,
+          "key": "_et_pb_truncate_post",
+          "value": ""
+        },
+        {
+          "id": 7166,
+          "key": "_yoast_wpseo_content_score",
+          "value": "60"
+        }
+      ],
+      "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v14.3 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Portuguesa - Vituccio Pizzaria</title>\n<!-- Aviso apenas para o administrador: esta p\u00e1gina n\u00e3o mostra uma meta descri\u00e7\u00e3o porque n\u00e3o possui nenhuma, escreva depois uma meta-descri\u00e7\u00e3o especificamente para esta p\u00e1gina ou v\u00e1 ao menu [SEO - Apar\u00eancia na Pesquisa] e configure um padr\u00e3o. -->\n<meta name=\"robots\" content=\"index, follow\" />\n<meta name=\"googlebot\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta name=\"bingbot\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://vituccio.com/cardapio/produtos/portuguesa-com-tomates-secos/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Portuguesa - Vituccio Pizzaria\" />\n<meta property=\"og:description\" content=\"Molho de tomate, mussarela, presunto, ovos, ervilhas frescas, cebola\" />\n<meta property=\"og:url\" content=\"https://vituccio.com/cardapio/produtos/portuguesa-com-tomates-secos/\" />\n<meta property=\"og:site_name\" content=\"Vituccio Pizzaria\" />\n<meta property=\"article:modified_time\" content=\"2019-07-05T21:14:36+00:00\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebSite\",\"@id\":\"https://vituccio.com/#website\",\"url\":\"https://vituccio.com/\",\"name\":\"Vituccio Pizzaria\",\"description\":\"Fundada em 1982, pelo italiano Vito Colonna, a Vituccio \\u00e9 uma das mais antigas e a mais tradicional pizzaria da zona Oeste de S\\u00e3o Paulo\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":\"https://vituccio.com/?s={search_term_string}\",\"query-input\":\"required name=search_term_string\"}],\"inLanguage\":\"pt-BR\"},{\"@type\":\"WebPage\",\"@id\":\"https://vituccio.com/cardapio/produtos/portuguesa-com-tomates-secos/#webpage\",\"url\":\"https://vituccio.com/cardapio/produtos/portuguesa-com-tomates-secos/\",\"name\":\"Portuguesa - Vituccio Pizzaria\",\"isPartOf\":{\"@id\":\"https://vituccio.com/#website\"},\"datePublished\":\"2018-11-23T02:46:53+00:00\",\"dateModified\":\"2019-07-05T21:14:36+00:00\",\"inLanguage\":\"pt-BR\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://vituccio.com/cardapio/produtos/portuguesa-com-tomates-secos/\"]}]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+      "_links": {
+        "self": [
+          {
+            "href": "https://vituccio.com/wp-json/wc/v3/products/617"
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://vituccio.com/wp-json/wc/v3/products"
+          }
+        ]
+      }
+    },
+    {
+      "id": 292,
+      "name": "Quatro queijos",
+      "slug": "quatro-queijos",
+      "permalink": "https://vituccio.com/cardapio/produtos/quatro-queijos/",
+      "date_created": "2018-09-28T15:04:10",
+      "date_created_gmt": "2018-09-28T18:04:10",
+      "date_modified": "2019-07-05T18:18:17",
+      "date_modified_gmt": "2019-07-05T21:18:17",
+      "type": "variable",
+      "status": "publish",
+      "featured": false,
+      "catalog_visibility": "visible",
+      "description": "<p>Mussarela, provolone, parmes\u00e3o e gorgonzola.</p>\n",
+      "short_description": "<p>Mussarela, provolone, parmes\u00e3o e gorgonzola.</p>\n",
+      "sku": "",
+      "price": "46",
+      "regular_price": "",
+      "sale_price": "",
+      "date_on_sale_from": null,
+      "date_on_sale_from_gmt": null,
+      "date_on_sale_to": null,
+      "date_on_sale_to_gmt": null,
+      "price_html": "<span class=\"woocommerce-Price-amount amount\">\n                <span class=\"woocommerce-Price-currencySymbol\">R$ </span>46.00<span style=\"font-size: 12px !important;\"> Pequena</span>\n                <br>\n                <span class=\"woocommerce-Price-currencySymbol\">R$ </span>74.00<span style=\"font-size: 12px !important;\"> Grande</span>\n                </span>",
+      "on_sale": false,
+      "purchasable": true,
+      "total_sales": 0,
+      "virtual": false,
+      "downloadable": false,
+      "downloads": [],
+      "download_limit": 0,
+      "download_expiry": 0,
+      "external_url": "",
+      "button_text": "",
+      "tax_status": "taxable",
+      "tax_class": "",
+      "manage_stock": false,
+      "stock_quantity": null,
+      "stock_status": "instock",
+      "backorders": "no",
+      "backorders_allowed": false,
+      "backordered": false,
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "shipping_required": true,
+      "shipping_taxable": true,
+      "shipping_class": "",
+      "shipping_class_id": 0,
+      "reviews_allowed": true,
+      "average_rating": "0.00",
+      "rating_count": 0,
+      "related_ids": [
+        250,
+        249,
+        251,
+        264,
+        267
+      ],
+      "upsell_ids": [],
+      "cross_sell_ids": [],
+      "parent_id": 0,
+      "purchase_note": "",
+      "categories": [
+        {
+          "id": 33,
+          "name": "Pizzas Tradicionais",
+          "slug": "pizzas-tradicionais"
+        },
+        {
+          "id": 25,
+          "name": "Todos os Produtos",
+          "slug": "produtos"
+        }
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": 182,
+          "date_created": "2018-07-26T02:59:48",
+          "date_created_gmt": "2018-07-26T05:59:48",
+          "date_modified": "2018-07-26T02:59:48",
+          "date_modified_gmt": "2018-07-26T05:59:48",
+          "src": "https://vituccio.com/wp-content/uploads/2018/07/4-queijos.png",
+          "name": "4 queijos",
+          "alt": ""
+        }
+      ],
+      "attributes": [
+        {
+          "id": 1,
+          "name": "Tamanho",
+          "position": 0,
+          "visible": true,
+          "variation": true,
+          "options": [
+            "Broto",
+            "Grande"
+          ]
+        }
+      ],
+      "default_attributes": [],
+      "variations": [
+        598,
+        599
+      ],
+      "grouped_products": [],
+      "menu_order": 0,
+      "meta_data": [
+        {
+          "id": 1984,
+          "key": "_vc_post_settings",
+          "value": {
+            "vc_grid_id": []
+          }
+        },
+        {
+          "id": 4170,
+          "key": "slide_template",
+          "value": "default"
+        },
+        {
+          "id": 4260,
+          "key": "_et_pb_post_hide_nav",
+          "value": "default"
+        },
+        {
+          "id": 4261,
+          "key": "_et_pb_page_layout",
+          "value": "et_right_sidebar"
+        },
+        {
+          "id": 4262,
+          "key": "_et_pb_side_nav",
+          "value": "off"
+        },
+        {
+          "id": 4263,
+          "key": "_et_pb_use_builder",
+          "value": ""
+        },
+        {
+          "id": 4264,
+          "key": "_et_builder_version",
+          "value": "BB|Divi|3.17.6"
+        },
+        {
+          "id": 4265,
+          "key": "_et_pb_ab_stats_refresh_interval",
+          "value": "hourly"
+        },
+        {
+          "id": 4266,
+          "key": "_et_pb_old_content",
+          "value": ""
+        },
+        {
+          "id": 4267,
+          "key": "_et_pb_enable_shortcode_tracking",
+          "value": ""
+        },
+        {
+          "id": 4268,
+          "key": "_et_pb_custom_css",
+          "value": ""
+        },
+        {
+          "id": 7173,
+          "key": "_yoast_wpseo_primary_product_cat",
+          "value": ""
+        },
+        {
+          "id": 7174,
+          "key": "_et_pb_first_image",
+          "value": ""
+        },
+        {
+          "id": 7175,
+          "key": "_et_pb_truncate_post",
+          "value": ""
+        },
+        {
+          "id": 7176,
+          "key": "_yoast_wpseo_content_score",
+          "value": "30"
+        }
+      ],
+      "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v14.3 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Quatro queijos - Vituccio Pizzaria</title>\n<!-- Aviso apenas para o administrador: esta p\u00e1gina n\u00e3o mostra uma meta descri\u00e7\u00e3o porque n\u00e3o possui nenhuma, escreva depois uma meta-descri\u00e7\u00e3o especificamente para esta p\u00e1gina ou v\u00e1 ao menu [SEO - Apar\u00eancia na Pesquisa] e configure um padr\u00e3o. -->\n<meta name=\"robots\" content=\"index, follow\" />\n<meta name=\"googlebot\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta name=\"bingbot\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://vituccio.com/cardapio/produtos/quatro-queijos/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Quatro queijos - Vituccio Pizzaria\" />\n<meta property=\"og:description\" content=\"Mussarela, provolone, parmes\u00e3o e gorgonzola.\" />\n<meta property=\"og:url\" content=\"https://vituccio.com/cardapio/produtos/quatro-queijos/\" />\n<meta property=\"og:site_name\" content=\"Vituccio Pizzaria\" />\n<meta property=\"article:modified_time\" content=\"2019-07-05T21:18:17+00:00\" />\n<meta property=\"og:image\" content=\"https://vituccio.com/wp-content/uploads/2018/07/4-queijos.png\" />\n\t<meta property=\"og:image:width\" content=\"1000\" />\n\t<meta property=\"og:image:height\" content=\"1000\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebSite\",\"@id\":\"https://vituccio.com/#website\",\"url\":\"https://vituccio.com/\",\"name\":\"Vituccio Pizzaria\",\"description\":\"Fundada em 1982, pelo italiano Vito Colonna, a Vituccio \\u00e9 uma das mais antigas e a mais tradicional pizzaria da zona Oeste de S\\u00e3o Paulo\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":\"https://vituccio.com/?s={search_term_string}\",\"query-input\":\"required name=search_term_string\"}],\"inLanguage\":\"pt-BR\"},{\"@type\":\"ImageObject\",\"@id\":\"https://vituccio.com/cardapio/produtos/quatro-queijos/#primaryimage\",\"inLanguage\":\"pt-BR\",\"url\":\"https://vituccio.com/wp-content/uploads/2018/07/4-queijos.png\",\"width\":1000,\"height\":1000},{\"@type\":\"WebPage\",\"@id\":\"https://vituccio.com/cardapio/produtos/quatro-queijos/#webpage\",\"url\":\"https://vituccio.com/cardapio/produtos/quatro-queijos/\",\"name\":\"Quatro queijos - Vituccio Pizzaria\",\"isPartOf\":{\"@id\":\"https://vituccio.com/#website\"},\"primaryImageOfPage\":{\"@id\":\"https://vituccio.com/cardapio/produtos/quatro-queijos/#primaryimage\"},\"datePublished\":\"2018-09-28T18:04:10+00:00\",\"dateModified\":\"2019-07-05T21:18:17+00:00\",\"inLanguage\":\"pt-BR\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://vituccio.com/cardapio/produtos/quatro-queijos/\"]}]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+      "_links": {
+        "self": [
+          {
+            "href": "https://vituccio.com/wp-json/wc/v3/products/292"
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://vituccio.com/wp-json/wc/v3/products"
+          }
+        ]
+      }
+    },
+    {
+      "id": 291,
+      "name": "R\u00facula com tomates secos",
+      "slug": "rucula-com-tomates-secos",
+      "permalink": "https://vituccio.com/cardapio/produtos/rucula-com-tomates-secos/",
+      "date_created": "2018-09-28T15:04:10",
+      "date_created_gmt": "2018-09-28T18:04:10",
+      "date_modified": "2019-07-05T18:19:38",
+      "date_modified_gmt": "2019-07-05T21:19:38",
+      "type": "variable",
+      "status": "publish",
+      "featured": false,
+      "catalog_visibility": "visible",
+      "description": "<p>Molho de tomate, mussarela de b\u00fafala, r\u00facula e tomates secos.</p>\n",
+      "short_description": "<p>Molho de tomate, mussarela de b\u00fafala, r\u00facula e tomates secos.</p>\n",
+      "sku": "",
+      "price": "48",
+      "regular_price": "",
+      "sale_price": "",
+      "date_on_sale_from": null,
+      "date_on_sale_from_gmt": null,
+      "date_on_sale_to": null,
+      "date_on_sale_to_gmt": null,
+      "price_html": "<span class=\"woocommerce-Price-amount amount\">\n                <span class=\"woocommerce-Price-currencySymbol\">R$ </span>48.00<span style=\"font-size: 12px !important;\"> Pequena</span>\n                <br>\n                <span class=\"woocommerce-Price-currencySymbol\">R$ </span>75.00<span style=\"font-size: 12px !important;\"> Grande</span>\n                </span>",
+      "on_sale": false,
+      "purchasable": true,
+      "total_sales": 0,
+      "virtual": false,
+      "downloadable": false,
+      "downloads": [],
+      "download_limit": 0,
+      "download_expiry": 0,
+      "external_url": "",
+      "button_text": "",
+      "tax_status": "taxable",
+      "tax_class": "",
+      "manage_stock": false,
+      "stock_quantity": null,
+      "stock_status": "instock",
+      "backorders": "no",
+      "backorders_allowed": false,
+      "backordered": false,
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "shipping_required": true,
+      "shipping_taxable": true,
+      "shipping_class": "",
+      "shipping_class_id": 0,
+      "reviews_allowed": true,
+      "average_rating": "0.00",
+      "rating_count": 0,
+      "related_ids": [
+        256,
+        260,
+        253,
+        255,
+        270
+      ],
+      "upsell_ids": [],
+      "cross_sell_ids": [],
+      "parent_id": 0,
+      "purchase_note": "",
+      "categories": [
+        {
+          "id": 33,
+          "name": "Pizzas Tradicionais",
+          "slug": "pizzas-tradicionais"
+        },
+        {
+          "id": 25,
+          "name": "Todos os Produtos",
+          "slug": "produtos"
+        }
+      ],
+      "tags": [],
+      "images": [],
+      "attributes": [
+        {
+          "id": 1,
+          "name": "Tamanho",
+          "position": 0,
+          "visible": true,
+          "variation": true,
+          "options": [
+            "Broto",
+            "Grande"
+          ]
+        }
+      ],
+      "default_attributes": [],
+      "variations": [
+        575,
+        576
+      ],
+      "grouped_products": [],
+      "menu_order": 0,
+      "meta_data": [
+        {
+          "id": 1950,
+          "key": "_vc_post_settings",
+          "value": {
+            "vc_grid_id": []
+          }
+        },
+        {
+          "id": 3693,
+          "key": "slide_template",
+          "value": "default"
+        },
+        {
+          "id": 3694,
+          "key": "_et_pb_post_hide_nav",
+          "value": "default"
+        },
+        {
+          "id": 3695,
+          "key": "_et_pb_page_layout",
+          "value": "et_right_sidebar"
+        },
+        {
+          "id": 3696,
+          "key": "_et_pb_side_nav",
+          "value": "off"
+        },
+        {
+          "id": 3697,
+          "key": "_et_pb_use_builder",
+          "value": ""
+        },
+        {
+          "id": 3698,
+          "key": "_et_builder_version",
+          "value": "BB|Divi|3.17.6"
+        },
+        {
+          "id": 3699,
+          "key": "_et_pb_ab_stats_refresh_interval",
+          "value": "hourly"
+        },
+        {
+          "id": 3700,
+          "key": "_et_pb_old_content",
+          "value": ""
+        },
+        {
+          "id": 3701,
+          "key": "_et_pb_enable_shortcode_tracking",
+          "value": ""
+        },
+        {
+          "id": 3702,
+          "key": "_et_pb_custom_css",
+          "value": ""
+        },
+        {
+          "id": 7179,
+          "key": "_yoast_wpseo_primary_product_cat",
+          "value": ""
+        },
+        {
+          "id": 7180,
+          "key": "_et_pb_first_image",
+          "value": ""
+        },
+        {
+          "id": 7181,
+          "key": "_et_pb_truncate_post",
+          "value": ""
+        },
+        {
+          "id": 7182,
+          "key": "_yoast_wpseo_content_score",
+          "value": "60"
+        }
+      ],
+      "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v14.3 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>R\u00facula com tomates secos - Vituccio Pizzaria</title>\n<!-- Aviso apenas para o administrador: esta p\u00e1gina n\u00e3o mostra uma meta descri\u00e7\u00e3o porque n\u00e3o possui nenhuma, escreva depois uma meta-descri\u00e7\u00e3o especificamente para esta p\u00e1gina ou v\u00e1 ao menu [SEO - Apar\u00eancia na Pesquisa] e configure um padr\u00e3o. -->\n<meta name=\"robots\" content=\"index, follow\" />\n<meta name=\"googlebot\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta name=\"bingbot\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://vituccio.com/cardapio/produtos/rucula-com-tomates-secos/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"R\u00facula com tomates secos - Vituccio Pizzaria\" />\n<meta property=\"og:description\" content=\"Molho de tomate, mussarela de b\u00fafala, r\u00facula e tomates secos.\" />\n<meta property=\"og:url\" content=\"https://vituccio.com/cardapio/produtos/rucula-com-tomates-secos/\" />\n<meta property=\"og:site_name\" content=\"Vituccio Pizzaria\" />\n<meta property=\"article:modified_time\" content=\"2019-07-05T21:19:38+00:00\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebSite\",\"@id\":\"https://vituccio.com/#website\",\"url\":\"https://vituccio.com/\",\"name\":\"Vituccio Pizzaria\",\"description\":\"Fundada em 1982, pelo italiano Vito Colonna, a Vituccio \\u00e9 uma das mais antigas e a mais tradicional pizzaria da zona Oeste de S\\u00e3o Paulo\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":\"https://vituccio.com/?s={search_term_string}\",\"query-input\":\"required name=search_term_string\"}],\"inLanguage\":\"pt-BR\"},{\"@type\":\"WebPage\",\"@id\":\"https://vituccio.com/cardapio/produtos/rucula-com-tomates-secos/#webpage\",\"url\":\"https://vituccio.com/cardapio/produtos/rucula-com-tomates-secos/\",\"name\":\"R\\u00facula com tomates secos - Vituccio Pizzaria\",\"isPartOf\":{\"@id\":\"https://vituccio.com/#website\"},\"datePublished\":\"2018-09-28T18:04:10+00:00\",\"dateModified\":\"2019-07-05T21:19:38+00:00\",\"inLanguage\":\"pt-BR\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://vituccio.com/cardapio/produtos/rucula-com-tomates-secos/\"]}]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+      "_links": {
+        "self": [
+          {
+            "href": "https://vituccio.com/wp-json/wc/v3/products/291"
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://vituccio.com/wp-json/wc/v3/products"
+          }
+        ]
+      }
+    },
+    {
+      "id": 290,
+      "name": "Palmito com Alho Por\u00f3",
+      "slug": "45-palmito-com-alho-poro",
+      "permalink": "https://vituccio.com/cardapio/produtos/45-palmito-com-alho-poro/",
+      "date_created": "2018-09-28T15:04:10",
+      "date_created_gmt": "2018-09-28T18:04:10",
+      "date_modified": "2019-07-05T17:51:02",
+      "date_modified_gmt": "2019-07-05T20:51:02",
+      "type": "variable",
+      "status": "publish",
+      "featured": false,
+      "catalog_visibility": "visible",
+      "description": "<p>Molho de tomate, mussarela, palmito, alho por\u00f3 puxado no azeite, tomates cereja e parmes\u00e3o.</p>\n",
+      "short_description": "<p>Molho de tomate, mussarela, palmito, alho por\u00f3 puxado no azeite, tomates cereja e parmes\u00e3o.</p>\n",
+      "sku": "",
+      "price": "45",
+      "regular_price": "",
+      "sale_price": "",
+      "date_on_sale_from": null,
+      "date_on_sale_from_gmt": null,
+      "date_on_sale_to": null,
+      "date_on_sale_to_gmt": null,
+      "price_html": "<span class=\"woocommerce-Price-amount amount\">\n                <span class=\"woocommerce-Price-currencySymbol\">R$ </span>45.00<span style=\"font-size: 12px !important;\"> Pequena</span>\n                <br>\n                <span class=\"woocommerce-Price-currencySymbol\">R$ </span>71.00<span style=\"font-size: 12px !important;\"> Grande</span>\n                </span>",
+      "on_sale": false,
+      "purchasable": true,
+      "total_sales": 0,
+      "virtual": false,
+      "downloadable": false,
+      "downloads": [],
+      "download_limit": 0,
+      "download_expiry": 0,
+      "external_url": "",
+      "button_text": "",
+      "tax_status": "taxable",
+      "tax_class": "",
+      "manage_stock": false,
+      "stock_quantity": null,
+      "stock_status": "instock",
+      "backorders": "no",
+      "backorders_allowed": false,
+      "backordered": false,
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "shipping_required": true,
+      "shipping_taxable": true,
+      "shipping_class": "",
+      "shipping_class_id": 0,
+      "reviews_allowed": true,
+      "average_rating": "0.00",
+      "rating_count": 0,
+      "related_ids": [
+        247,
+        262,
+        254,
+        249,
+        268
+      ],
+      "upsell_ids": [],
+      "cross_sell_ids": [],
+      "parent_id": 0,
+      "purchase_note": "",
+      "categories": [
+        {
+          "id": 33,
+          "name": "Pizzas Tradicionais",
+          "slug": "pizzas-tradicionais"
+        },
+        {
+          "id": 25,
+          "name": "Todos os Produtos",
+          "slug": "produtos"
+        }
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": 197,
+          "date_created": "2018-07-26T03:08:24",
+          "date_created_gmt": "2018-07-26T06:08:24",
+          "date_modified": "2018-07-26T03:08:24",
+          "date_modified_gmt": "2018-07-26T06:08:24",
+          "src": "https://vituccio.com/wp-content/uploads/2018/07/palmito-com-alho-poro_.png",
+          "name": "palmito com alho poro_",
+          "alt": ""
+        }
+      ],
+      "attributes": [
+        {
+          "id": 1,
+          "name": "Tamanho",
+          "position": 0,
+          "visible": true,
+          "variation": true,
+          "options": [
+            "Broto",
+            "Grande"
+          ]
+        }
+      ],
+      "default_attributes": [],
+      "variations": [
+        586,
+        587
+      ],
+      "grouped_products": [],
+      "menu_order": 0,
+      "meta_data": [
+        {
+          "id": 1915,
+          "key": "_vc_post_settings",
+          "value": {
+            "vc_grid_id": []
+          }
+        },
+        {
+          "id": 3810,
+          "key": "slide_template",
+          "value": ""
+        },
+        {
+          "id": 3811,
+          "key": "_et_pb_post_hide_nav",
+          "value": "default"
+        },
+        {
+          "id": 3812,
+          "key": "_et_pb_page_layout",
+          "value": "et_right_sidebar"
+        },
+        {
+          "id": 3813,
+          "key": "_et_pb_side_nav",
+          "value": "off"
+        },
+        {
+          "id": 3814,
+          "key": "_et_pb_use_builder",
+          "value": ""
+        },
+        {
+          "id": 3815,
+          "key": "_et_builder_version",
+          "value": "BB|Divi|3.17.6"
+        },
+        {
+          "id": 3816,
+          "key": "_et_pb_ab_stats_refresh_interval",
+          "value": "hourly"
+        },
+        {
+          "id": 3817,
+          "key": "_et_pb_old_content",
+          "value": ""
+        },
+        {
+          "id": 3818,
+          "key": "_et_pb_enable_shortcode_tracking",
+          "value": ""
+        },
+        {
+          "id": 3819,
+          "key": "_et_pb_custom_css",
+          "value": ""
+        },
+        {
+          "id": 7136,
+          "key": "_yoast_wpseo_primary_product_cat",
+          "value": ""
+        },
+        {
+          "id": 7137,
+          "key": "_et_pb_first_image",
+          "value": ""
+        },
+        {
+          "id": 7138,
+          "key": "_et_pb_truncate_post",
+          "value": ""
+        },
+        {
+          "id": 7139,
+          "key": "_yoast_wpseo_content_score",
+          "value": "60"
+        }
+      ],
+      "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v14.3 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Palmito com Alho Por\u00f3 - Vituccio Pizzaria</title>\n<!-- Aviso apenas para o administrador: esta p\u00e1gina n\u00e3o mostra uma meta descri\u00e7\u00e3o porque n\u00e3o possui nenhuma, escreva depois uma meta-descri\u00e7\u00e3o especificamente para esta p\u00e1gina ou v\u00e1 ao menu [SEO - Apar\u00eancia na Pesquisa] e configure um padr\u00e3o. -->\n<meta name=\"robots\" content=\"index, follow\" />\n<meta name=\"googlebot\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta name=\"bingbot\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://vituccio.com/cardapio/produtos/45-palmito-com-alho-poro/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Palmito com Alho Por\u00f3 - Vituccio Pizzaria\" />\n<meta property=\"og:description\" content=\"Molho de tomate, mussarela, palmito, alho por\u00f3 puxado no azeite, tomates cereja e parmes\u00e3o.\" />\n<meta property=\"og:url\" content=\"https://vituccio.com/cardapio/produtos/45-palmito-com-alho-poro/\" />\n<meta property=\"og:site_name\" content=\"Vituccio Pizzaria\" />\n<meta property=\"article:modified_time\" content=\"2019-07-05T20:51:02+00:00\" />\n<meta property=\"og:image\" content=\"https://vituccio.com/wp-content/uploads/2018/07/palmito-com-alho-poro_.png\" />\n\t<meta property=\"og:image:width\" content=\"1000\" />\n\t<meta property=\"og:image:height\" content=\"1000\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebSite\",\"@id\":\"https://vituccio.com/#website\",\"url\":\"https://vituccio.com/\",\"name\":\"Vituccio Pizzaria\",\"description\":\"Fundada em 1982, pelo italiano Vito Colonna, a Vituccio \\u00e9 uma das mais antigas e a mais tradicional pizzaria da zona Oeste de S\\u00e3o Paulo\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":\"https://vituccio.com/?s={search_term_string}\",\"query-input\":\"required name=search_term_string\"}],\"inLanguage\":\"pt-BR\"},{\"@type\":\"ImageObject\",\"@id\":\"https://vituccio.com/cardapio/produtos/45-palmito-com-alho-poro/#primaryimage\",\"inLanguage\":\"pt-BR\",\"url\":\"https://vituccio.com/wp-content/uploads/2018/07/palmito-com-alho-poro_.png\",\"width\":1000,\"height\":1000},{\"@type\":\"WebPage\",\"@id\":\"https://vituccio.com/cardapio/produtos/45-palmito-com-alho-poro/#webpage\",\"url\":\"https://vituccio.com/cardapio/produtos/45-palmito-com-alho-poro/\",\"name\":\"Palmito com Alho Por\\u00f3 - Vituccio Pizzaria\",\"isPartOf\":{\"@id\":\"https://vituccio.com/#website\"},\"primaryImageOfPage\":{\"@id\":\"https://vituccio.com/cardapio/produtos/45-palmito-com-alho-poro/#primaryimage\"},\"datePublished\":\"2018-09-28T18:04:10+00:00\",\"dateModified\":\"2019-07-05T20:51:02+00:00\",\"inLanguage\":\"pt-BR\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://vituccio.com/cardapio/produtos/45-palmito-com-alho-poro/\"]}]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+      "_links": {
+        "self": [
+          {
+            "href": "https://vituccio.com/wp-json/wc/v3/products/290"
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://vituccio.com/wp-json/wc/v3/products"
+          }
+        ]
+      }
+    },
+    {
+      "id": 289,
+      "name": "Napolitana",
+      "slug": "44-napolitana",
+      "permalink": "https://vituccio.com/cardapio/produtos/44-napolitana/",
+      "date_created": "2018-09-28T15:04:09",
+      "date_created_gmt": "2018-09-28T18:04:09",
+      "date_modified": "2019-07-05T17:51:06",
+      "date_modified_gmt": "2019-07-05T20:51:06",
+      "type": "variable",
+      "status": "publish",
+      "featured": false,
+      "catalog_visibility": "visible",
+      "description": "<p>Molho de tomate, mussarela, alho fresco, rodelas de tomate e parmes\u00e3o.</p>\n",
+      "short_description": "<p>Molho de tomate, mussarela, alho fresco, rodelas de tomate e parmes\u00e3o.</p>\n",
+      "sku": "",
+      "price": "42",
+      "regular_price": "",
+      "sale_price": "",
+      "date_on_sale_from": null,
+      "date_on_sale_from_gmt": null,
+      "date_on_sale_to": null,
+      "date_on_sale_to_gmt": null,
+      "price_html": "<span class=\"woocommerce-Price-amount amount\">\n                <span class=\"woocommerce-Price-currencySymbol\">R$ </span>42.00<span style=\"font-size: 12px !important;\"> Pequena</span>\n                <br>\n                <span class=\"woocommerce-Price-currencySymbol\">R$ </span>67.00<span style=\"font-size: 12px !important;\"> Grande</span>\n                </span>",
+      "on_sale": false,
+      "purchasable": true,
+      "total_sales": 0,
+      "virtual": false,
+      "downloadable": false,
+      "downloads": [],
+      "download_limit": 0,
+      "download_expiry": 0,
+      "external_url": "",
+      "button_text": "",
+      "tax_status": "taxable",
+      "tax_class": "",
+      "manage_stock": false,
+      "stock_quantity": null,
+      "stock_status": "instock",
+      "backorders": "no",
+      "backorders_allowed": false,
+      "backordered": false,
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "shipping_required": true,
+      "shipping_taxable": true,
+      "shipping_class": "",
+      "shipping_class_id": 0,
+      "reviews_allowed": true,
+      "average_rating": "0.00",
+      "rating_count": 0,
+      "related_ids": [
+        268,
+        263,
+        262,
+        269,
+        271
+      ],
+      "upsell_ids": [],
+      "cross_sell_ids": [],
+      "parent_id": 0,
+      "purchase_note": "",
+      "categories": [
+        {
+          "id": 33,
+          "name": "Pizzas Tradicionais",
+          "slug": "pizzas-tradicionais"
+        },
+        {
+          "id": 25,
+          "name": "Todos os Produtos",
+          "slug": "produtos"
+        }
+      ],
+      "tags": [],
+      "images": [],
+      "attributes": [
+        {
+          "id": 1,
+          "name": "Tamanho",
+          "position": 0,
+          "visible": true,
+          "variation": true,
+          "options": [
+            "Broto",
+            "Grande"
+          ]
+        }
+      ],
+      "default_attributes": [],
+      "variations": [
+        593,
+        594
+      ],
+      "grouped_products": [],
+      "menu_order": 0,
+      "meta_data": [
+        {
+          "id": 1881,
+          "key": "_vc_post_settings",
+          "value": {
+            "vc_grid_id": []
+          }
+        },
+        {
+          "id": 4070,
+          "key": "slide_template",
+          "value": ""
+        },
+        {
+          "id": 4071,
+          "key": "_et_pb_post_hide_nav",
+          "value": "default"
+        },
+        {
+          "id": 4072,
+          "key": "_et_pb_page_layout",
+          "value": "et_right_sidebar"
+        },
+        {
+          "id": 4073,
+          "key": "_et_pb_side_nav",
+          "value": "off"
+        },
+        {
+          "id": 4074,
+          "key": "_et_pb_use_builder",
+          "value": ""
+        },
+        {
+          "id": 4075,
+          "key": "_et_builder_version",
+          "value": "BB|Divi|3.17.6"
+        },
+        {
+          "id": 4076,
+          "key": "_et_pb_ab_stats_refresh_interval",
+          "value": "hourly"
+        },
+        {
+          "id": 4077,
+          "key": "_et_pb_old_content",
+          "value": ""
+        },
+        {
+          "id": 4078,
+          "key": "_et_pb_enable_shortcode_tracking",
+          "value": ""
+        },
+        {
+          "id": 4079,
+          "key": "_et_pb_custom_css",
+          "value": ""
+        },
+        {
+          "id": 7130,
+          "key": "_yoast_wpseo_primary_product_cat",
+          "value": ""
+        },
+        {
+          "id": 7131,
+          "key": "_et_pb_first_image",
+          "value": ""
+        },
+        {
+          "id": 7132,
+          "key": "_et_pb_truncate_post",
+          "value": ""
+        },
+        {
+          "id": 7133,
+          "key": "_yoast_wpseo_content_score",
+          "value": "60"
+        }
+      ],
+      "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v14.3 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Napolitana - Vituccio Pizzaria</title>\n<!-- Aviso apenas para o administrador: esta p\u00e1gina n\u00e3o mostra uma meta descri\u00e7\u00e3o porque n\u00e3o possui nenhuma, escreva depois uma meta-descri\u00e7\u00e3o especificamente para esta p\u00e1gina ou v\u00e1 ao menu [SEO - Apar\u00eancia na Pesquisa] e configure um padr\u00e3o. -->\n<meta name=\"robots\" content=\"index, follow\" />\n<meta name=\"googlebot\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta name=\"bingbot\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://vituccio.com/cardapio/produtos/44-napolitana/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Napolitana - Vituccio Pizzaria\" />\n<meta property=\"og:description\" content=\"Molho de tomate, mussarela, alho fresco, rodelas de tomate e parmes\u00e3o.\" />\n<meta property=\"og:url\" content=\"https://vituccio.com/cardapio/produtos/44-napolitana/\" />\n<meta property=\"og:site_name\" content=\"Vituccio Pizzaria\" />\n<meta property=\"article:modified_time\" content=\"2019-07-05T20:51:06+00:00\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebSite\",\"@id\":\"https://vituccio.com/#website\",\"url\":\"https://vituccio.com/\",\"name\":\"Vituccio Pizzaria\",\"description\":\"Fundada em 1982, pelo italiano Vito Colonna, a Vituccio \\u00e9 uma das mais antigas e a mais tradicional pizzaria da zona Oeste de S\\u00e3o Paulo\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":\"https://vituccio.com/?s={search_term_string}\",\"query-input\":\"required name=search_term_string\"}],\"inLanguage\":\"pt-BR\"},{\"@type\":\"WebPage\",\"@id\":\"https://vituccio.com/cardapio/produtos/44-napolitana/#webpage\",\"url\":\"https://vituccio.com/cardapio/produtos/44-napolitana/\",\"name\":\"Napolitana - Vituccio Pizzaria\",\"isPartOf\":{\"@id\":\"https://vituccio.com/#website\"},\"datePublished\":\"2018-09-28T18:04:09+00:00\",\"dateModified\":\"2019-07-05T20:51:06+00:00\",\"inLanguage\":\"pt-BR\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://vituccio.com/cardapio/produtos/44-napolitana/\"]}]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+      "_links": {
+        "self": [
+          {
+            "href": "https://vituccio.com/wp-json/wc/v3/products/289"
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://vituccio.com/wp-json/wc/v3/products"
+          }
+        ]
+      }
+    },
+    {
+      "id": 288,
+      "name": "Frango com Catupiry",
+      "slug": "frango-com-catupiry",
+      "permalink": "https://vituccio.com/cardapio/produtos/frango-com-catupiry/",
+      "date_created": "2018-09-28T15:04:09",
+      "date_created_gmt": "2018-09-28T18:04:09",
+      "date_modified": "2020-05-14T13:46:24",
+      "date_modified_gmt": "2020-05-14T16:46:24",
+      "type": "variable",
+      "status": "publish",
+      "featured": false,
+      "catalog_visibility": "visible",
+      "description": "<p>Molho de tomate, frango inteiro korin temperado em peda\u00e7os e requeij\u00e3o catupiry.</p>\n",
+      "short_description": "<p>Molho de tomate, frango inteiro korin temperado em peda\u00e7os e requeij\u00e3o catupiry.</p>\n",
+      "sku": "",
+      "price": "50",
+      "regular_price": "",
+      "sale_price": "",
+      "date_on_sale_from": null,
+      "date_on_sale_from_gmt": null,
+      "date_on_sale_to": null,
+      "date_on_sale_to_gmt": null,
+      "price_html": "<span class=\"woocommerce-Price-amount amount\">\n                <span class=\"woocommerce-Price-currencySymbol\">R$ </span>50.00<span style=\"font-size: 12px !important;\"> Pequena</span>\n                <br>\n                <span class=\"woocommerce-Price-currencySymbol\">R$ </span>80.00<span style=\"font-size: 12px !important;\"> Grande</span>\n                </span>",
+      "on_sale": false,
+      "purchasable": true,
+      "total_sales": 0,
+      "virtual": false,
+      "downloadable": false,
+      "downloads": [],
+      "download_limit": 0,
+      "download_expiry": 0,
+      "external_url": "",
+      "button_text": "",
+      "tax_status": "taxable",
+      "tax_class": "",
+      "manage_stock": false,
+      "stock_quantity": null,
+      "stock_status": "instock",
+      "backorders": "no",
+      "backorders_allowed": false,
+      "backordered": false,
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "shipping_required": true,
+      "shipping_taxable": true,
+      "shipping_class": "",
+      "shipping_class_id": 0,
+      "reviews_allowed": true,
+      "average_rating": "0.00",
+      "rating_count": 0,
+      "related_ids": [
+        265,
+        258,
+        270,
+        268,
+        263
+      ],
+      "upsell_ids": [],
+      "cross_sell_ids": [],
+      "parent_id": 0,
+      "purchase_note": "",
+      "categories": [
+        {
+          "id": 33,
+          "name": "Pizzas Tradicionais",
+          "slug": "pizzas-tradicionais"
+        },
+        {
+          "id": 25,
+          "name": "Todos os Produtos",
+          "slug": "produtos"
+        }
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": 191,
+          "date_created": "2018-07-26T03:03:35",
+          "date_created_gmt": "2018-07-26T06:03:35",
+          "date_modified": "2018-07-26T03:03:35",
+          "date_modified_gmt": "2018-07-26T06:03:35",
+          "src": "https://vituccio.com/wp-content/uploads/2018/07/frango-com-catupiry.png",
+          "name": "frango com catupiry",
+          "alt": ""
+        }
+      ],
+      "attributes": [
+        {
+          "id": 1,
+          "name": "Tamanho",
+          "position": 0,
+          "visible": true,
+          "variation": true,
+          "options": [
+            "Broto",
+            "Grande"
+          ]
+        }
+      ],
+      "default_attributes": [],
+      "variations": [
+        591,
+        592
+      ],
+      "grouped_products": [],
+      "menu_order": 0,
+      "meta_data": [
+        {
+          "id": 1846,
+          "key": "_vc_post_settings",
+          "value": {
+            "vc_grid_id": []
+          }
+        },
+        {
+          "id": 3983,
+          "key": "slide_template",
+          "value": ""
+        },
+        {
+          "id": 3984,
+          "key": "_et_pb_post_hide_nav",
+          "value": "default"
+        },
+        {
+          "id": 3985,
+          "key": "_et_pb_page_layout",
+          "value": "et_right_sidebar"
+        },
+        {
+          "id": 3986,
+          "key": "_et_pb_side_nav",
+          "value": "off"
+        },
+        {
+          "id": 3987,
+          "key": "_et_pb_use_builder",
+          "value": ""
+        },
+        {
+          "id": 3988,
+          "key": "_et_builder_version",
+          "value": "BB|Divi|3.17.6"
+        },
+        {
+          "id": 3989,
+          "key": "_et_pb_ab_stats_refresh_interval",
+          "value": "hourly"
+        },
+        {
+          "id": 3990,
+          "key": "_et_pb_old_content",
+          "value": ""
+        },
+        {
+          "id": 3991,
+          "key": "_et_pb_enable_shortcode_tracking",
+          "value": ""
+        },
+        {
+          "id": 3992,
+          "key": "_et_pb_custom_css",
+          "value": ""
+        }
+      ],
+      "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v14.3 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Frango com Catupiry - Vituccio Pizzaria</title>\n<!-- Aviso apenas para o administrador: esta p\u00e1gina n\u00e3o mostra uma meta descri\u00e7\u00e3o porque n\u00e3o possui nenhuma, escreva depois uma meta-descri\u00e7\u00e3o especificamente para esta p\u00e1gina ou v\u00e1 ao menu [SEO - Apar\u00eancia na Pesquisa] e configure um padr\u00e3o. -->\n<meta name=\"robots\" content=\"index, follow\" />\n<meta name=\"googlebot\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta name=\"bingbot\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://vituccio.com/cardapio/produtos/frango-com-catupiry/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Frango com Catupiry - Vituccio Pizzaria\" />\n<meta property=\"og:description\" content=\"Molho de tomate, frango inteiro korin temperado em peda\u00e7os e requeij\u00e3o catupiry.\" />\n<meta property=\"og:url\" content=\"https://vituccio.com/cardapio/produtos/frango-com-catupiry/\" />\n<meta property=\"og:site_name\" content=\"Vituccio Pizzaria\" />\n<meta property=\"article:modified_time\" content=\"2020-05-14T16:46:24+00:00\" />\n<meta property=\"og:image\" content=\"https://vituccio.com/wp-content/uploads/2018/07/frango-com-catupiry.png\" />\n\t<meta property=\"og:image:width\" content=\"1000\" />\n\t<meta property=\"og:image:height\" content=\"1000\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebSite\",\"@id\":\"https://vituccio.com/#website\",\"url\":\"https://vituccio.com/\",\"name\":\"Vituccio Pizzaria\",\"description\":\"Fundada em 1982, pelo italiano Vito Colonna, a Vituccio \\u00e9 uma das mais antigas e a mais tradicional pizzaria da zona Oeste de S\\u00e3o Paulo\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":\"https://vituccio.com/?s={search_term_string}\",\"query-input\":\"required name=search_term_string\"}],\"inLanguage\":\"pt-BR\"},{\"@type\":\"ImageObject\",\"@id\":\"https://vituccio.com/cardapio/produtos/frango-com-catupiry/#primaryimage\",\"inLanguage\":\"pt-BR\",\"url\":\"https://vituccio.com/wp-content/uploads/2018/07/frango-com-catupiry.png\",\"width\":1000,\"height\":1000},{\"@type\":\"WebPage\",\"@id\":\"https://vituccio.com/cardapio/produtos/frango-com-catupiry/#webpage\",\"url\":\"https://vituccio.com/cardapio/produtos/frango-com-catupiry/\",\"name\":\"Frango com Catupiry - Vituccio Pizzaria\",\"isPartOf\":{\"@id\":\"https://vituccio.com/#website\"},\"primaryImageOfPage\":{\"@id\":\"https://vituccio.com/cardapio/produtos/frango-com-catupiry/#primaryimage\"},\"datePublished\":\"2018-09-28T18:04:09+00:00\",\"dateModified\":\"2020-05-14T16:46:24+00:00\",\"inLanguage\":\"pt-BR\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://vituccio.com/cardapio/produtos/frango-com-catupiry/\"]}]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+      "_links": {
+        "self": [
+          {
+            "href": "https://vituccio.com/wp-json/wc/v3/products/288"
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://vituccio.com/wp-json/wc/v3/products"
+          }
+        ]
+      }
+    },
+    {
+      "id": 287,
+      "name": "Catupiry",
+      "slug": "catupiry",
+      "permalink": "https://vituccio.com/cardapio/produtos/catupiry/",
+      "date_created": "2018-09-28T15:04:09",
+      "date_created_gmt": "2018-09-28T18:04:09",
+      "date_modified": "2019-07-05T16:38:45",
+      "date_modified_gmt": "2019-07-05T19:38:45",
+      "type": "variable",
+      "status": "publish",
+      "featured": false,
+      "catalog_visibility": "visible",
+      "description": "<p>Molho de tomate, requeij\u00e3o catupiry e tomate cereja.</p>\n",
+      "short_description": "<p>Molho de tomate, requeij\u00e3o catupiry e tomate cereja.</p>\n",
+      "sku": "",
+      "price": "47",
+      "regular_price": "",
+      "sale_price": "",
+      "date_on_sale_from": null,
+      "date_on_sale_from_gmt": null,
+      "date_on_sale_to": null,
+      "date_on_sale_to_gmt": null,
+      "price_html": "<span class=\"woocommerce-Price-amount amount\">\n                <span class=\"woocommerce-Price-currencySymbol\">R$ </span>47.00<span style=\"font-size: 12px !important;\"> Pequena</span>\n                <br>\n                <span class=\"woocommerce-Price-currencySymbol\">R$ </span>75.00<span style=\"font-size: 12px !important;\"> Grande</span>\n                </span>",
+      "on_sale": false,
+      "purchasable": true,
+      "total_sales": 0,
+      "virtual": false,
+      "downloadable": false,
+      "downloads": [],
+      "download_limit": 0,
+      "download_expiry": 0,
+      "external_url": "",
+      "button_text": "",
+      "tax_status": "taxable",
+      "tax_class": "",
+      "manage_stock": false,
+      "stock_quantity": null,
+      "stock_status": "instock",
+      "backorders": "no",
+      "backorders_allowed": false,
+      "backordered": false,
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "shipping_required": true,
+      "shipping_taxable": true,
+      "shipping_class": "",
+      "shipping_class_id": 0,
+      "reviews_allowed": true,
+      "average_rating": "0.00",
+      "rating_count": 0,
+      "related_ids": [
+        251,
+        270,
+        253,
+        263,
+        267
+      ],
+      "upsell_ids": [],
+      "cross_sell_ids": [],
+      "parent_id": 0,
+      "purchase_note": "",
+      "categories": [
+        {
+          "id": 33,
+          "name": "Pizzas Tradicionais",
+          "slug": "pizzas-tradicionais"
+        },
+        {
+          "id": 25,
+          "name": "Todos os Produtos",
+          "slug": "produtos"
+        }
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": 188,
+          "date_created": "2018-07-26T03:03:06",
+          "date_created_gmt": "2018-07-26T06:03:06",
+          "date_modified": "2018-07-26T03:03:06",
+          "date_modified_gmt": "2018-07-26T06:03:06",
+          "src": "https://vituccio.com/wp-content/uploads/2018/07/catupiry.png",
+          "name": "catupiry",
+          "alt": ""
+        }
+      ],
+      "attributes": [
+        {
+          "id": 1,
+          "name": "Tamanho",
+          "position": 0,
+          "visible": true,
+          "variation": true,
+          "options": [
+            "Broto",
+            "Grande"
+          ]
+        }
+      ],
+      "default_attributes": [],
+      "variations": [
+        589,
+        590
+      ],
+      "grouped_products": [],
+      "menu_order": 0,
+      "meta_data": [
+        {
+          "id": 1811,
+          "key": "_vc_post_settings",
+          "value": {
+            "vc_grid_id": []
+          }
+        },
+        {
+          "id": 3902,
+          "key": "slide_template",
+          "value": "default"
+        },
+        {
+          "id": 3903,
+          "key": "_et_pb_post_hide_nav",
+          "value": "default"
+        },
+        {
+          "id": 3904,
+          "key": "_et_pb_page_layout",
+          "value": "et_right_sidebar"
+        },
+        {
+          "id": 3905,
+          "key": "_et_pb_side_nav",
+          "value": "off"
+        },
+        {
+          "id": 3906,
+          "key": "_et_pb_use_builder",
+          "value": ""
+        },
+        {
+          "id": 3907,
+          "key": "_et_builder_version",
+          "value": "BB|Divi|3.17.6"
+        },
+        {
+          "id": 3908,
+          "key": "_et_pb_ab_stats_refresh_interval",
+          "value": "hourly"
+        },
+        {
+          "id": 3909,
+          "key": "_et_pb_old_content",
+          "value": ""
+        },
+        {
+          "id": 3910,
+          "key": "_et_pb_enable_shortcode_tracking",
+          "value": ""
+        },
+        {
+          "id": 3911,
+          "key": "_et_pb_custom_css",
+          "value": ""
+        }
+      ],
+      "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v14.3 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Catupiry - Vituccio Pizzaria</title>\n<!-- Aviso apenas para o administrador: esta p\u00e1gina n\u00e3o mostra uma meta descri\u00e7\u00e3o porque n\u00e3o possui nenhuma, escreva depois uma meta-descri\u00e7\u00e3o especificamente para esta p\u00e1gina ou v\u00e1 ao menu [SEO - Apar\u00eancia na Pesquisa] e configure um padr\u00e3o. -->\n<meta name=\"robots\" content=\"index, follow\" />\n<meta name=\"googlebot\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta name=\"bingbot\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://vituccio.com/cardapio/produtos/catupiry/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Catupiry - Vituccio Pizzaria\" />\n<meta property=\"og:description\" content=\"Molho de tomate, requeij\u00e3o catupiry e tomate cereja.\" />\n<meta property=\"og:url\" content=\"https://vituccio.com/cardapio/produtos/catupiry/\" />\n<meta property=\"og:site_name\" content=\"Vituccio Pizzaria\" />\n<meta property=\"article:modified_time\" content=\"2019-07-05T19:38:45+00:00\" />\n<meta property=\"og:image\" content=\"https://vituccio.com/wp-content/uploads/2018/07/catupiry.png\" />\n\t<meta property=\"og:image:width\" content=\"1000\" />\n\t<meta property=\"og:image:height\" content=\"1000\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebSite\",\"@id\":\"https://vituccio.com/#website\",\"url\":\"https://vituccio.com/\",\"name\":\"Vituccio Pizzaria\",\"description\":\"Fundada em 1982, pelo italiano Vito Colonna, a Vituccio \\u00e9 uma das mais antigas e a mais tradicional pizzaria da zona Oeste de S\\u00e3o Paulo\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":\"https://vituccio.com/?s={search_term_string}\",\"query-input\":\"required name=search_term_string\"}],\"inLanguage\":\"pt-BR\"},{\"@type\":\"ImageObject\",\"@id\":\"https://vituccio.com/cardapio/produtos/catupiry/#primaryimage\",\"inLanguage\":\"pt-BR\",\"url\":\"https://vituccio.com/wp-content/uploads/2018/07/catupiry.png\",\"width\":1000,\"height\":1000},{\"@type\":\"WebPage\",\"@id\":\"https://vituccio.com/cardapio/produtos/catupiry/#webpage\",\"url\":\"https://vituccio.com/cardapio/produtos/catupiry/\",\"name\":\"Catupiry - Vituccio Pizzaria\",\"isPartOf\":{\"@id\":\"https://vituccio.com/#website\"},\"primaryImageOfPage\":{\"@id\":\"https://vituccio.com/cardapio/produtos/catupiry/#primaryimage\"},\"datePublished\":\"2018-09-28T18:04:09+00:00\",\"dateModified\":\"2019-07-05T19:38:45+00:00\",\"inLanguage\":\"pt-BR\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://vituccio.com/cardapio/produtos/catupiry/\"]}]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+      "_links": {
+        "self": [
+          {
+            "href": "https://vituccio.com/wp-json/wc/v3/products/287"
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://vituccio.com/wp-json/wc/v3/products"
+          }
+        ]
+      }
+    },
+    {
+      "id": 286,
+      "name": "Baiana",
+      "slug": "41-baiana",
+      "permalink": "https://vituccio.com/cardapio/produtos/41-baiana/",
+      "date_created": "2018-09-28T15:04:08",
+      "date_created_gmt": "2018-09-28T18:04:08",
+      "date_modified": "2019-07-05T16:37:33",
+      "date_modified_gmt": "2019-07-05T19:37:33",
+      "type": "variable",
+      "status": "publish",
+      "featured": false,
+      "catalog_visibility": "visible",
+      "description": "<p>Molho de tomate, calabresa mo\u00edda, pimenta calabresa, rodelas de tomate e parmes\u00e3o.</p>\n",
+      "short_description": "<p>Molho de tomate, calabresa mo\u00edda, pimenta calabresa, rodelas de tomate e parmes\u00e3o.</p>\n",
+      "sku": "",
+      "price": "40",
+      "regular_price": "",
+      "sale_price": "",
+      "date_on_sale_from": null,
+      "date_on_sale_from_gmt": null,
+      "date_on_sale_to": null,
+      "date_on_sale_to_gmt": null,
+      "price_html": "<span class=\"woocommerce-Price-amount amount\">\n                <span class=\"woocommerce-Price-currencySymbol\">R$ </span>40.00<span style=\"font-size: 12px !important;\"> Pequena</span>\n                <br>\n                <span class=\"woocommerce-Price-currencySymbol\">R$ </span>66.00<span style=\"font-size: 12px !important;\"> Grande</span>\n                </span>",
+      "on_sale": false,
+      "purchasable": true,
+      "total_sales": 0,
+      "virtual": false,
+      "downloadable": false,
+      "downloads": [],
+      "download_limit": 0,
+      "download_expiry": 0,
+      "external_url": "",
+      "button_text": "",
+      "tax_status": "taxable",
+      "tax_class": "",
+      "manage_stock": false,
+      "stock_quantity": null,
+      "stock_status": "instock",
+      "backorders": "no",
+      "backorders_allowed": false,
+      "backordered": false,
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "shipping_required": true,
+      "shipping_taxable": true,
+      "shipping_class": "",
+      "shipping_class_id": 0,
+      "reviews_allowed": true,
+      "average_rating": "0.00",
+      "rating_count": 0,
+      "related_ids": [
+        248,
+        250,
+        260,
+        247,
+        253
+      ],
+      "upsell_ids": [],
+      "cross_sell_ids": [],
+      "parent_id": 0,
+      "purchase_note": "",
+      "categories": [
+        {
+          "id": 33,
+          "name": "Pizzas Tradicionais",
+          "slug": "pizzas-tradicionais"
+        },
+        {
+          "id": 25,
+          "name": "Todos os Produtos",
+          "slug": "produtos"
+        }
+      ],
+      "tags": [],
+      "images": [],
+      "attributes": [
+        {
+          "id": 1,
+          "name": "Tamanho",
+          "position": 0,
+          "visible": true,
+          "variation": true,
+          "options": [
+            "Broto",
+            "Grande"
+          ]
+        }
+      ],
+      "default_attributes": [],
+      "variations": [
+        600,
+        601
+      ],
+      "grouped_products": [],
+      "menu_order": 0,
+      "meta_data": [
+        {
+          "id": 1777,
+          "key": "_vc_post_settings",
+          "value": {
+            "vc_grid_id": []
+          }
+        },
+        {
+          "id": 4806,
+          "key": "slide_template",
+          "value": ""
+        },
+        {
+          "id": 7105,
+          "key": "_yoast_wpseo_primary_product_cat",
+          "value": ""
+        },
+        {
+          "id": 7106,
+          "key": "_et_pb_post_hide_nav",
+          "value": "default"
+        },
+        {
+          "id": 7107,
+          "key": "_et_pb_page_layout",
+          "value": "et_right_sidebar"
+        },
+        {
+          "id": 7108,
+          "key": "_et_pb_side_nav",
+          "value": "off"
+        },
+        {
+          "id": 7109,
+          "key": "_et_pb_use_builder",
+          "value": ""
+        },
+        {
+          "id": 7110,
+          "key": "_et_pb_first_image",
+          "value": ""
+        },
+        {
+          "id": 7111,
+          "key": "_et_pb_truncate_post",
+          "value": ""
+        },
+        {
+          "id": 7112,
+          "key": "_et_pb_old_content",
+          "value": ""
+        },
+        {
+          "id": 7113,
+          "key": "_yoast_wpseo_content_score",
+          "value": "60"
+        }
+      ],
+      "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v14.3 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Baiana - Vituccio Pizzaria</title>\n<!-- Aviso apenas para o administrador: esta p\u00e1gina n\u00e3o mostra uma meta descri\u00e7\u00e3o porque n\u00e3o possui nenhuma, escreva depois uma meta-descri\u00e7\u00e3o especificamente para esta p\u00e1gina ou v\u00e1 ao menu [SEO - Apar\u00eancia na Pesquisa] e configure um padr\u00e3o. -->\n<meta name=\"robots\" content=\"index, follow\" />\n<meta name=\"googlebot\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<meta name=\"bingbot\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://vituccio.com/cardapio/produtos/41-baiana/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Baiana - Vituccio Pizzaria\" />\n<meta property=\"og:description\" content=\"Molho de tomate, calabresa mo\u00edda, pimenta calabresa, rodelas de tomate e parmes\u00e3o.\" />\n<meta property=\"og:url\" content=\"https://vituccio.com/cardapio/produtos/41-baiana/\" />\n<meta property=\"og:site_name\" content=\"Vituccio Pizzaria\" />\n<meta property=\"article:modified_time\" content=\"2019-07-05T19:37:33+00:00\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebSite\",\"@id\":\"https://vituccio.com/#website\",\"url\":\"https://vituccio.com/\",\"name\":\"Vituccio Pizzaria\",\"description\":\"Fundada em 1982, pelo italiano Vito Colonna, a Vituccio \\u00e9 uma das mais antigas e a mais tradicional pizzaria da zona Oeste de S\\u00e3o Paulo\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":\"https://vituccio.com/?s={search_term_string}\",\"query-input\":\"required name=search_term_string\"}],\"inLanguage\":\"pt-BR\"},{\"@type\":\"WebPage\",\"@id\":\"https://vituccio.com/cardapio/produtos/41-baiana/#webpage\",\"url\":\"https://vituccio.com/cardapio/produtos/41-baiana/\",\"name\":\"Baiana - Vituccio Pizzaria\",\"isPartOf\":{\"@id\":\"https://vituccio.com/#website\"},\"datePublished\":\"2018-09-28T18:04:08+00:00\",\"dateModified\":\"2019-07-05T19:37:33+00:00\",\"inLanguage\":\"pt-BR\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://vituccio.com/cardapio/produtos/41-baiana/\"]}]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+      "_links": {
+        "self": [
+          {
+            "href": "https://vituccio.com/wp-json/wc/v3/products/286"
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://vituccio.com/wp-json/wc/v3/products"
+          }
+        ]
+      }
+    }
+  ]
+}

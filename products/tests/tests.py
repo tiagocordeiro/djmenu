@@ -1,13 +1,17 @@
+import json
+import os
+
+import responses
 from django.contrib.auth.models import User, Group
 from django.contrib.messages.storage.fallback import FallbackStorage
 from django.forms import inlineformset_factory
 from django.test import TestCase, Client, RequestFactory
 from django.urls import reverse
 
-from .forms import CategoryForm, ProductForm, VariationForm, \
+from products.forms import CategoryForm, ProductForm, VariationForm, \
     ProductVariationForm
-from .models import Product, Category, Variation, ProductVariation
-from .views import two_flavors, category_new, \
+from products.models import Product, Category, Variation, ProductVariation
+from products.views import two_flavors, category_new, \
     product_new, variation_new
 
 
@@ -264,3 +268,60 @@ class ProductsViewTest(TestCase):
         variations = Variation.objects.all()
         self.assertEqual(len(variations), 3)
         self.assertEqual(Variation.objects.count(), 3)
+
+    @responses.activate
+    def test_product_import_anonimo(self):
+        dir_path = os.path.dirname(os.path.realpath(__file__))
+        with open(dir_path + '/product_623_mock.json') as json_data_file:
+            data = json.load(json_data_file)
+
+        responses.add(responses.GET,
+                      'https://vituccio.com/wp-json/wc/v3/products/623',
+                      json=data, status=200)
+
+        response = self.client.get(reverse('import_from_woocommerce', kwargs={
+            'product_id': 623
+        }))
+        self.assertEqual(response.status_code, 302)
+        self.assertRedirects(response,
+                             '/accounts/login/?next=/products/import/woo/623/',
+                             status_code=302,
+                             target_status_code=200)
+
+    @responses.activate
+    def test_product_import_logged_user(self):
+        dir_path = os.path.dirname(os.path.realpath(__file__))
+        with open(dir_path + '/product_623_mock.json') as json_data_file:
+            data = json.load(json_data_file)
+
+        responses.add(responses.GET,
+                      'https://vituccio.com/wp-json/wc/v3/products/623',
+                      json=data, status=200)
+
+        self.client.force_login(self.staff_user)
+        response = self.client.get(reverse('import_from_woocommerce', kwargs={
+            'product_id': 623
+        }))
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'Margherita')
+
+    @responses.activate
+    def test_category_import_with_non_logged_user(self):
+        dir_path = os.path.dirname(os.path.realpath(__file__))
+        with open(dir_path + '/category_33_mock.json') as json_data_file:
+            data = json.load(json_data_file)
+
+        responses.add(responses.GET,
+                      'https://vituccio.com/wp-json/wc/v3/products?category=33',
+                      json=data, status=200)
+
+        response = self.client.get(
+            reverse('import_all_from_woocommerce_category', kwargs={
+                'category_id': 33
+            }))
+
+        self.assertEqual(response.status_code, 302)
+        self.assertRedirects(response,
+                             '/accounts/login/?next=/products/import/woo/category/33/',
+                             status_code=302,
+                             target_status_code=200)

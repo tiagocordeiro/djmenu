@@ -23,9 +23,12 @@ qrcode==6.1
 six==1.15.0
 
 # Sentry
-certifi==2020.4.5.2
-sentry-sdk==0.14.4
+certifi==2020.6.20
+sentry-sdk==0.15.1
 urllib3==1.25.9
 
 # AWS Storage
 django-s3-folder-storage==0.5
+
+# WPAPI
+wordpress-api==1.2.9

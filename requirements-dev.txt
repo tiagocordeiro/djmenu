@@ -13,4 +13,7 @@ coverage==5.1
 # DebugToolbar
 django-debug-toolbar==2.2
 
+# Responses
+responses==0.10.15
+
 -r requirements.txt
