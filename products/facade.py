@@ -6,9 +6,9 @@ from wordpress import API
 from products.models import Category, Product, ProductVariation, Variation
 
 # Configurações do WooCommerce
-consumer_key = config("WC_CK")
-consumer_secret = config("WC_CS")
-woo_commerce_url = config("WOO_COMMERCE_URL")
+consumer_key = config("WC_CK", False)
+consumer_secret = config("WC_CS", False)
+woo_commerce_url = config("WOO_COMMERCE_URL", False)
 
 wpapi = API(
     url=woo_commerce_url,
