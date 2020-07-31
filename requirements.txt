@@ -1,5 +1,5 @@
 # Django
-Django==3.0.7
+Django==3.0.8
 pytz==2020.1
 
 # Python Decouple
@@ -24,8 +24,8 @@ six==1.15.0
 
 # Sentry
 certifi==2020.6.20
-sentry-sdk==0.15.1
-urllib3==1.25.9
+sentry-sdk==0.16.2
+urllib3==1.25.10
 
 # AWS Storage
 django-s3-folder-storage==0.5

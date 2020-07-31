@@ -1,6 +1,11 @@
 # djmenu - Django food menu
 A simple solution for restaurants and pizzerias.
 
+🎉 Nova versão para multiplos restaurantes disponível! 🎉
+> Confira a Nova Versão  
+> GitHub: https://github.com/tiagocordeiro/gomenu  
+> Aplicação: https://gomenu.herokuapp.com/  
+
 ## Live demo
 https://djmenu.herokuapp.com/
 
@@ -86,6 +91,6 @@ pycodestyle .
 flake8 .
 ```
 
-#### Thanx
-
-[ ~ Dependencies scanned by PyUp.io ~ ]
+### Thanx
+- [[ ~ PurpleAdmin Free Admin Template ~ ]](https://github.com/BootstrapDash/PurpleAdmin-Free-Admin-Template)
+- [[ ~ Dependencies scanned by PyUp.io ~ ]](https://pyup.io/)
