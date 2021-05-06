@@ -20,7 +20,7 @@ whitenoise==5.1.0
 # QRcode
 django-qr-code==1.2.0
 qrcode==6.1
-six==1.15.0
+six==1.16.0
 
 # Sentry
 certifi==2020.6.20
