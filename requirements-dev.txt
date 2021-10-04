@@ -2,7 +2,7 @@
 flake8==3.9.2
 
 # Coverage
-coverage==5.5
+coverage==6.0
 
 # DebugToolbar
 django-debug-toolbar==3.2.1
