@@ -8,7 +8,7 @@ python-decouple==3.4
 dj-database-url==0.5.0
 
 # PsycoPG
-psycopg2==2.8.6
+psycopg2==2.9.6
 psycopg2-binary==2.8.6
 
 # Heroku
