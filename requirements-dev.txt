@@ -5,7 +5,7 @@ flake8==3.9.2
 coverage==5.5
 
 # DebugToolbar
-django-debug-toolbar==3.2.1
+django-debug-toolbar==4.0.0
 
 # Responses
 responses==0.13.3
