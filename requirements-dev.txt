@@ -1,5 +1,5 @@
 # Flake8
-flake8==3.9.2
+flake8==7.0.0
 
 # Coverage
 coverage==5.5
