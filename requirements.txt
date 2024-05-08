@@ -1,5 +1,5 @@
 # Django
-Django==3.2.2
+Django==5.0.6
 
 # Python Decouple
 python-decouple==3.4
