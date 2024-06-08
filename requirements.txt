@@ -19,7 +19,7 @@ gunicorn==20.1.0
 django-qr-code==2.1.0
 
 # Sentry
-sentry-sdk==1.1.0
+sentry-sdk==2.5.1
 
 # AWS Storage
 django-s3-folder-storage==0.5
